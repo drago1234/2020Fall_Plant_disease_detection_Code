@@ -1,0 +1,860 @@
+environemnt set up
+Running the batch script
+2021-01-18 03:01:14.890491: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-18 03:01:34.838622: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX512F
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-01-18 03:01:34.868298: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-18 03:01:34.870866: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2021-01-18 03:01:34.915686: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:d8:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-18 03:01:34.915715: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-18 03:01:34.920685: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-18 03:01:34.920725: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-18 03:01:34.923488: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-18 03:01:34.925158: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-18 03:01:34.929418: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-18 03:01:34.931312: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-18 03:01:34.932889: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-18 03:01:34.938176: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-18 03:01:34.939299: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-18 03:01:39.609064: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-18 03:01:39.609128: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-01-18 03:01:39.609145: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-01-18 03:01:39.617828: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 30128 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:d8:00.0, compute capability: 7.0)
+2021-01-18 03:01:39.622289: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-18 03:01:39.625082: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:d8:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-18 03:01:39.625130: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-18 03:01:39.625162: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-18 03:01:39.625183: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-18 03:01:39.625203: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-18 03:01:39.625227: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-18 03:01:39.625248: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-18 03:01:39.625268: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-18 03:01:39.625288: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-18 03:01:39.630420: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-18 03:01:39.630455: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-18 03:01:39.630468: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-01-18 03:01:39.630480: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-01-18 03:01:39.635505: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 30128 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:d8:00.0, compute capability: 7.0)
+2021-01-18 03:01:40.216605: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-18 03:01:40.218226: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:d8:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-18 03:01:40.218263: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-18 03:01:40.218286: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-18 03:01:40.218297: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-18 03:01:40.218307: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-18 03:01:40.218318: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-18 03:01:40.218328: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-18 03:01:40.218338: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-18 03:01:40.218349: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-18 03:01:40.221125: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-18 03:01:40.221357: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-18 03:01:40.223498: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:d8:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-18 03:01:40.223523: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-18 03:01:40.223541: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-18 03:01:40.223555: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-18 03:01:40.223565: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-18 03:01:40.223575: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-18 03:01:40.223588: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-18 03:01:40.223598: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-18 03:01:40.223608: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-18 03:01:40.226327: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-18 03:01:40.226358: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-18 03:01:40.226366: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-01-18 03:01:40.226372: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-01-18 03:01:40.229128: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30128 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:d8:00.0, compute capability: 7.0)
+2021-01-18 03:02:01.338593: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-01-18 03:02:01.339514: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2900000000 Hz
+Using TensorFlow backend.
+WARNING:tensorflow:AutoGraph could not transform <function Model.make_train_function.<locals>.train_function at 0x2aeb2a17fe18> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+Does the system is built with CUDA?: True
+Default GPU Device: /device:GPU:0
+====> Start running baseline.py
+Classes: ['Tomato___Late_blight', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Peach___healthy', 'Grape___Esca_(Black_Measles)', 'Potato___Late_blight', 'Pepper,_bell___Bacterial_spot', 'Strawberry___healthy', 'Orange___Haunglongbing_(Citrus_greening)', 'Tomato___Leaf_Mold', 'Apple___Black_rot', 'Strawberry___Leaf_scorch', 'Tomato___Early_blight', 'Cherry_(including_sour)___healthy', 'Corn_(maize)___Common_rust_', 'Blueberry___healthy', 'Potato___Early_blight', 'Pepper,_bell___healthy', 'Apple___Cedar_apple_rust', 'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)', 'Tomato___Tomato_mosaic_virus', 'Tomato___Target_Spot', 'Tomato___healthy', 'Peach___Bacterial_spot', 'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot', 'Tomato___Spider_mites Two-spotted_spider_mite', 'Corn_(maize)___healthy', 'Squash___Powdery_mildew', 'Cherry_(including_sour)___Powdery_mildew', 'Tomato___Bacterial_spot', 'Grape___Black_rot', 'Apple___healthy', 'Potato___healthy', 'Corn_(maize)___Northern_Leaf_Blight', 'Tomato___Septoria_leaf_spot', 'Raspberry___healthy', 'Soybean___healthy', 'Apple___Apple_scab', 'Grape___healthy']
+Number of classes: 38
+Total number of images: 54305
+first_folder_path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight
+Number of folder: 38
+sample image path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight/5fdf3288-d5f4-4c70-9b12-95222b82d415___RS_Late.B 4942.JPG
+Image size: (256, 256, 3)
+Found 43456 images belonging to 38 classes.
+Found 10849 images belonging to 38 classes.
+Train size: 43456
+val_size: 10849, train_size: 43456
+
+====> Statistics: Model name: MobileNetV3Small_model, epochs=100, batch_size=32, validation_split=0.2, lr=0.001, momentum=0.9, steps_per_epoch =100, feature shape= (224, 224, 3), no_classes=38, loss_function=categorical_crossentropy
+Model: "model"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_7 (InputLayer)            [(None, 224, 224, 3) 0                                            
+__________________________________________________________________________________________________
+rescaling_1 (Rescaling)         (None, 224, 224, 3)  0           input_7[0][0]                    
+__________________________________________________________________________________________________
+Conv (Conv2D)                   (None, 112, 112, 16) 432         rescaling_1[0][0]                
+__________________________________________________________________________________________________
+Conv/BatchNorm (BatchNormalizat (None, 112, 112, 16) 64          Conv[0][0]                       
+__________________________________________________________________________________________________
+tf.__operators__.add_29 (TFOpLa (None, 112, 112, 16) 0           Conv/BatchNorm[0][0]             
+__________________________________________________________________________________________________
+re_lu_40 (ReLU)                 (None, 112, 112, 16) 0           tf.__operators__.add_29[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_29 (TFOpLambda (None, 112, 112, 16) 0           re_lu_40[0][0]                   
+__________________________________________________________________________________________________
+multiply_21 (Multiply)          (None, 112, 112, 16) 0           tf.math.multiply_29[0][0]        
+                                                                 Conv/BatchNorm[0][0]             
+__________________________________________________________________________________________________
+expanded_conv/depthwise/pad (Ze (None, 113, 113, 16) 0           multiply_21[0][0]                
+__________________________________________________________________________________________________
+expanded_conv/depthwise (Depthw (None, 56, 56, 16)   144         expanded_conv/depthwise/pad[0][0]
+__________________________________________________________________________________________________
+expanded_conv/depthwise/BatchNo (None, 56, 56, 16)   64          expanded_conv/depthwise[0][0]    
+__________________________________________________________________________________________________
+re_lu_41 (ReLU)                 (None, 56, 56, 16)   0           expanded_conv/depthwise/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv/squeeze_excite/Av (None, 16)           0           re_lu_41[0][0]                   
+__________________________________________________________________________________________________
+reshape_8 (Reshape)             (None, 1, 1, 16)     0           expanded_conv/squeeze_excite/AvgP
+__________________________________________________________________________________________________
+expanded_conv/squeeze_excite/Co (None, 1, 1, 8)      136         reshape_8[0][0]                  
+__________________________________________________________________________________________________
+expanded_conv/squeeze_excite/Re (None, 1, 1, 8)      0           expanded_conv/squeeze_excite/Conv
+__________________________________________________________________________________________________
+expanded_conv/squeeze_excite/Co (None, 1, 1, 16)     144         expanded_conv/squeeze_excite/Relu
+__________________________________________________________________________________________________
+tf.__operators__.add_30 (TFOpLa (None, 1, 1, 16)     0           expanded_conv/squeeze_excite/Conv
+__________________________________________________________________________________________________
+re_lu_42 (ReLU)                 (None, 1, 1, 16)     0           tf.__operators__.add_30[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_30 (TFOpLambda (None, 1, 1, 16)     0           re_lu_42[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv/squeeze_excite/Mu (None, 56, 56, 16)   0           re_lu_41[0][0]                   
+                                                                 tf.math.multiply_30[0][0]        
+__________________________________________________________________________________________________
+expanded_conv/project (Conv2D)  (None, 56, 56, 16)   256         expanded_conv/squeeze_excite/Mul[
+__________________________________________________________________________________________________
+expanded_conv/project/BatchNorm (None, 56, 56, 16)   64          expanded_conv/project[0][0]      
+__________________________________________________________________________________________________
+expanded_conv_1/expand (Conv2D) (None, 56, 56, 72)   1152        expanded_conv/project/BatchNorm[0
+__________________________________________________________________________________________________
+expanded_conv_1/expand/BatchNor (None, 56, 56, 72)   288         expanded_conv_1/expand[0][0]     
+__________________________________________________________________________________________________
+re_lu_43 (ReLU)                 (None, 56, 56, 72)   0           expanded_conv_1/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_1/depthwise/pad ( (None, 57, 57, 72)   0           re_lu_43[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_1/depthwise (Dept (None, 28, 28, 72)   648         expanded_conv_1/depthwise/pad[0][
+__________________________________________________________________________________________________
+expanded_conv_1/depthwise/Batch (None, 28, 28, 72)   288         expanded_conv_1/depthwise[0][0]  
+__________________________________________________________________________________________________
+re_lu_44 (ReLU)                 (None, 28, 28, 72)   0           expanded_conv_1/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_1/project (Conv2D (None, 28, 28, 24)   1728        re_lu_44[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_1/project/BatchNo (None, 28, 28, 24)   96          expanded_conv_1/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_2/expand (Conv2D) (None, 28, 28, 88)   2112        expanded_conv_1/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_2/expand/BatchNor (None, 28, 28, 88)   352         expanded_conv_2/expand[0][0]     
+__________________________________________________________________________________________________
+re_lu_45 (ReLU)                 (None, 28, 28, 88)   0           expanded_conv_2/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_2/depthwise (Dept (None, 28, 28, 88)   792         re_lu_45[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_2/depthwise/Batch (None, 28, 28, 88)   352         expanded_conv_2/depthwise[0][0]  
+__________________________________________________________________________________________________
+re_lu_46 (ReLU)                 (None, 28, 28, 88)   0           expanded_conv_2/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_2/project (Conv2D (None, 28, 28, 24)   2112        re_lu_46[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_2/project/BatchNo (None, 28, 28, 24)   96          expanded_conv_2/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_2/Add (Add)       (None, 28, 28, 24)   0           expanded_conv_1/project/BatchNorm
+                                                                 expanded_conv_2/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_3/expand (Conv2D) (None, 28, 28, 96)   2304        expanded_conv_2/Add[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_3/expand/BatchNor (None, 28, 28, 96)   384         expanded_conv_3/expand[0][0]     
+__________________________________________________________________________________________________
+tf.__operators__.add_31 (TFOpLa (None, 28, 28, 96)   0           expanded_conv_3/expand/BatchNorm[
+__________________________________________________________________________________________________
+re_lu_47 (ReLU)                 (None, 28, 28, 96)   0           tf.__operators__.add_31[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_31 (TFOpLambda (None, 28, 28, 96)   0           re_lu_47[0][0]                   
+__________________________________________________________________________________________________
+multiply_22 (Multiply)          (None, 28, 28, 96)   0           tf.math.multiply_31[0][0]        
+                                                                 expanded_conv_3/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_3/depthwise/pad ( (None, 31, 31, 96)   0           multiply_22[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_3/depthwise (Dept (None, 14, 14, 96)   2400        expanded_conv_3/depthwise/pad[0][
+__________________________________________________________________________________________________
+expanded_conv_3/depthwise/Batch (None, 14, 14, 96)   384         expanded_conv_3/depthwise[0][0]  
+__________________________________________________________________________________________________
+tf.__operators__.add_32 (TFOpLa (None, 14, 14, 96)   0           expanded_conv_3/depthwise/BatchNo
+__________________________________________________________________________________________________
+re_lu_48 (ReLU)                 (None, 14, 14, 96)   0           tf.__operators__.add_32[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_32 (TFOpLambda (None, 14, 14, 96)   0           re_lu_48[0][0]                   
+__________________________________________________________________________________________________
+multiply_23 (Multiply)          (None, 14, 14, 96)   0           tf.math.multiply_32[0][0]        
+                                                                 expanded_conv_3/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_3/squeeze_excite/ (None, 96)           0           multiply_23[0][0]                
+__________________________________________________________________________________________________
+reshape_9 (Reshape)             (None, 1, 1, 96)     0           expanded_conv_3/squeeze_excite/Av
+__________________________________________________________________________________________________
+expanded_conv_3/squeeze_excite/ (None, 1, 1, 24)     2328        reshape_9[0][0]                  
+__________________________________________________________________________________________________
+expanded_conv_3/squeeze_excite/ (None, 1, 1, 24)     0           expanded_conv_3/squeeze_excite/Co
+__________________________________________________________________________________________________
+expanded_conv_3/squeeze_excite/ (None, 1, 1, 96)     2400        expanded_conv_3/squeeze_excite/Re
+__________________________________________________________________________________________________
+tf.__operators__.add_33 (TFOpLa (None, 1, 1, 96)     0           expanded_conv_3/squeeze_excite/Co
+__________________________________________________________________________________________________
+re_lu_49 (ReLU)                 (None, 1, 1, 96)     0           tf.__operators__.add_33[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_33 (TFOpLambda (None, 1, 1, 96)     0           re_lu_49[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_3/squeeze_excite/ (None, 14, 14, 96)   0           multiply_23[0][0]                
+                                                                 tf.math.multiply_33[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_3/project (Conv2D (None, 14, 14, 40)   3840        expanded_conv_3/squeeze_excite/Mu
+__________________________________________________________________________________________________
+expanded_conv_3/project/BatchNo (None, 14, 14, 40)   160         expanded_conv_3/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_4/expand (Conv2D) (None, 14, 14, 240)  9600        expanded_conv_3/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_4/expand/BatchNor (None, 14, 14, 240)  960         expanded_conv_4/expand[0][0]     
+__________________________________________________________________________________________________
+tf.__operators__.add_34 (TFOpLa (None, 14, 14, 240)  0           expanded_conv_4/expand/BatchNorm[
+__________________________________________________________________________________________________
+re_lu_50 (ReLU)                 (None, 14, 14, 240)  0           tf.__operators__.add_34[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_34 (TFOpLambda (None, 14, 14, 240)  0           re_lu_50[0][0]                   
+__________________________________________________________________________________________________
+multiply_24 (Multiply)          (None, 14, 14, 240)  0           tf.math.multiply_34[0][0]        
+                                                                 expanded_conv_4/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_4/depthwise (Dept (None, 14, 14, 240)  6000        multiply_24[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_4/depthwise/Batch (None, 14, 14, 240)  960         expanded_conv_4/depthwise[0][0]  
+__________________________________________________________________________________________________
+tf.__operators__.add_35 (TFOpLa (None, 14, 14, 240)  0           expanded_conv_4/depthwise/BatchNo
+__________________________________________________________________________________________________
+re_lu_51 (ReLU)                 (None, 14, 14, 240)  0           tf.__operators__.add_35[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_35 (TFOpLambda (None, 14, 14, 240)  0           re_lu_51[0][0]                   
+__________________________________________________________________________________________________
+multiply_25 (Multiply)          (None, 14, 14, 240)  0           tf.math.multiply_35[0][0]        
+                                                                 expanded_conv_4/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_4/squeeze_excite/ (None, 240)          0           multiply_25[0][0]                
+__________________________________________________________________________________________________
+reshape_10 (Reshape)            (None, 1, 1, 240)    0           expanded_conv_4/squeeze_excite/Av
+__________________________________________________________________________________________________
+expanded_conv_4/squeeze_excite/ (None, 1, 1, 64)     15424       reshape_10[0][0]                 
+__________________________________________________________________________________________________
+expanded_conv_4/squeeze_excite/ (None, 1, 1, 64)     0           expanded_conv_4/squeeze_excite/Co
+__________________________________________________________________________________________________
+expanded_conv_4/squeeze_excite/ (None, 1, 1, 240)    15600       expanded_conv_4/squeeze_excite/Re
+__________________________________________________________________________________________________
+tf.__operators__.add_36 (TFOpLa (None, 1, 1, 240)    0           expanded_conv_4/squeeze_excite/Co
+__________________________________________________________________________________________________
+re_lu_52 (ReLU)                 (None, 1, 1, 240)    0           tf.__operators__.add_36[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_36 (TFOpLambda (None, 1, 1, 240)    0           re_lu_52[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_4/squeeze_excite/ (None, 14, 14, 240)  0           multiply_25[0][0]                
+                                                                 tf.math.multiply_36[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_4/project (Conv2D (None, 14, 14, 40)   9600        expanded_conv_4/squeeze_excite/Mu
+__________________________________________________________________________________________________
+expanded_conv_4/project/BatchNo (None, 14, 14, 40)   160         expanded_conv_4/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_4/Add (Add)       (None, 14, 14, 40)   0           expanded_conv_3/project/BatchNorm
+                                                                 expanded_conv_4/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_5/expand (Conv2D) (None, 14, 14, 240)  9600        expanded_conv_4/Add[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_5/expand/BatchNor (None, 14, 14, 240)  960         expanded_conv_5/expand[0][0]     
+__________________________________________________________________________________________________
+tf.__operators__.add_37 (TFOpLa (None, 14, 14, 240)  0           expanded_conv_5/expand/BatchNorm[
+__________________________________________________________________________________________________
+re_lu_53 (ReLU)                 (None, 14, 14, 240)  0           tf.__operators__.add_37[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_37 (TFOpLambda (None, 14, 14, 240)  0           re_lu_53[0][0]                   
+__________________________________________________________________________________________________
+multiply_26 (Multiply)          (None, 14, 14, 240)  0           tf.math.multiply_37[0][0]        
+                                                                 expanded_conv_5/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_5/depthwise (Dept (None, 14, 14, 240)  6000        multiply_26[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_5/depthwise/Batch (None, 14, 14, 240)  960         expanded_conv_5/depthwise[0][0]  
+__________________________________________________________________________________________________
+tf.__operators__.add_38 (TFOpLa (None, 14, 14, 240)  0           expanded_conv_5/depthwise/BatchNo
+__________________________________________________________________________________________________
+re_lu_54 (ReLU)                 (None, 14, 14, 240)  0           tf.__operators__.add_38[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_38 (TFOpLambda (None, 14, 14, 240)  0           re_lu_54[0][0]                   
+__________________________________________________________________________________________________
+multiply_27 (Multiply)          (None, 14, 14, 240)  0           tf.math.multiply_38[0][0]        
+                                                                 expanded_conv_5/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_5/squeeze_excite/ (None, 240)          0           multiply_27[0][0]                
+__________________________________________________________________________________________________
+reshape_11 (Reshape)            (None, 1, 1, 240)    0           expanded_conv_5/squeeze_excite/Av
+__________________________________________________________________________________________________
+expanded_conv_5/squeeze_excite/ (None, 1, 1, 64)     15424       reshape_11[0][0]                 
+__________________________________________________________________________________________________
+expanded_conv_5/squeeze_excite/ (None, 1, 1, 64)     0           expanded_conv_5/squeeze_excite/Co
+__________________________________________________________________________________________________
+expanded_conv_5/squeeze_excite/ (None, 1, 1, 240)    15600       expanded_conv_5/squeeze_excite/Re
+__________________________________________________________________________________________________
+tf.__operators__.add_39 (TFOpLa (None, 1, 1, 240)    0           expanded_conv_5/squeeze_excite/Co
+__________________________________________________________________________________________________
+re_lu_55 (ReLU)                 (None, 1, 1, 240)    0           tf.__operators__.add_39[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_39 (TFOpLambda (None, 1, 1, 240)    0           re_lu_55[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_5/squeeze_excite/ (None, 14, 14, 240)  0           multiply_27[0][0]                
+                                                                 tf.math.multiply_39[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_5/project (Conv2D (None, 14, 14, 40)   9600        expanded_conv_5/squeeze_excite/Mu
+__________________________________________________________________________________________________
+expanded_conv_5/project/BatchNo (None, 14, 14, 40)   160         expanded_conv_5/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_5/Add (Add)       (None, 14, 14, 40)   0           expanded_conv_4/Add[0][0]        
+                                                                 expanded_conv_5/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_6/expand (Conv2D) (None, 14, 14, 120)  4800        expanded_conv_5/Add[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_6/expand/BatchNor (None, 14, 14, 120)  480         expanded_conv_6/expand[0][0]     
+__________________________________________________________________________________________________
+tf.__operators__.add_40 (TFOpLa (None, 14, 14, 120)  0           expanded_conv_6/expand/BatchNorm[
+__________________________________________________________________________________________________
+re_lu_56 (ReLU)                 (None, 14, 14, 120)  0           tf.__operators__.add_40[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_40 (TFOpLambda (None, 14, 14, 120)  0           re_lu_56[0][0]                   
+__________________________________________________________________________________________________
+multiply_28 (Multiply)          (None, 14, 14, 120)  0           tf.math.multiply_40[0][0]        
+                                                                 expanded_conv_6/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_6/depthwise (Dept (None, 14, 14, 120)  3000        multiply_28[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_6/depthwise/Batch (None, 14, 14, 120)  480         expanded_conv_6/depthwise[0][0]  
+__________________________________________________________________________________________________
+tf.__operators__.add_41 (TFOpLa (None, 14, 14, 120)  0           expanded_conv_6/depthwise/BatchNo
+__________________________________________________________________________________________________
+re_lu_57 (ReLU)                 (None, 14, 14, 120)  0           tf.__operators__.add_41[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_41 (TFOpLambda (None, 14, 14, 120)  0           re_lu_57[0][0]                   
+__________________________________________________________________________________________________
+multiply_29 (Multiply)          (None, 14, 14, 120)  0           tf.math.multiply_41[0][0]        
+                                                                 expanded_conv_6/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_6/squeeze_excite/ (None, 120)          0           multiply_29[0][0]                
+__________________________________________________________________________________________________
+reshape_12 (Reshape)            (None, 1, 1, 120)    0           expanded_conv_6/squeeze_excite/Av
+__________________________________________________________________________________________________
+expanded_conv_6/squeeze_excite/ (None, 1, 1, 32)     3872        reshape_12[0][0]                 
+__________________________________________________________________________________________________
+expanded_conv_6/squeeze_excite/ (None, 1, 1, 32)     0           expanded_conv_6/squeeze_excite/Co
+__________________________________________________________________________________________________
+expanded_conv_6/squeeze_excite/ (None, 1, 1, 120)    3960        expanded_conv_6/squeeze_excite/Re
+__________________________________________________________________________________________________
+tf.__operators__.add_42 (TFOpLa (None, 1, 1, 120)    0           expanded_conv_6/squeeze_excite/Co
+__________________________________________________________________________________________________
+re_lu_58 (ReLU)                 (None, 1, 1, 120)    0           tf.__operators__.add_42[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_42 (TFOpLambda (None, 1, 1, 120)    0           re_lu_58[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_6/squeeze_excite/ (None, 14, 14, 120)  0           multiply_29[0][0]                
+                                                                 tf.math.multiply_42[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_6/project (Conv2D (None, 14, 14, 48)   5760        expanded_conv_6/squeeze_excite/Mu
+__________________________________________________________________________________________________
+expanded_conv_6/project/BatchNo (None, 14, 14, 48)   192         expanded_conv_6/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_7/expand (Conv2D) (None, 14, 14, 144)  6912        expanded_conv_6/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_7/expand/BatchNor (None, 14, 14, 144)  576         expanded_conv_7/expand[0][0]     
+__________________________________________________________________________________________________
+tf.__operators__.add_43 (TFOpLa (None, 14, 14, 144)  0           expanded_conv_7/expand/BatchNorm[
+__________________________________________________________________________________________________
+re_lu_59 (ReLU)                 (None, 14, 14, 144)  0           tf.__operators__.add_43[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_43 (TFOpLambda (None, 14, 14, 144)  0           re_lu_59[0][0]                   
+__________________________________________________________________________________________________
+multiply_30 (Multiply)          (None, 14, 14, 144)  0           tf.math.multiply_43[0][0]        
+                                                                 expanded_conv_7/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_7/depthwise (Dept (None, 14, 14, 144)  3600        multiply_30[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_7/depthwise/Batch (None, 14, 14, 144)  576         expanded_conv_7/depthwise[0][0]  
+__________________________________________________________________________________________________
+tf.__operators__.add_44 (TFOpLa (None, 14, 14, 144)  0           expanded_conv_7/depthwise/BatchNo
+__________________________________________________________________________________________________
+re_lu_60 (ReLU)                 (None, 14, 14, 144)  0           tf.__operators__.add_44[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_44 (TFOpLambda (None, 14, 14, 144)  0           re_lu_60[0][0]                   
+__________________________________________________________________________________________________
+multiply_31 (Multiply)          (None, 14, 14, 144)  0           tf.math.multiply_44[0][0]        
+                                                                 expanded_conv_7/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_7/squeeze_excite/ (None, 144)          0           multiply_31[0][0]                
+__________________________________________________________________________________________________
+reshape_13 (Reshape)            (None, 1, 1, 144)    0           expanded_conv_7/squeeze_excite/Av
+__________________________________________________________________________________________________
+expanded_conv_7/squeeze_excite/ (None, 1, 1, 40)     5800        reshape_13[0][0]                 
+__________________________________________________________________________________________________
+expanded_conv_7/squeeze_excite/ (None, 1, 1, 40)     0           expanded_conv_7/squeeze_excite/Co
+__________________________________________________________________________________________________
+expanded_conv_7/squeeze_excite/ (None, 1, 1, 144)    5904        expanded_conv_7/squeeze_excite/Re
+__________________________________________________________________________________________________
+tf.__operators__.add_45 (TFOpLa (None, 1, 1, 144)    0           expanded_conv_7/squeeze_excite/Co
+__________________________________________________________________________________________________
+re_lu_61 (ReLU)                 (None, 1, 1, 144)    0           tf.__operators__.add_45[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_45 (TFOpLambda (None, 1, 1, 144)    0           re_lu_61[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_7/squeeze_excite/ (None, 14, 14, 144)  0           multiply_31[0][0]                
+                                                                 tf.math.multiply_45[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_7/project (Conv2D (None, 14, 14, 48)   6912        expanded_conv_7/squeeze_excite/Mu
+__________________________________________________________________________________________________
+expanded_conv_7/project/BatchNo (None, 14, 14, 48)   192         expanded_conv_7/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_7/Add (Add)       (None, 14, 14, 48)   0           expanded_conv_6/project/BatchNorm
+                                                                 expanded_conv_7/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_8/expand (Conv2D) (None, 14, 14, 288)  13824       expanded_conv_7/Add[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_8/expand/BatchNor (None, 14, 14, 288)  1152        expanded_conv_8/expand[0][0]     
+__________________________________________________________________________________________________
+tf.__operators__.add_46 (TFOpLa (None, 14, 14, 288)  0           expanded_conv_8/expand/BatchNorm[
+__________________________________________________________________________________________________
+re_lu_62 (ReLU)                 (None, 14, 14, 288)  0           tf.__operators__.add_46[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_46 (TFOpLambda (None, 14, 14, 288)  0           re_lu_62[0][0]                   
+__________________________________________________________________________________________________
+multiply_32 (Multiply)          (None, 14, 14, 288)  0           tf.math.multiply_46[0][0]        
+                                                                 expanded_conv_8/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_8/depthwise/pad ( (None, 17, 17, 288)  0           multiply_32[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_8/depthwise (Dept (None, 7, 7, 288)    7200        expanded_conv_8/depthwise/pad[0][
+__________________________________________________________________________________________________
+expanded_conv_8/depthwise/Batch (None, 7, 7, 288)    1152        expanded_conv_8/depthwise[0][0]  
+__________________________________________________________________________________________________
+tf.__operators__.add_47 (TFOpLa (None, 7, 7, 288)    0           expanded_conv_8/depthwise/BatchNo
+__________________________________________________________________________________________________
+re_lu_63 (ReLU)                 (None, 7, 7, 288)    0           tf.__operators__.add_47[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_47 (TFOpLambda (None, 7, 7, 288)    0           re_lu_63[0][0]                   
+__________________________________________________________________________________________________
+multiply_33 (Multiply)          (None, 7, 7, 288)    0           tf.math.multiply_47[0][0]        
+                                                                 expanded_conv_8/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_8/squeeze_excite/ (None, 288)          0           multiply_33[0][0]                
+__________________________________________________________________________________________________
+reshape_14 (Reshape)            (None, 1, 1, 288)    0           expanded_conv_8/squeeze_excite/Av
+__________________________________________________________________________________________________
+expanded_conv_8/squeeze_excite/ (None, 1, 1, 72)     20808       reshape_14[0][0]                 
+__________________________________________________________________________________________________
+expanded_conv_8/squeeze_excite/ (None, 1, 1, 72)     0           expanded_conv_8/squeeze_excite/Co
+__________________________________________________________________________________________________
+expanded_conv_8/squeeze_excite/ (None, 1, 1, 288)    21024       expanded_conv_8/squeeze_excite/Re
+__________________________________________________________________________________________________
+tf.__operators__.add_48 (TFOpLa (None, 1, 1, 288)    0           expanded_conv_8/squeeze_excite/Co
+__________________________________________________________________________________________________
+re_lu_64 (ReLU)                 (None, 1, 1, 288)    0           tf.__operators__.add_48[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_48 (TFOpLambda (None, 1, 1, 288)    0           re_lu_64[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_8/squeeze_excite/ (None, 7, 7, 288)    0           multiply_33[0][0]                
+                                                                 tf.math.multiply_48[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_8/project (Conv2D (None, 7, 7, 96)     27648       expanded_conv_8/squeeze_excite/Mu
+__________________________________________________________________________________________________
+expanded_conv_8/project/BatchNo (None, 7, 7, 96)     384         expanded_conv_8/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_9/expand (Conv2D) (None, 7, 7, 576)    55296       expanded_conv_8/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_9/expand/BatchNor (None, 7, 7, 576)    2304        expanded_conv_9/expand[0][0]     
+__________________________________________________________________________________________________
+tf.__operators__.add_49 (TFOpLa (None, 7, 7, 576)    0           expanded_conv_9/expand/BatchNorm[
+__________________________________________________________________________________________________
+re_lu_65 (ReLU)                 (None, 7, 7, 576)    0           tf.__operators__.add_49[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_49 (TFOpLambda (None, 7, 7, 576)    0           re_lu_65[0][0]                   
+__________________________________________________________________________________________________
+multiply_34 (Multiply)          (None, 7, 7, 576)    0           tf.math.multiply_49[0][0]        
+                                                                 expanded_conv_9/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_9/depthwise (Dept (None, 7, 7, 576)    14400       multiply_34[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_9/depthwise/Batch (None, 7, 7, 576)    2304        expanded_conv_9/depthwise[0][0]  
+__________________________________________________________________________________________________
+tf.__operators__.add_50 (TFOpLa (None, 7, 7, 576)    0           expanded_conv_9/depthwise/BatchNo
+__________________________________________________________________________________________________
+re_lu_66 (ReLU)                 (None, 7, 7, 576)    0           tf.__operators__.add_50[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_50 (TFOpLambda (None, 7, 7, 576)    0           re_lu_66[0][0]                   
+__________________________________________________________________________________________________
+multiply_35 (Multiply)          (None, 7, 7, 576)    0           tf.math.multiply_50[0][0]        
+                                                                 expanded_conv_9/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_9/squeeze_excite/ (None, 576)          0           multiply_35[0][0]                
+__________________________________________________________________________________________________
+reshape_15 (Reshape)            (None, 1, 1, 576)    0           expanded_conv_9/squeeze_excite/Av
+__________________________________________________________________________________________________
+expanded_conv_9/squeeze_excite/ (None, 1, 1, 144)    83088       reshape_15[0][0]                 
+__________________________________________________________________________________________________
+expanded_conv_9/squeeze_excite/ (None, 1, 1, 144)    0           expanded_conv_9/squeeze_excite/Co
+__________________________________________________________________________________________________
+expanded_conv_9/squeeze_excite/ (None, 1, 1, 576)    83520       expanded_conv_9/squeeze_excite/Re
+__________________________________________________________________________________________________
+tf.__operators__.add_51 (TFOpLa (None, 1, 1, 576)    0           expanded_conv_9/squeeze_excite/Co
+__________________________________________________________________________________________________
+re_lu_67 (ReLU)                 (None, 1, 1, 576)    0           tf.__operators__.add_51[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_51 (TFOpLambda (None, 1, 1, 576)    0           re_lu_67[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_9/squeeze_excite/ (None, 7, 7, 576)    0           multiply_35[0][0]                
+                                                                 tf.math.multiply_51[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_9/project (Conv2D (None, 7, 7, 96)     55296       expanded_conv_9/squeeze_excite/Mu
+__________________________________________________________________________________________________
+expanded_conv_9/project/BatchNo (None, 7, 7, 96)     384         expanded_conv_9/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_9/Add (Add)       (None, 7, 7, 96)     0           expanded_conv_8/project/BatchNorm
+                                                                 expanded_conv_9/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_10/expand (Conv2D (None, 7, 7, 576)    55296       expanded_conv_9/Add[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_10/expand/BatchNo (None, 7, 7, 576)    2304        expanded_conv_10/expand[0][0]    
+__________________________________________________________________________________________________
+tf.__operators__.add_52 (TFOpLa (None, 7, 7, 576)    0           expanded_conv_10/expand/BatchNorm
+__________________________________________________________________________________________________
+re_lu_68 (ReLU)                 (None, 7, 7, 576)    0           tf.__operators__.add_52[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_52 (TFOpLambda (None, 7, 7, 576)    0           re_lu_68[0][0]                   
+__________________________________________________________________________________________________
+multiply_36 (Multiply)          (None, 7, 7, 576)    0           tf.math.multiply_52[0][0]        
+                                                                 expanded_conv_10/expand/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_10/depthwise (Dep (None, 7, 7, 576)    14400       multiply_36[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_10/depthwise/Batc (None, 7, 7, 576)    2304        expanded_conv_10/depthwise[0][0] 
+__________________________________________________________________________________________________
+tf.__operators__.add_53 (TFOpLa (None, 7, 7, 576)    0           expanded_conv_10/depthwise/BatchN
+__________________________________________________________________________________________________
+re_lu_69 (ReLU)                 (None, 7, 7, 576)    0           tf.__operators__.add_53[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_53 (TFOpLambda (None, 7, 7, 576)    0           re_lu_69[0][0]                   
+__________________________________________________________________________________________________
+multiply_37 (Multiply)          (None, 7, 7, 576)    0           tf.math.multiply_53[0][0]        
+                                                                 expanded_conv_10/depthwise/BatchN
+__________________________________________________________________________________________________
+expanded_conv_10/squeeze_excite (None, 576)          0           multiply_37[0][0]                
+__________________________________________________________________________________________________
+reshape_16 (Reshape)            (None, 1, 1, 576)    0           expanded_conv_10/squeeze_excite/A
+__________________________________________________________________________________________________
+expanded_conv_10/squeeze_excite (None, 1, 1, 144)    83088       reshape_16[0][0]                 
+__________________________________________________________________________________________________
+expanded_conv_10/squeeze_excite (None, 1, 1, 144)    0           expanded_conv_10/squeeze_excite/C
+__________________________________________________________________________________________________
+expanded_conv_10/squeeze_excite (None, 1, 1, 576)    83520       expanded_conv_10/squeeze_excite/R
+__________________________________________________________________________________________________
+tf.__operators__.add_54 (TFOpLa (None, 1, 1, 576)    0           expanded_conv_10/squeeze_excite/C
+__________________________________________________________________________________________________
+re_lu_70 (ReLU)                 (None, 1, 1, 576)    0           tf.__operators__.add_54[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_54 (TFOpLambda (None, 1, 1, 576)    0           re_lu_70[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_10/squeeze_excite (None, 7, 7, 576)    0           multiply_37[0][0]                
+                                                                 tf.math.multiply_54[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_10/project (Conv2 (None, 7, 7, 96)     55296       expanded_conv_10/squeeze_excite/M
+__________________________________________________________________________________________________
+expanded_conv_10/project/BatchN (None, 7, 7, 96)     384         expanded_conv_10/project[0][0]   
+__________________________________________________________________________________________________
+expanded_conv_10/Add (Add)      (None, 7, 7, 96)     0           expanded_conv_9/Add[0][0]        
+                                                                 expanded_conv_10/project/BatchNor
+__________________________________________________________________________________________________
+Conv_1 (Conv2D)                 (None, 7, 7, 576)    55296       expanded_conv_10/Add[0][0]       
+__________________________________________________________________________________________________
+Conv_1/BatchNorm (BatchNormaliz (None, 7, 7, 576)    2304        Conv_1[0][0]                     
+__________________________________________________________________________________________________
+tf.__operators__.add_55 (TFOpLa (None, 7, 7, 576)    0           Conv_1/BatchNorm[0][0]           
+__________________________________________________________________________________________________
+re_lu_71 (ReLU)                 (None, 7, 7, 576)    0           tf.__operators__.add_55[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_55 (TFOpLambda (None, 7, 7, 576)    0           re_lu_71[0][0]                   
+__________________________________________________________________________________________________
+multiply_38 (Multiply)          (None, 7, 7, 576)    0           tf.math.multiply_55[0][0]        
+                                                                 Conv_1/BatchNorm[0][0]           
+__________________________________________________________________________________________________
+Conv_2 (Conv2D)                 (None, 7, 7, 1024)   590848      multiply_38[0][0]                
+__________________________________________________________________________________________________
+tf.__operators__.add_56 (TFOpLa (None, 7, 7, 1024)   0           Conv_2[0][0]                     
+__________________________________________________________________________________________________
+re_lu_72 (ReLU)                 (None, 7, 7, 1024)   0           tf.__operators__.add_56[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_56 (TFOpLambda (None, 7, 7, 1024)   0           re_lu_72[0][0]                   
+__________________________________________________________________________________________________
+multiply_39 (Multiply)          (None, 7, 7, 1024)   0           tf.math.multiply_56[0][0]        
+                                                                 Conv_2[0][0]                     
+__________________________________________________________________________________________________
+flatten (Flatten)               (None, 50176)        0           multiply_39[0][0]                
+__________________________________________________________________________________________________
+dense (Dense)                   (None, 1024)         51381248    flatten[0][0]                    
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, 38)           38950       dense[0][0]                      
+==================================================================================================
+Total params: 52,950,166
+Trainable params: 51,420,198
+Non-trainable params: 1,529,968
+__________________________________________________________________________________________________
+None
+Epoch 1/100
+2021-01-18 03:02:04.182774: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-18 03:02:04.594255: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-18 03:02:06.336762: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+WARNING:tensorflow:AutoGraph could not transform <function Model.make_test_function.<locals>.test_function at 0x2aeb2b0b4620> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+1358/1358 - 2255s - loss: 3.3750 - accuracy: 0.1006 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.6939 - val_loss: 3.3611 - val_accuracy: 0.0987 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7021
+Epoch 2/100
+1358/1358 - 1951s - loss: 3.3530 - accuracy: 0.0986 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7012 - val_loss: 3.3595 - val_accuracy: 0.0987 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7041
+Epoch 3/100
+1358/1358 - 2394s - loss: 3.3498 - accuracy: 0.0981 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7018 - val_loss: 3.3362 - val_accuracy: 0.0938 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7057
+Epoch 4/100
+1358/1358 - 2348s - loss: 3.3439 - accuracy: 0.1023 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7044 - val_loss: 3.3311 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7069
+Epoch 5/100
+1358/1358 - 1839s - loss: 3.3418 - accuracy: 0.1042 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7046 - val_loss: 3.3550 - val_accuracy: 0.1060 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7081
+Epoch 6/100
+1358/1358 - 1847s - loss: 3.3307 - accuracy: 0.1103 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7082 - val_loss: 3.3387 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7056
+Epoch 7/100
+1358/1358 - 1852s - loss: 3.3442 - accuracy: 0.1018 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7040 - val_loss: 3.3316 - val_accuracy: 0.0987 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7085
+Epoch 8/100
+1358/1358 - 1839s - loss: 3.3339 - accuracy: 0.1063 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7065 - val_loss: 3.3171 - val_accuracy: 0.1662 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7119
+Epoch 9/100
+1358/1358 - 1892s - loss: 3.3149 - accuracy: 0.1157 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7127 - val_loss: 3.3026 - val_accuracy: 0.1610 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7221
+Epoch 10/100
+1358/1358 - 1825s - loss: 3.2939 - accuracy: 0.1280 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7189 - val_loss: 3.2420 - val_accuracy: 0.1449 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7339
+Epoch 11/100
+1358/1358 - 1841s - loss: 3.2562 - accuracy: 0.1423 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7313 - val_loss: 3.2242 - val_accuracy: 0.1267 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7368
+Epoch 12/100
+1358/1358 - 3766s - loss: 3.3239 - accuracy: 0.1320 - precision: 0.5000 - recall: 1.3807e-04 - auc: 0.7053 - val_loss: 3.5485 - val_accuracy: 0.0938 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.6174
+Epoch 13/100
+1358/1358 - 5834s - loss: 3.4748 - accuracy: 0.0937 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.6667 - val_loss: 3.4200 - val_accuracy: 0.0938 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.6876
+Epoch 14/100
+1358/1358 - 2638s - loss: 3.3948 - accuracy: 0.0937 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.6924 - val_loss: 3.3769 - val_accuracy: 0.0938 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.6962
+Epoch 15/100
+1358/1358 - 1959s - loss: 3.3695 - accuracy: 0.0955 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.6981 - val_loss: 3.3629 - val_accuracy: 0.0987 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7003
+Epoch 16/100
+1358/1358 - 1981s - loss: 3.3602 - accuracy: 0.0998 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7010 - val_loss: 3.3566 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7020
+Epoch 17/100
+1358/1358 - 2196s - loss: 3.3554 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7020 - val_loss: 3.3530 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7025
+Epoch 18/100
+1358/1358 - 2033s - loss: 3.3525 - accuracy: 0.1009 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7025 - val_loss: 3.3506 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7029
+Epoch 19/100
+1358/1358 - 2071s - loss: 3.3506 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7028 - val_loss: 3.3490 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7032
+Epoch 20/100
+1358/1358 - 2114s - loss: 3.3492 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7029 - val_loss: 3.3478 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7033
+Epoch 21/100
+1358/1358 - 2224s - loss: 3.3482 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7030 - val_loss: 3.3470 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7035
+Epoch 22/100
+1358/1358 - 2643s - loss: 3.3475 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7032 - val_loss: 3.3464 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7035
+Epoch 23/100
+1358/1358 - 2382s - loss: 3.3470 - accuracy: 0.1009 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7031 - val_loss: 3.3459 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7034
+Epoch 24/100
+1358/1358 - 1892s - loss: 3.3466 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7031 - val_loss: 3.3455 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7034
+Epoch 25/100
+1358/1358 - 1829s - loss: 3.3462 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7031 - val_loss: 3.3452 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7033
+Epoch 26/100
+1358/1358 - 1836s - loss: 3.3460 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7030 - val_loss: 3.3450 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7033
+Epoch 27/100
+1358/1358 - 2192s - loss: 3.3458 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7030 - val_loss: 3.3448 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 28/100
+1358/1358 - 2425s - loss: 3.3456 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7032 - val_loss: 3.3446 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 29/100
+1358/1358 - 1937s - loss: 3.3455 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7033 - val_loss: 3.3445 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 30/100
+1358/1358 - 1964s - loss: 3.3453 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7033 - val_loss: 3.3444 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 31/100
+1358/1358 - 2131s - loss: 3.3452 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3443 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 32/100
+1358/1358 - 2215s - loss: 3.3452 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3442 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 33/100
+1358/1358 - 2139s - loss: 3.3451 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3442 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 34/100
+1358/1358 - 1956s - loss: 3.3450 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3441 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 35/100
+1358/1358 - 1803s - loss: 3.3450 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3441 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 36/100
+1358/1358 - 1925s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3440 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 37/100
+1358/1358 - 1889s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3440 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 38/100
+1358/1358 - 1812s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3440 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 39/100
+1358/1358 - 1892s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3440 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 40/100
+1358/1358 - 1884s - loss: 3.3448 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3439 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 41/100
+1358/1358 - 1968s - loss: 3.3448 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3439 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 42/100
+1358/1358 - 1824s - loss: 3.3448 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3439 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 43/100
+1358/1358 - 1783s - loss: 3.3448 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3439 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 44/100
+1358/1358 - 1828s - loss: 3.3448 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3439 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 45/100
+1358/1358 - 1806s - loss: 3.3448 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3439 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 46/100
+1358/1358 - 1765s - loss: 3.3448 - accuracy: 0.1005 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3439 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 47/100
+1358/1358 - 1757s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 48/100
+1358/1358 - 1724s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7037 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 49/100
+1358/1358 - 1730s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 50/100
+1358/1358 - 1786s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 51/100
+1358/1358 - 2128s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 52/100
+1358/1358 - 2236s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 53/100
+1358/1358 - 2182s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 54/100
+1358/1358 - 2213s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7037 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 55/100
+1358/1358 - 2714s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 56/100
+1358/1358 - 2244s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 57/100
+1358/1358 - 2152s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 58/100
+1358/1358 - 1942s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 59/100
+1358/1358 - 2093s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 60/100
+1358/1358 - 1995s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 61/100
+1358/1358 - 2060s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 62/100
+1358/1358 - 1901s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 63/100
+1358/1358 - 2021s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 64/100
+1358/1358 - 2057s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 65/100
+1358/1358 - 2006s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 66/100
+1358/1358 - 2890s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 67/100
+1358/1358 - 2546s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 68/100
+1358/1358 - 2767s - loss: 3.3447 - accuracy: 0.1011 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 69/100
+1358/1358 - 2111s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 70/100
+1358/1358 - 2012s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 71/100
+1358/1358 - 2026s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 72/100
+1358/1358 - 1796s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 73/100
+1358/1358 - 1765s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 74/100
+1358/1358 - 2001s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 75/100
+1358/1358 - 2272s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 76/100
+1358/1358 - 1996s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 77/100
+1358/1358 - 2105s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 78/100
+1358/1358 - 2382s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 79/100
+1358/1358 - 2084s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 80/100
+1358/1358 - 1981s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 81/100
+1358/1358 - 1954s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 82/100
+1358/1358 - 1879s - loss: 3.3447 - accuracy: 0.1012 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 83/100
+1358/1358 - 1829s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 84/100
+1358/1358 - 1798s - loss: 3.3446 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 85/100
+1358/1358 - 1814s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 86/100
+1358/1358 - 1801s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 87/100
+1358/1358 - 1800s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 88/100
+1358/1358 - 1739s - loss: 3.3447 - accuracy: 0.1008 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 89/100
+1358/1358 - 1721s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 90/100
+1358/1358 - 1754s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 91/100
+1358/1358 - 1741s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 92/100
+1358/1358 - 1725s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 93/100
+1358/1358 - 1785s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 94/100
+1358/1358 - 1957s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 95/100
+1358/1358 - 1961s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 96/100
+1358/1358 - 1852s - loss: 3.3446 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+Epoch 97/100
+1358/1358 - 1816s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 98/100
+1358/1358 - 2019s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 99/100
+1358/1358 - 2125s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 100/100
+1358/1358 - 2093s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+2021-01-20 12:36:27.176350: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:tensorflow:AutoGraph could not transform <function canonicalize_signatures.<locals>.signature_wrapper at 0x2aeba0a051e0> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+{'loss': [3.375013589859009, 3.35298228263855, 3.3498189449310303, 3.343876600265503, 3.341773509979248, 3.3307228088378906, 3.344231128692627, 3.33393931388855, 3.3149499893188477, 3.2939047813415527, 3.2561652660369873, 3.323861598968506, 3.4748117923736572, 3.3948235511779785, 3.369516372680664, 3.36020565032959, 3.355414867401123, 3.3525023460388184, 3.3505592346191406, 3.349221706390381, 3.3482494354248047, 3.347519874572754, 3.3469719886779785, 3.3465523719787598, 3.346224069595337, 3.345964193344116, 3.3457510471343994, 3.345590114593506, 3.345452070236206, 3.3453280925750732, 3.3452348709106445, 3.3451602458953857, 3.3450818061828613, 3.345038414001465, 3.344989061355591, 3.3449454307556152, 3.34490704536438, 3.3448829650878906, 3.344863176345825, 3.3448336124420166, 3.3448212146759033, 3.344797372817993, 3.344796657562256, 3.344783306121826, 3.3447606563568115, 3.3447511196136475, 3.3447420597076416, 3.3447306156158447, 3.3447301387786865, 3.3447258472442627, 3.3447132110595703, 3.3446998596191406, 3.344714641571045, 3.3447060585021973, 3.344700574874878, 3.344694137573242, 3.344698905944824, 3.34468412399292, 3.3446924686431885, 3.3446784019470215, 3.3446831703186035, 3.344674825668335, 3.3446779251098633, 3.3446779251098633, 3.3446805477142334, 3.3446757793426514, 3.344667673110962, 3.3446707725524902, 3.344674825668335, 3.344672203063965, 3.344667673110962, 3.344665050506592, 3.344658613204956, 3.344667911529541, 3.344672679901123, 3.3446662425994873, 3.3446578979492188, 3.344665765762329, 3.344660758972168, 3.3446578979492188, 3.3446614742279053, 3.344661235809326, 3.3446574211120605, 3.344648838043213, 3.344668388366699, 3.3446500301361084, 3.34466290473938, 3.34466552734375, 3.3446648120880127, 3.3446600437164307, 3.3446571826934814, 3.344663381576538, 3.344651699066162, 3.344667911529541, 3.3446571826934814, 3.344646453857422, 3.34466290473938, 3.3446552753448486, 3.3446619510650635, 3.3446621894836426], 'accuracy': [0.10060751438140869, 0.09862849861383438, 0.0981452539563179, 0.10228737443685532, 0.10422036051750183, 0.11029547452926636, 0.10180412232875824, 0.10626840591430664, 0.11572625488042831, 0.12801454961299896, 0.14225883781909943, 0.13201859593391418, 0.0937039777636528, 0.0937039777636528, 0.09552190452814102, 0.09975607693195343, 0.10138991475105286, 0.10090666264295578, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10088365525007248, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.1004694402217865, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10111377388238907, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10120581835508347, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10079160332679749, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286], 'precision': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'recall': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.00013807069626636803, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'auc': [0.6939228773117065, 0.7012236714363098, 0.701831042766571, 0.704359769821167, 0.7045972943305969, 0.7082102298736572, 0.7039998173713684, 0.7064501047134399, 0.7126607894897461, 0.7188735008239746, 0.7313316464424133, 0.7052580714225769, 0.66669762134552, 0.6924267411231995, 0.6981114745140076, 0.7010341882705688, 0.7020041346549988, 0.702484130859375, 0.7028056383132935, 0.7028671503067017, 0.7029872536659241, 0.7031981945037842, 0.7031347155570984, 0.7030996084213257, 0.7030918002128601, 0.7029594779014587, 0.7030492424964905, 0.7032039761543274, 0.7033336758613586, 0.7033181190490723, 0.7034627199172974, 0.7034712433815002, 0.7035199403762817, 0.7034236192703247, 0.7035501003265381, 0.7035243511199951, 0.7035543918609619, 0.7035134434700012, 0.7034581899642944, 0.7035438418388367, 0.7034807801246643, 0.7034446001052856, 0.7035374045372009, 0.7035423517227173, 0.7035481929779053, 0.7035773992538452, 0.7035493850708008, 0.7036859393119812, 0.7035405039787292, 0.7034132480621338, 0.7035242915153503, 0.7036060690879822, 0.7035204768180847, 0.7036868333816528, 0.7035655379295349, 0.7035633325576782, 0.7035126686096191, 0.703480064868927, 0.7035991549491882, 0.7035297155380249, 0.7035441994667053, 0.7035447359085083, 0.7035480737686157, 0.7035623788833618, 0.7034982442855835, 0.703630268573761, 0.7035384178161621, 0.7035629749298096, 0.7036105990409851, 0.7035120129585266, 0.7034067511558533, 0.7035443186759949, 0.7034785151481628, 0.7034293413162231, 0.703583836555481, 0.703503429889679, 0.7035335898399353, 0.7035800218582153, 0.7035543322563171, 0.7035333514213562, 0.7036194801330566, 0.7036128044128418, 0.7036091089248657, 0.7035444378852844, 0.7035377025604248, 0.7035504579544067, 0.7035566568374634, 0.703524112701416, 0.7035214304924011, 0.7036236524581909, 0.7034114003181458, 0.7035454511642456, 0.7035834193229675, 0.7035257816314697, 0.7035683393478394, 0.703583300113678, 0.7035382390022278, 0.7035723924636841, 0.7035459876060486, 0.7034581899642944], 'val_loss': [3.361057996749878, 3.3595006465911865, 3.336185932159424, 3.3310790061950684, 3.3550052642822266, 3.3386545181274414, 3.3315534591674805, 3.3170998096466064, 3.3026492595672607, 3.242004871368408, 3.2242236137390137, 3.548492431640625, 3.420013189315796, 3.376854181289673, 3.3629212379455566, 3.3566246032714844, 3.352962017059326, 3.350602626800537, 3.348999261856079, 3.3478496074676514, 3.3470096588134766, 3.3463833332061768, 3.3458991050720215, 3.3455183506011963, 3.3452200889587402, 3.3449785709381104, 3.344787359237671, 3.344633102416992, 3.3445072174072266, 3.3443992137908936, 3.344313859939575, 3.3442368507385254, 3.3441762924194336, 3.344120740890503, 3.3440802097320557, 3.34403920173645, 3.344008207321167, 3.3439781665802, 3.3439605236053467, 3.3439364433288574, 3.3439178466796875, 3.3439016342163086, 3.343883514404297, 3.343870162963867, 3.3438591957092285, 3.3438501358032227, 3.343841791152954, 3.343831777572632, 3.3438239097595215, 3.3438165187835693, 3.343812942504883, 3.3438122272491455, 3.343801736831665, 3.3437986373901367, 3.3437938690185547, 3.3437910079956055, 3.34378719329834, 3.3437929153442383, 3.343782663345337, 3.3437790870666504, 3.343778371810913, 3.343777656555176, 3.3437788486480713, 3.343773365020752, 3.3437719345092773, 3.3437716960906982, 3.3437671661376953, 3.3437705039978027, 3.343766927719116, 3.343764305114746, 3.343766212463379, 3.3437600135803223, 3.3437628746032715, 3.3437607288360596, 3.3437576293945312, 3.343759775161743, 3.3437633514404297, 3.3437583446502686, 3.3437585830688477, 3.3437585830688477, 3.343759298324585, 3.3437554836273193, 3.3437604904174805, 3.3437626361846924, 3.3437554836273193, 3.3437628746032715, 3.3437578678131104, 3.3437554836273193, 3.343752145767212, 3.3437554836273193, 3.343759775161743, 3.343752861022949, 3.3437583446502686, 3.343755006790161, 3.3437554836273193, 3.343759298324585, 3.343752145767212, 3.3437561988830566, 3.3437535762786865, 3.343751907348633], 'val_accuracy': [0.09871877729892731, 0.09871877729892731, 0.09383353590965271, 0.10148400813341141, 0.10600055009126663, 0.10148400813341141, 0.09871877729892731, 0.16619043052196503, 0.1610286682844162, 0.14489814639091492, 0.12673978507518768, 0.09383353590965271, 0.09383353590965271, 0.09383353590965271, 0.09871877729892731, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141], 'val_precision': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'val_recall': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'val_auc': [0.7020704746246338, 0.7040798664093018, 0.7056909203529358, 0.7069263458251953, 0.7081213593482971, 0.7056196928024292, 0.7085428237915039, 0.7119264006614685, 0.7221284508705139, 0.7338970899581909, 0.7367799282073975, 0.6173641681671143, 0.687649667263031, 0.6961981058120728, 0.7003111243247986, 0.7020226716995239, 0.7024685144424438, 0.702933132648468, 0.7032320499420166, 0.7033017873764038, 0.7035334706306458, 0.7035334706306458, 0.7033964991569519, 0.7033964991569519, 0.703299343585968, 0.7033429145812988, 0.7037689089775085, 0.7037689089775085, 0.7037689089775085, 0.7037689089775085, 0.7037689089775085, 0.7037689089775085, 0.7037689089775085, 0.7037689089775085, 0.7037689089775085, 0.7038374543190002, 0.7038374543190002, 0.7037689089775085, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7039557695388794, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7039557695388794, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7039557695388794, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7039557695388794, 0.7038374543190002, 0.7039557695388794, 0.7039557695388794, 0.7037689089775085, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7039557695388794, 0.7039557695388794, 0.7039557695388794, 0.7039557695388794, 0.7039557695388794, 0.7039557695388794, 0.7039557695388794, 0.7038374543190002, 0.7038001418113708, 0.7039557695388794, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7039557695388794, 0.70391845703125, 0.7038374543190002, 0.7039557695388794, 0.7039557695388794, 0.7039557695388794]}
+date and time = 20-01-2021_12-36-21
+Saving the model to path: /users/PAA0023/dong760/plant_leaves_diagnosis/saved_models/MobileNetV3Small_model_BatchSize_32_0.2ValSplit_20-01-2021_12-36-21_100epochs
+
+Prediction Result: 
+340/340 - 453s - loss: 3.3438 - accuracy: 0.1015 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7040
+Result: [3.3437511920928955, 0.10148400813341141, 0.0, 0.0, 0.7039557695388794]
+Validation accuracy: 0.10148400813341141 Validation accuracy: 3.3437511920928955
+
+
+p0315.ten.osc.edu:
+                                                                               Req'd  Req'd   Elap 
+Job id               Username Queue    Name                 SessID NDS   TSK   Memory Time Use S Time 
+-------------------- -------- -------- -------------------- ------ ----- ----- ------ ----- - -----
+2786193              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 57:43
+2789380              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 49:35
+2792235              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 46:27
+The date when running current script is :
+Wed Jan 20 12:44:30 EST 2021

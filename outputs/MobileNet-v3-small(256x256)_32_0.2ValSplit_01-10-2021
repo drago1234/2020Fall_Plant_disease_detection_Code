@@ -1,0 +1,746 @@
+environemnt set up
+
+The following have been reloaded with a version change:
+  1) cuda/10.0.130 => cuda/11.0.3
+
+Running the batch script
+2021-01-12 16:29:09.700261: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-12 16:29:29.317544: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX512F
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-01-12 16:29:29.325143: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-12 16:29:29.327995: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2021-01-12 16:29:29.377307: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-12 16:29:29.377344: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-12 16:29:29.382201: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-12 16:29:29.382249: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-12 16:29:29.384952: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-12 16:29:29.386739: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-12 16:29:29.390853: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-12 16:29:29.392813: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-12 16:29:29.394281: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-12 16:29:29.398646: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-12 16:29:29.400752: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-12 16:29:32.293566: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-12 16:29:32.293630: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-01-12 16:29:32.293645: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-01-12 16:29:32.301791: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 30128 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2021-01-12 16:29:32.308117: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-12 16:29:32.310609: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-12 16:29:32.310651: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-12 16:29:32.310681: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-12 16:29:32.310699: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-12 16:29:32.310718: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-12 16:29:32.310740: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-12 16:29:32.310758: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-12 16:29:32.310775: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-12 16:29:32.310793: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-12 16:29:32.315524: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-12 16:29:32.315559: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-12 16:29:32.315571: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-01-12 16:29:32.315582: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-01-12 16:29:32.320269: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 30128 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2021-01-12 16:29:34.846913: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-12 16:29:34.850067: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-12 16:29:34.850125: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-12 16:29:34.850159: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-12 16:29:34.850181: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-12 16:29:34.850202: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-12 16:29:34.850223: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-12 16:29:34.850244: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-12 16:29:34.850265: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-12 16:29:34.850287: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-12 16:29:34.855903: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-12 16:29:34.856301: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-12 16:29:34.859133: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-12 16:29:34.859172: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-12 16:29:34.859199: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-12 16:29:34.859219: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-12 16:29:34.859238: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-12 16:29:34.859257: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-12 16:29:34.859280: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-12 16:29:34.859300: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-12 16:29:34.859319: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-12 16:29:34.864585: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-12 16:29:34.864633: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-12 16:29:34.864647: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-01-12 16:29:34.864660: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-01-12 16:29:34.869906: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30128 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2021-01-12 16:30:00.259481: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-01-12 16:30:00.260977: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2900000000 Hz
+Using TensorFlow backend.
+WARNING:tensorflow:AutoGraph could not transform <function Model.make_train_function.<locals>.train_function at 0x2b8d845b4e18> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+Does the system is built with CUDA?: True
+Default GPU Device: /device:GPU:0
+====> Start running baseline.py
+Classes: ['Tomato___Late_blight', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Peach___healthy', 'Grape___Esca_(Black_Measles)', 'Potato___Late_blight', 'Pepper,_bell___Bacterial_spot', 'Strawberry___healthy', 'Orange___Haunglongbing_(Citrus_greening)', 'Tomato___Leaf_Mold', 'Apple___Black_rot', 'Strawberry___Leaf_scorch', 'Tomato___Early_blight', 'Cherry_(including_sour)___healthy', 'Corn_(maize)___Common_rust_', 'Blueberry___healthy', 'Potato___Early_blight', 'Pepper,_bell___healthy', 'Apple___Cedar_apple_rust', 'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)', 'Tomato___Tomato_mosaic_virus', 'Tomato___Target_Spot', 'Tomato___healthy', 'Peach___Bacterial_spot', 'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot', 'Tomato___Spider_mites Two-spotted_spider_mite', 'Corn_(maize)___healthy', 'Squash___Powdery_mildew', 'Cherry_(including_sour)___Powdery_mildew', 'Tomato___Bacterial_spot', 'Grape___Black_rot', 'Apple___healthy', 'Potato___healthy', 'Corn_(maize)___Northern_Leaf_Blight', 'Tomato___Septoria_leaf_spot', 'Raspberry___healthy', 'Soybean___healthy', 'Apple___Apple_scab', 'Grape___healthy']
+Number of classes: 38
+Total number of images: 54305
+first_folder_path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight
+Number of folder: 38
+sample image path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight/5fdf3288-d5f4-4c70-9b12-95222b82d415___RS_Late.B 4942.JPG
+Image size: (256, 256, 3)
+Found 43456 images belonging to 38 classes.
+Found 10849 images belonging to 38 classes.
+Train size: 43456
+val_size: 10849, train_size: 43456
+
+====> Statistics: Model name: MobileNetV3Small_model, epochs=40, batch_size=32, validation_split=0.2, lr=0.001, momentum=0.9, steps_per_epoch =100, feature shape= (224, 224, 3), no_classes=38, loss_function=categorical_crossentropy
+Model: "model"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_7 (InputLayer)            [(None, 224, 224, 3) 0                                            
+__________________________________________________________________________________________________
+rescaling_1 (Rescaling)         (None, 224, 224, 3)  0           input_7[0][0]                    
+__________________________________________________________________________________________________
+Conv (Conv2D)                   (None, 112, 112, 16) 432         rescaling_1[0][0]                
+__________________________________________________________________________________________________
+Conv/BatchNorm (BatchNormalizat (None, 112, 112, 16) 64          Conv[0][0]                       
+__________________________________________________________________________________________________
+tf.__operators__.add_29 (TFOpLa (None, 112, 112, 16) 0           Conv/BatchNorm[0][0]             
+__________________________________________________________________________________________________
+re_lu_40 (ReLU)                 (None, 112, 112, 16) 0           tf.__operators__.add_29[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_29 (TFOpLambda (None, 112, 112, 16) 0           re_lu_40[0][0]                   
+__________________________________________________________________________________________________
+multiply_21 (Multiply)          (None, 112, 112, 16) 0           tf.math.multiply_29[0][0]        
+                                                                 Conv/BatchNorm[0][0]             
+__________________________________________________________________________________________________
+expanded_conv/depthwise/pad (Ze (None, 113, 113, 16) 0           multiply_21[0][0]                
+__________________________________________________________________________________________________
+expanded_conv/depthwise (Depthw (None, 56, 56, 16)   144         expanded_conv/depthwise/pad[0][0]
+__________________________________________________________________________________________________
+expanded_conv/depthwise/BatchNo (None, 56, 56, 16)   64          expanded_conv/depthwise[0][0]    
+__________________________________________________________________________________________________
+re_lu_41 (ReLU)                 (None, 56, 56, 16)   0           expanded_conv/depthwise/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv/squeeze_excite/Av (None, 16)           0           re_lu_41[0][0]                   
+__________________________________________________________________________________________________
+reshape_8 (Reshape)             (None, 1, 1, 16)     0           expanded_conv/squeeze_excite/AvgP
+__________________________________________________________________________________________________
+expanded_conv/squeeze_excite/Co (None, 1, 1, 8)      136         reshape_8[0][0]                  
+__________________________________________________________________________________________________
+expanded_conv/squeeze_excite/Re (None, 1, 1, 8)      0           expanded_conv/squeeze_excite/Conv
+__________________________________________________________________________________________________
+expanded_conv/squeeze_excite/Co (None, 1, 1, 16)     144         expanded_conv/squeeze_excite/Relu
+__________________________________________________________________________________________________
+tf.__operators__.add_30 (TFOpLa (None, 1, 1, 16)     0           expanded_conv/squeeze_excite/Conv
+__________________________________________________________________________________________________
+re_lu_42 (ReLU)                 (None, 1, 1, 16)     0           tf.__operators__.add_30[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_30 (TFOpLambda (None, 1, 1, 16)     0           re_lu_42[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv/squeeze_excite/Mu (None, 56, 56, 16)   0           re_lu_41[0][0]                   
+                                                                 tf.math.multiply_30[0][0]        
+__________________________________________________________________________________________________
+expanded_conv/project (Conv2D)  (None, 56, 56, 16)   256         expanded_conv/squeeze_excite/Mul[
+__________________________________________________________________________________________________
+expanded_conv/project/BatchNorm (None, 56, 56, 16)   64          expanded_conv/project[0][0]      
+__________________________________________________________________________________________________
+expanded_conv_1/expand (Conv2D) (None, 56, 56, 72)   1152        expanded_conv/project/BatchNorm[0
+__________________________________________________________________________________________________
+expanded_conv_1/expand/BatchNor (None, 56, 56, 72)   288         expanded_conv_1/expand[0][0]     
+__________________________________________________________________________________________________
+re_lu_43 (ReLU)                 (None, 56, 56, 72)   0           expanded_conv_1/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_1/depthwise/pad ( (None, 57, 57, 72)   0           re_lu_43[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_1/depthwise (Dept (None, 28, 28, 72)   648         expanded_conv_1/depthwise/pad[0][
+__________________________________________________________________________________________________
+expanded_conv_1/depthwise/Batch (None, 28, 28, 72)   288         expanded_conv_1/depthwise[0][0]  
+__________________________________________________________________________________________________
+re_lu_44 (ReLU)                 (None, 28, 28, 72)   0           expanded_conv_1/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_1/project (Conv2D (None, 28, 28, 24)   1728        re_lu_44[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_1/project/BatchNo (None, 28, 28, 24)   96          expanded_conv_1/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_2/expand (Conv2D) (None, 28, 28, 88)   2112        expanded_conv_1/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_2/expand/BatchNor (None, 28, 28, 88)   352         expanded_conv_2/expand[0][0]     
+__________________________________________________________________________________________________
+re_lu_45 (ReLU)                 (None, 28, 28, 88)   0           expanded_conv_2/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_2/depthwise (Dept (None, 28, 28, 88)   792         re_lu_45[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_2/depthwise/Batch (None, 28, 28, 88)   352         expanded_conv_2/depthwise[0][0]  
+__________________________________________________________________________________________________
+re_lu_46 (ReLU)                 (None, 28, 28, 88)   0           expanded_conv_2/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_2/project (Conv2D (None, 28, 28, 24)   2112        re_lu_46[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_2/project/BatchNo (None, 28, 28, 24)   96          expanded_conv_2/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_2/Add (Add)       (None, 28, 28, 24)   0           expanded_conv_1/project/BatchNorm
+                                                                 expanded_conv_2/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_3/expand (Conv2D) (None, 28, 28, 96)   2304        expanded_conv_2/Add[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_3/expand/BatchNor (None, 28, 28, 96)   384         expanded_conv_3/expand[0][0]     
+__________________________________________________________________________________________________
+tf.__operators__.add_31 (TFOpLa (None, 28, 28, 96)   0           expanded_conv_3/expand/BatchNorm[
+__________________________________________________________________________________________________
+re_lu_47 (ReLU)                 (None, 28, 28, 96)   0           tf.__operators__.add_31[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_31 (TFOpLambda (None, 28, 28, 96)   0           re_lu_47[0][0]                   
+__________________________________________________________________________________________________
+multiply_22 (Multiply)          (None, 28, 28, 96)   0           tf.math.multiply_31[0][0]        
+                                                                 expanded_conv_3/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_3/depthwise/pad ( (None, 31, 31, 96)   0           multiply_22[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_3/depthwise (Dept (None, 14, 14, 96)   2400        expanded_conv_3/depthwise/pad[0][
+__________________________________________________________________________________________________
+expanded_conv_3/depthwise/Batch (None, 14, 14, 96)   384         expanded_conv_3/depthwise[0][0]  
+__________________________________________________________________________________________________
+tf.__operators__.add_32 (TFOpLa (None, 14, 14, 96)   0           expanded_conv_3/depthwise/BatchNo
+__________________________________________________________________________________________________
+re_lu_48 (ReLU)                 (None, 14, 14, 96)   0           tf.__operators__.add_32[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_32 (TFOpLambda (None, 14, 14, 96)   0           re_lu_48[0][0]                   
+__________________________________________________________________________________________________
+multiply_23 (Multiply)          (None, 14, 14, 96)   0           tf.math.multiply_32[0][0]        
+                                                                 expanded_conv_3/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_3/squeeze_excite/ (None, 96)           0           multiply_23[0][0]                
+__________________________________________________________________________________________________
+reshape_9 (Reshape)             (None, 1, 1, 96)     0           expanded_conv_3/squeeze_excite/Av
+__________________________________________________________________________________________________
+expanded_conv_3/squeeze_excite/ (None, 1, 1, 24)     2328        reshape_9[0][0]                  
+__________________________________________________________________________________________________
+expanded_conv_3/squeeze_excite/ (None, 1, 1, 24)     0           expanded_conv_3/squeeze_excite/Co
+__________________________________________________________________________________________________
+expanded_conv_3/squeeze_excite/ (None, 1, 1, 96)     2400        expanded_conv_3/squeeze_excite/Re
+__________________________________________________________________________________________________
+tf.__operators__.add_33 (TFOpLa (None, 1, 1, 96)     0           expanded_conv_3/squeeze_excite/Co
+__________________________________________________________________________________________________
+re_lu_49 (ReLU)                 (None, 1, 1, 96)     0           tf.__operators__.add_33[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_33 (TFOpLambda (None, 1, 1, 96)     0           re_lu_49[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_3/squeeze_excite/ (None, 14, 14, 96)   0           multiply_23[0][0]                
+                                                                 tf.math.multiply_33[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_3/project (Conv2D (None, 14, 14, 40)   3840        expanded_conv_3/squeeze_excite/Mu
+__________________________________________________________________________________________________
+expanded_conv_3/project/BatchNo (None, 14, 14, 40)   160         expanded_conv_3/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_4/expand (Conv2D) (None, 14, 14, 240)  9600        expanded_conv_3/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_4/expand/BatchNor (None, 14, 14, 240)  960         expanded_conv_4/expand[0][0]     
+__________________________________________________________________________________________________
+tf.__operators__.add_34 (TFOpLa (None, 14, 14, 240)  0           expanded_conv_4/expand/BatchNorm[
+__________________________________________________________________________________________________
+re_lu_50 (ReLU)                 (None, 14, 14, 240)  0           tf.__operators__.add_34[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_34 (TFOpLambda (None, 14, 14, 240)  0           re_lu_50[0][0]                   
+__________________________________________________________________________________________________
+multiply_24 (Multiply)          (None, 14, 14, 240)  0           tf.math.multiply_34[0][0]        
+                                                                 expanded_conv_4/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_4/depthwise (Dept (None, 14, 14, 240)  6000        multiply_24[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_4/depthwise/Batch (None, 14, 14, 240)  960         expanded_conv_4/depthwise[0][0]  
+__________________________________________________________________________________________________
+tf.__operators__.add_35 (TFOpLa (None, 14, 14, 240)  0           expanded_conv_4/depthwise/BatchNo
+__________________________________________________________________________________________________
+re_lu_51 (ReLU)                 (None, 14, 14, 240)  0           tf.__operators__.add_35[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_35 (TFOpLambda (None, 14, 14, 240)  0           re_lu_51[0][0]                   
+__________________________________________________________________________________________________
+multiply_25 (Multiply)          (None, 14, 14, 240)  0           tf.math.multiply_35[0][0]        
+                                                                 expanded_conv_4/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_4/squeeze_excite/ (None, 240)          0           multiply_25[0][0]                
+__________________________________________________________________________________________________
+reshape_10 (Reshape)            (None, 1, 1, 240)    0           expanded_conv_4/squeeze_excite/Av
+__________________________________________________________________________________________________
+expanded_conv_4/squeeze_excite/ (None, 1, 1, 64)     15424       reshape_10[0][0]                 
+__________________________________________________________________________________________________
+expanded_conv_4/squeeze_excite/ (None, 1, 1, 64)     0           expanded_conv_4/squeeze_excite/Co
+__________________________________________________________________________________________________
+expanded_conv_4/squeeze_excite/ (None, 1, 1, 240)    15600       expanded_conv_4/squeeze_excite/Re
+__________________________________________________________________________________________________
+tf.__operators__.add_36 (TFOpLa (None, 1, 1, 240)    0           expanded_conv_4/squeeze_excite/Co
+__________________________________________________________________________________________________
+re_lu_52 (ReLU)                 (None, 1, 1, 240)    0           tf.__operators__.add_36[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_36 (TFOpLambda (None, 1, 1, 240)    0           re_lu_52[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_4/squeeze_excite/ (None, 14, 14, 240)  0           multiply_25[0][0]                
+                                                                 tf.math.multiply_36[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_4/project (Conv2D (None, 14, 14, 40)   9600        expanded_conv_4/squeeze_excite/Mu
+__________________________________________________________________________________________________
+expanded_conv_4/project/BatchNo (None, 14, 14, 40)   160         expanded_conv_4/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_4/Add (Add)       (None, 14, 14, 40)   0           expanded_conv_3/project/BatchNorm
+                                                                 expanded_conv_4/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_5/expand (Conv2D) (None, 14, 14, 240)  9600        expanded_conv_4/Add[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_5/expand/BatchNor (None, 14, 14, 240)  960         expanded_conv_5/expand[0][0]     
+__________________________________________________________________________________________________
+tf.__operators__.add_37 (TFOpLa (None, 14, 14, 240)  0           expanded_conv_5/expand/BatchNorm[
+__________________________________________________________________________________________________
+re_lu_53 (ReLU)                 (None, 14, 14, 240)  0           tf.__operators__.add_37[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_37 (TFOpLambda (None, 14, 14, 240)  0           re_lu_53[0][0]                   
+__________________________________________________________________________________________________
+multiply_26 (Multiply)          (None, 14, 14, 240)  0           tf.math.multiply_37[0][0]        
+                                                                 expanded_conv_5/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_5/depthwise (Dept (None, 14, 14, 240)  6000        multiply_26[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_5/depthwise/Batch (None, 14, 14, 240)  960         expanded_conv_5/depthwise[0][0]  
+__________________________________________________________________________________________________
+tf.__operators__.add_38 (TFOpLa (None, 14, 14, 240)  0           expanded_conv_5/depthwise/BatchNo
+__________________________________________________________________________________________________
+re_lu_54 (ReLU)                 (None, 14, 14, 240)  0           tf.__operators__.add_38[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_38 (TFOpLambda (None, 14, 14, 240)  0           re_lu_54[0][0]                   
+__________________________________________________________________________________________________
+multiply_27 (Multiply)          (None, 14, 14, 240)  0           tf.math.multiply_38[0][0]        
+                                                                 expanded_conv_5/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_5/squeeze_excite/ (None, 240)          0           multiply_27[0][0]                
+__________________________________________________________________________________________________
+reshape_11 (Reshape)            (None, 1, 1, 240)    0           expanded_conv_5/squeeze_excite/Av
+__________________________________________________________________________________________________
+expanded_conv_5/squeeze_excite/ (None, 1, 1, 64)     15424       reshape_11[0][0]                 
+__________________________________________________________________________________________________
+expanded_conv_5/squeeze_excite/ (None, 1, 1, 64)     0           expanded_conv_5/squeeze_excite/Co
+__________________________________________________________________________________________________
+expanded_conv_5/squeeze_excite/ (None, 1, 1, 240)    15600       expanded_conv_5/squeeze_excite/Re
+__________________________________________________________________________________________________
+tf.__operators__.add_39 (TFOpLa (None, 1, 1, 240)    0           expanded_conv_5/squeeze_excite/Co
+__________________________________________________________________________________________________
+re_lu_55 (ReLU)                 (None, 1, 1, 240)    0           tf.__operators__.add_39[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_39 (TFOpLambda (None, 1, 1, 240)    0           re_lu_55[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_5/squeeze_excite/ (None, 14, 14, 240)  0           multiply_27[0][0]                
+                                                                 tf.math.multiply_39[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_5/project (Conv2D (None, 14, 14, 40)   9600        expanded_conv_5/squeeze_excite/Mu
+__________________________________________________________________________________________________
+expanded_conv_5/project/BatchNo (None, 14, 14, 40)   160         expanded_conv_5/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_5/Add (Add)       (None, 14, 14, 40)   0           expanded_conv_4/Add[0][0]        
+                                                                 expanded_conv_5/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_6/expand (Conv2D) (None, 14, 14, 120)  4800        expanded_conv_5/Add[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_6/expand/BatchNor (None, 14, 14, 120)  480         expanded_conv_6/expand[0][0]     
+__________________________________________________________________________________________________
+tf.__operators__.add_40 (TFOpLa (None, 14, 14, 120)  0           expanded_conv_6/expand/BatchNorm[
+__________________________________________________________________________________________________
+re_lu_56 (ReLU)                 (None, 14, 14, 120)  0           tf.__operators__.add_40[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_40 (TFOpLambda (None, 14, 14, 120)  0           re_lu_56[0][0]                   
+__________________________________________________________________________________________________
+multiply_28 (Multiply)          (None, 14, 14, 120)  0           tf.math.multiply_40[0][0]        
+                                                                 expanded_conv_6/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_6/depthwise (Dept (None, 14, 14, 120)  3000        multiply_28[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_6/depthwise/Batch (None, 14, 14, 120)  480         expanded_conv_6/depthwise[0][0]  
+__________________________________________________________________________________________________
+tf.__operators__.add_41 (TFOpLa (None, 14, 14, 120)  0           expanded_conv_6/depthwise/BatchNo
+__________________________________________________________________________________________________
+re_lu_57 (ReLU)                 (None, 14, 14, 120)  0           tf.__operators__.add_41[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_41 (TFOpLambda (None, 14, 14, 120)  0           re_lu_57[0][0]                   
+__________________________________________________________________________________________________
+multiply_29 (Multiply)          (None, 14, 14, 120)  0           tf.math.multiply_41[0][0]        
+                                                                 expanded_conv_6/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_6/squeeze_excite/ (None, 120)          0           multiply_29[0][0]                
+__________________________________________________________________________________________________
+reshape_12 (Reshape)            (None, 1, 1, 120)    0           expanded_conv_6/squeeze_excite/Av
+__________________________________________________________________________________________________
+expanded_conv_6/squeeze_excite/ (None, 1, 1, 32)     3872        reshape_12[0][0]                 
+__________________________________________________________________________________________________
+expanded_conv_6/squeeze_excite/ (None, 1, 1, 32)     0           expanded_conv_6/squeeze_excite/Co
+__________________________________________________________________________________________________
+expanded_conv_6/squeeze_excite/ (None, 1, 1, 120)    3960        expanded_conv_6/squeeze_excite/Re
+__________________________________________________________________________________________________
+tf.__operators__.add_42 (TFOpLa (None, 1, 1, 120)    0           expanded_conv_6/squeeze_excite/Co
+__________________________________________________________________________________________________
+re_lu_58 (ReLU)                 (None, 1, 1, 120)    0           tf.__operators__.add_42[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_42 (TFOpLambda (None, 1, 1, 120)    0           re_lu_58[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_6/squeeze_excite/ (None, 14, 14, 120)  0           multiply_29[0][0]                
+                                                                 tf.math.multiply_42[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_6/project (Conv2D (None, 14, 14, 48)   5760        expanded_conv_6/squeeze_excite/Mu
+__________________________________________________________________________________________________
+expanded_conv_6/project/BatchNo (None, 14, 14, 48)   192         expanded_conv_6/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_7/expand (Conv2D) (None, 14, 14, 144)  6912        expanded_conv_6/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_7/expand/BatchNor (None, 14, 14, 144)  576         expanded_conv_7/expand[0][0]     
+__________________________________________________________________________________________________
+tf.__operators__.add_43 (TFOpLa (None, 14, 14, 144)  0           expanded_conv_7/expand/BatchNorm[
+__________________________________________________________________________________________________
+re_lu_59 (ReLU)                 (None, 14, 14, 144)  0           tf.__operators__.add_43[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_43 (TFOpLambda (None, 14, 14, 144)  0           re_lu_59[0][0]                   
+__________________________________________________________________________________________________
+multiply_30 (Multiply)          (None, 14, 14, 144)  0           tf.math.multiply_43[0][0]        
+                                                                 expanded_conv_7/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_7/depthwise (Dept (None, 14, 14, 144)  3600        multiply_30[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_7/depthwise/Batch (None, 14, 14, 144)  576         expanded_conv_7/depthwise[0][0]  
+__________________________________________________________________________________________________
+tf.__operators__.add_44 (TFOpLa (None, 14, 14, 144)  0           expanded_conv_7/depthwise/BatchNo
+__________________________________________________________________________________________________
+re_lu_60 (ReLU)                 (None, 14, 14, 144)  0           tf.__operators__.add_44[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_44 (TFOpLambda (None, 14, 14, 144)  0           re_lu_60[0][0]                   
+__________________________________________________________________________________________________
+multiply_31 (Multiply)          (None, 14, 14, 144)  0           tf.math.multiply_44[0][0]        
+                                                                 expanded_conv_7/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_7/squeeze_excite/ (None, 144)          0           multiply_31[0][0]                
+__________________________________________________________________________________________________
+reshape_13 (Reshape)            (None, 1, 1, 144)    0           expanded_conv_7/squeeze_excite/Av
+__________________________________________________________________________________________________
+expanded_conv_7/squeeze_excite/ (None, 1, 1, 40)     5800        reshape_13[0][0]                 
+__________________________________________________________________________________________________
+expanded_conv_7/squeeze_excite/ (None, 1, 1, 40)     0           expanded_conv_7/squeeze_excite/Co
+__________________________________________________________________________________________________
+expanded_conv_7/squeeze_excite/ (None, 1, 1, 144)    5904        expanded_conv_7/squeeze_excite/Re
+__________________________________________________________________________________________________
+tf.__operators__.add_45 (TFOpLa (None, 1, 1, 144)    0           expanded_conv_7/squeeze_excite/Co
+__________________________________________________________________________________________________
+re_lu_61 (ReLU)                 (None, 1, 1, 144)    0           tf.__operators__.add_45[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_45 (TFOpLambda (None, 1, 1, 144)    0           re_lu_61[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_7/squeeze_excite/ (None, 14, 14, 144)  0           multiply_31[0][0]                
+                                                                 tf.math.multiply_45[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_7/project (Conv2D (None, 14, 14, 48)   6912        expanded_conv_7/squeeze_excite/Mu
+__________________________________________________________________________________________________
+expanded_conv_7/project/BatchNo (None, 14, 14, 48)   192         expanded_conv_7/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_7/Add (Add)       (None, 14, 14, 48)   0           expanded_conv_6/project/BatchNorm
+                                                                 expanded_conv_7/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_8/expand (Conv2D) (None, 14, 14, 288)  13824       expanded_conv_7/Add[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_8/expand/BatchNor (None, 14, 14, 288)  1152        expanded_conv_8/expand[0][0]     
+__________________________________________________________________________________________________
+tf.__operators__.add_46 (TFOpLa (None, 14, 14, 288)  0           expanded_conv_8/expand/BatchNorm[
+__________________________________________________________________________________________________
+re_lu_62 (ReLU)                 (None, 14, 14, 288)  0           tf.__operators__.add_46[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_46 (TFOpLambda (None, 14, 14, 288)  0           re_lu_62[0][0]                   
+__________________________________________________________________________________________________
+multiply_32 (Multiply)          (None, 14, 14, 288)  0           tf.math.multiply_46[0][0]        
+                                                                 expanded_conv_8/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_8/depthwise/pad ( (None, 17, 17, 288)  0           multiply_32[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_8/depthwise (Dept (None, 7, 7, 288)    7200        expanded_conv_8/depthwise/pad[0][
+__________________________________________________________________________________________________
+expanded_conv_8/depthwise/Batch (None, 7, 7, 288)    1152        expanded_conv_8/depthwise[0][0]  
+__________________________________________________________________________________________________
+tf.__operators__.add_47 (TFOpLa (None, 7, 7, 288)    0           expanded_conv_8/depthwise/BatchNo
+__________________________________________________________________________________________________
+re_lu_63 (ReLU)                 (None, 7, 7, 288)    0           tf.__operators__.add_47[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_47 (TFOpLambda (None, 7, 7, 288)    0           re_lu_63[0][0]                   
+__________________________________________________________________________________________________
+multiply_33 (Multiply)          (None, 7, 7, 288)    0           tf.math.multiply_47[0][0]        
+                                                                 expanded_conv_8/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_8/squeeze_excite/ (None, 288)          0           multiply_33[0][0]                
+__________________________________________________________________________________________________
+reshape_14 (Reshape)            (None, 1, 1, 288)    0           expanded_conv_8/squeeze_excite/Av
+__________________________________________________________________________________________________
+expanded_conv_8/squeeze_excite/ (None, 1, 1, 72)     20808       reshape_14[0][0]                 
+__________________________________________________________________________________________________
+expanded_conv_8/squeeze_excite/ (None, 1, 1, 72)     0           expanded_conv_8/squeeze_excite/Co
+__________________________________________________________________________________________________
+expanded_conv_8/squeeze_excite/ (None, 1, 1, 288)    21024       expanded_conv_8/squeeze_excite/Re
+__________________________________________________________________________________________________
+tf.__operators__.add_48 (TFOpLa (None, 1, 1, 288)    0           expanded_conv_8/squeeze_excite/Co
+__________________________________________________________________________________________________
+re_lu_64 (ReLU)                 (None, 1, 1, 288)    0           tf.__operators__.add_48[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_48 (TFOpLambda (None, 1, 1, 288)    0           re_lu_64[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_8/squeeze_excite/ (None, 7, 7, 288)    0           multiply_33[0][0]                
+                                                                 tf.math.multiply_48[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_8/project (Conv2D (None, 7, 7, 96)     27648       expanded_conv_8/squeeze_excite/Mu
+__________________________________________________________________________________________________
+expanded_conv_8/project/BatchNo (None, 7, 7, 96)     384         expanded_conv_8/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_9/expand (Conv2D) (None, 7, 7, 576)    55296       expanded_conv_8/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_9/expand/BatchNor (None, 7, 7, 576)    2304        expanded_conv_9/expand[0][0]     
+__________________________________________________________________________________________________
+tf.__operators__.add_49 (TFOpLa (None, 7, 7, 576)    0           expanded_conv_9/expand/BatchNorm[
+__________________________________________________________________________________________________
+re_lu_65 (ReLU)                 (None, 7, 7, 576)    0           tf.__operators__.add_49[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_49 (TFOpLambda (None, 7, 7, 576)    0           re_lu_65[0][0]                   
+__________________________________________________________________________________________________
+multiply_34 (Multiply)          (None, 7, 7, 576)    0           tf.math.multiply_49[0][0]        
+                                                                 expanded_conv_9/expand/BatchNorm[
+__________________________________________________________________________________________________
+expanded_conv_9/depthwise (Dept (None, 7, 7, 576)    14400       multiply_34[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_9/depthwise/Batch (None, 7, 7, 576)    2304        expanded_conv_9/depthwise[0][0]  
+__________________________________________________________________________________________________
+tf.__operators__.add_50 (TFOpLa (None, 7, 7, 576)    0           expanded_conv_9/depthwise/BatchNo
+__________________________________________________________________________________________________
+re_lu_66 (ReLU)                 (None, 7, 7, 576)    0           tf.__operators__.add_50[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_50 (TFOpLambda (None, 7, 7, 576)    0           re_lu_66[0][0]                   
+__________________________________________________________________________________________________
+multiply_35 (Multiply)          (None, 7, 7, 576)    0           tf.math.multiply_50[0][0]        
+                                                                 expanded_conv_9/depthwise/BatchNo
+__________________________________________________________________________________________________
+expanded_conv_9/squeeze_excite/ (None, 576)          0           multiply_35[0][0]                
+__________________________________________________________________________________________________
+reshape_15 (Reshape)            (None, 1, 1, 576)    0           expanded_conv_9/squeeze_excite/Av
+__________________________________________________________________________________________________
+expanded_conv_9/squeeze_excite/ (None, 1, 1, 144)    83088       reshape_15[0][0]                 
+__________________________________________________________________________________________________
+expanded_conv_9/squeeze_excite/ (None, 1, 1, 144)    0           expanded_conv_9/squeeze_excite/Co
+__________________________________________________________________________________________________
+expanded_conv_9/squeeze_excite/ (None, 1, 1, 576)    83520       expanded_conv_9/squeeze_excite/Re
+__________________________________________________________________________________________________
+tf.__operators__.add_51 (TFOpLa (None, 1, 1, 576)    0           expanded_conv_9/squeeze_excite/Co
+__________________________________________________________________________________________________
+re_lu_67 (ReLU)                 (None, 1, 1, 576)    0           tf.__operators__.add_51[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_51 (TFOpLambda (None, 1, 1, 576)    0           re_lu_67[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_9/squeeze_excite/ (None, 7, 7, 576)    0           multiply_35[0][0]                
+                                                                 tf.math.multiply_51[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_9/project (Conv2D (None, 7, 7, 96)     55296       expanded_conv_9/squeeze_excite/Mu
+__________________________________________________________________________________________________
+expanded_conv_9/project/BatchNo (None, 7, 7, 96)     384         expanded_conv_9/project[0][0]    
+__________________________________________________________________________________________________
+expanded_conv_9/Add (Add)       (None, 7, 7, 96)     0           expanded_conv_8/project/BatchNorm
+                                                                 expanded_conv_9/project/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_10/expand (Conv2D (None, 7, 7, 576)    55296       expanded_conv_9/Add[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_10/expand/BatchNo (None, 7, 7, 576)    2304        expanded_conv_10/expand[0][0]    
+__________________________________________________________________________________________________
+tf.__operators__.add_52 (TFOpLa (None, 7, 7, 576)    0           expanded_conv_10/expand/BatchNorm
+__________________________________________________________________________________________________
+re_lu_68 (ReLU)                 (None, 7, 7, 576)    0           tf.__operators__.add_52[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_52 (TFOpLambda (None, 7, 7, 576)    0           re_lu_68[0][0]                   
+__________________________________________________________________________________________________
+multiply_36 (Multiply)          (None, 7, 7, 576)    0           tf.math.multiply_52[0][0]        
+                                                                 expanded_conv_10/expand/BatchNorm
+__________________________________________________________________________________________________
+expanded_conv_10/depthwise (Dep (None, 7, 7, 576)    14400       multiply_36[0][0]                
+__________________________________________________________________________________________________
+expanded_conv_10/depthwise/Batc (None, 7, 7, 576)    2304        expanded_conv_10/depthwise[0][0] 
+__________________________________________________________________________________________________
+tf.__operators__.add_53 (TFOpLa (None, 7, 7, 576)    0           expanded_conv_10/depthwise/BatchN
+__________________________________________________________________________________________________
+re_lu_69 (ReLU)                 (None, 7, 7, 576)    0           tf.__operators__.add_53[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_53 (TFOpLambda (None, 7, 7, 576)    0           re_lu_69[0][0]                   
+__________________________________________________________________________________________________
+multiply_37 (Multiply)          (None, 7, 7, 576)    0           tf.math.multiply_53[0][0]        
+                                                                 expanded_conv_10/depthwise/BatchN
+__________________________________________________________________________________________________
+expanded_conv_10/squeeze_excite (None, 576)          0           multiply_37[0][0]                
+__________________________________________________________________________________________________
+reshape_16 (Reshape)            (None, 1, 1, 576)    0           expanded_conv_10/squeeze_excite/A
+__________________________________________________________________________________________________
+expanded_conv_10/squeeze_excite (None, 1, 1, 144)    83088       reshape_16[0][0]                 
+__________________________________________________________________________________________________
+expanded_conv_10/squeeze_excite (None, 1, 1, 144)    0           expanded_conv_10/squeeze_excite/C
+__________________________________________________________________________________________________
+expanded_conv_10/squeeze_excite (None, 1, 1, 576)    83520       expanded_conv_10/squeeze_excite/R
+__________________________________________________________________________________________________
+tf.__operators__.add_54 (TFOpLa (None, 1, 1, 576)    0           expanded_conv_10/squeeze_excite/C
+__________________________________________________________________________________________________
+re_lu_70 (ReLU)                 (None, 1, 1, 576)    0           tf.__operators__.add_54[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_54 (TFOpLambda (None, 1, 1, 576)    0           re_lu_70[0][0]                   
+__________________________________________________________________________________________________
+expanded_conv_10/squeeze_excite (None, 7, 7, 576)    0           multiply_37[0][0]                
+                                                                 tf.math.multiply_54[0][0]        
+__________________________________________________________________________________________________
+expanded_conv_10/project (Conv2 (None, 7, 7, 96)     55296       expanded_conv_10/squeeze_excite/M
+__________________________________________________________________________________________________
+expanded_conv_10/project/BatchN (None, 7, 7, 96)     384         expanded_conv_10/project[0][0]   
+__________________________________________________________________________________________________
+expanded_conv_10/Add (Add)      (None, 7, 7, 96)     0           expanded_conv_9/Add[0][0]        
+                                                                 expanded_conv_10/project/BatchNor
+__________________________________________________________________________________________________
+Conv_1 (Conv2D)                 (None, 7, 7, 576)    55296       expanded_conv_10/Add[0][0]       
+__________________________________________________________________________________________________
+Conv_1/BatchNorm (BatchNormaliz (None, 7, 7, 576)    2304        Conv_1[0][0]                     
+__________________________________________________________________________________________________
+tf.__operators__.add_55 (TFOpLa (None, 7, 7, 576)    0           Conv_1/BatchNorm[0][0]           
+__________________________________________________________________________________________________
+re_lu_71 (ReLU)                 (None, 7, 7, 576)    0           tf.__operators__.add_55[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_55 (TFOpLambda (None, 7, 7, 576)    0           re_lu_71[0][0]                   
+__________________________________________________________________________________________________
+multiply_38 (Multiply)          (None, 7, 7, 576)    0           tf.math.multiply_55[0][0]        
+                                                                 Conv_1/BatchNorm[0][0]           
+__________________________________________________________________________________________________
+Conv_2 (Conv2D)                 (None, 7, 7, 1024)   590848      multiply_38[0][0]                
+__________________________________________________________________________________________________
+tf.__operators__.add_56 (TFOpLa (None, 7, 7, 1024)   0           Conv_2[0][0]                     
+__________________________________________________________________________________________________
+re_lu_72 (ReLU)                 (None, 7, 7, 1024)   0           tf.__operators__.add_56[0][0]    
+__________________________________________________________________________________________________
+tf.math.multiply_56 (TFOpLambda (None, 7, 7, 1024)   0           re_lu_72[0][0]                   
+__________________________________________________________________________________________________
+multiply_39 (Multiply)          (None, 7, 7, 1024)   0           tf.math.multiply_56[0][0]        
+                                                                 Conv_2[0][0]                     
+__________________________________________________________________________________________________
+flatten (Flatten)               (None, 50176)        0           multiply_39[0][0]                
+__________________________________________________________________________________________________
+dense (Dense)                   (None, 1024)         51381248    flatten[0][0]                    
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, 38)           38950       dense[0][0]                      
+==================================================================================================
+Total params: 52,950,166
+Trainable params: 51,420,198
+Non-trainable params: 1,529,968
+__________________________________________________________________________________________________
+None
+Epoch 1/40
+2021-01-12 16:30:03.625963: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-12 16:30:04.076683: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-12 16:30:06.689095: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+WARNING:tensorflow:AutoGraph could not transform <function Model.make_test_function.<locals>.test_function at 0x2b8d856e7620> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+1358/1358 - 3242s - loss: 3.3726 - accuracy: 0.0993 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.6949 - val_loss: 3.3496 - val_accuracy: 0.0987 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7031
+Epoch 2/40
+1358/1358 - 3271s - loss: 3.3506 - accuracy: 0.0989 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7018 - val_loss: 3.3538 - val_accuracy: 0.0987 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7083
+Epoch 3/40
+1358/1358 - 2666s - loss: 3.3370 - accuracy: 0.1077 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7066 - val_loss: 3.3169 - val_accuracy: 0.0984 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7191
+Epoch 4/40
+1358/1358 - 2486s - loss: 3.3011 - accuracy: 0.1217 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7190 - val_loss: 3.2432 - val_accuracy: 0.1283 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7384
+Epoch 5/40
+1358/1358 - 2339s - loss: 3.2477 - accuracy: 0.1361 - precision: 1.0000 - recall: 4.6024e-05 - auc: 0.7351 - val_loss: 3.3466 - val_accuracy: 0.1001 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7105
+Epoch 6/40
+1358/1358 - 2108s - loss: 3.1763 - accuracy: 0.1539 - precision: 0.5316 - recall: 0.0019 - auc: 0.7551 - val_loss: 3.0795 - val_accuracy: 0.1769 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7787
+Epoch 7/40
+1358/1358 - 2153s - loss: 3.1345 - accuracy: 0.1591 - precision: 0.5000 - recall: 0.0024 - auc: 0.7658 - val_loss: 3.0506 - val_accuracy: 0.1841 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7903
+Epoch 8/40
+1358/1358 - 2183s - loss: 3.1255 - accuracy: 0.1568 - precision: 0.4471 - recall: 0.0026 - auc: 0.7689 - val_loss: 3.0458 - val_accuracy: 0.1706 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7932
+Epoch 9/40
+1358/1358 - 2035s - loss: 3.0858 - accuracy: 0.1671 - precision: 0.5462 - recall: 0.0049 - auc: 0.7781 - val_loss: 3.0706 - val_accuracy: 0.1656 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7812
+Epoch 10/40
+1358/1358 - 1986s - loss: 3.0922 - accuracy: 0.1629 - precision: 0.5772 - recall: 0.0059 - auc: 0.7764 - val_loss: 3.0330 - val_accuracy: 0.1722 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7903
+Epoch 11/40
+1358/1358 - 2042s - loss: 3.0677 - accuracy: 0.1651 - precision: 0.5666 - recall: 0.0066 - auc: 0.7824 - val_loss: 3.1804 - val_accuracy: 0.1469 - val_precision: 0.6124 - val_recall: 0.0236 - val_auc: 0.7652
+Epoch 12/40
+1358/1358 - 2009s - loss: 3.0818 - accuracy: 0.1625 - precision: 0.5129 - recall: 0.0046 - auc: 0.7792 - val_loss: 3.0480 - val_accuracy: 0.1696 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7865
+Epoch 13/40
+1358/1358 - 1975s - loss: 3.0657 - accuracy: 0.1651 - precision: 0.5423 - recall: 0.0035 - auc: 0.7826 - val_loss: 3.0129 - val_accuracy: 0.1726 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7973
+Epoch 14/40
+1358/1358 - 1937s - loss: 3.0680 - accuracy: 0.1644 - precision: 0.5390 - recall: 0.0052 - auc: 0.7821 - val_loss: 2.9933 - val_accuracy: 0.1721 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7985
+Epoch 15/40
+1358/1358 - 1982s - loss: 3.0482 - accuracy: 0.1654 - precision: 0.5766 - recall: 0.0044 - auc: 0.7866 - val_loss: 2.9846 - val_accuracy: 0.1733 - val_precision: 0.3077 - val_recall: 3.6870e-04 - val_auc: 0.8028
+Epoch 16/40
+1358/1358 - 1950s - loss: 3.0521 - accuracy: 0.1659 - precision: 0.5558 - recall: 0.0067 - auc: 0.7855 - val_loss: 2.9897 - val_accuracy: 0.1702 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8032
+Epoch 17/40
+1358/1358 - 1975s - loss: 3.0409 - accuracy: 0.1655 - precision: 0.4935 - recall: 0.0044 - auc: 0.7888 - val_loss: 3.3546 - val_accuracy: 0.1432 - val_precision: 0.4879 - val_recall: 0.0539 - val_auc: 0.7431
+Epoch 18/40
+1358/1358 - 1962s - loss: 3.0394 - accuracy: 0.1668 - precision: 0.5293 - recall: 0.0052 - auc: 0.7890 - val_loss: 3.0612 - val_accuracy: 0.1616 - val_precision: 0.6012 - val_recall: 0.0277 - val_auc: 0.7864
+Epoch 19/40
+1358/1358 - 2025s - loss: 3.0404 - accuracy: 0.1649 - precision: 0.5331 - recall: 0.0044 - auc: 0.7886 - val_loss: 3.0058 - val_accuracy: 0.1701 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7958
+Epoch 20/40
+1358/1358 - 1934s - loss: 3.0354 - accuracy: 0.1643 - precision: 0.6031 - recall: 0.0054 - auc: 0.7895 - val_loss: 2.9987 - val_accuracy: 0.1645 - val_precision: 0.5840 - val_recall: 0.0128 - val_auc: 0.7986
+Epoch 21/40
+1358/1358 - 1894s - loss: 3.0284 - accuracy: 0.1666 - precision: 0.5668 - recall: 0.0073 - auc: 0.7911 - val_loss: 2.9835 - val_accuracy: 0.1717 - val_precision: 0.1667 - val_recall: 1.8435e-04 - val_auc: 0.8018
+Epoch 22/40
+1358/1358 - 1908s - loss: 3.0190 - accuracy: 0.1681 - precision: 0.5793 - recall: 0.0055 - auc: 0.7934 - val_loss: 2.9757 - val_accuracy: 0.1695 - val_precision: 0.5000 - val_recall: 1.8435e-04 - val_auc: 0.8033
+Epoch 23/40
+1358/1358 - 1919s - loss: 3.0266 - accuracy: 0.1670 - precision: 0.5184 - recall: 0.0058 - auc: 0.7914 - val_loss: 3.0197 - val_accuracy: 0.1631 - val_precision: 1.0000 - val_recall: 9.2174e-05 - val_auc: 0.7950
+Epoch 24/40
+1358/1358 - 1990s - loss: 3.0276 - accuracy: 0.1676 - precision: 0.5525 - recall: 0.0059 - auc: 0.7911 - val_loss: 3.2865 - val_accuracy: 0.1384 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7249
+Epoch 25/40
+1358/1358 - 2080s - loss: 3.0235 - accuracy: 0.1663 - precision: 0.5734 - recall: 0.0058 - auc: 0.7922 - val_loss: 2.9796 - val_accuracy: 0.1710 - val_precision: 0.2500 - val_recall: 5.5305e-04 - val_auc: 0.8022
+Epoch 26/40
+1358/1358 - 2009s - loss: 3.0188 - accuracy: 0.1685 - precision: 0.5706 - recall: 0.0064 - auc: 0.7932 - val_loss: 2.9892 - val_accuracy: 0.1655 - val_precision: 0.5786 - val_recall: 0.0170 - val_auc: 0.8013
+Epoch 27/40
+1358/1358 - 2051s - loss: 3.0231 - accuracy: 0.1683 - precision: 0.5660 - recall: 0.0058 - auc: 0.7922 - val_loss: 3.0009 - val_accuracy: 0.1741 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8027
+Epoch 28/40
+1358/1358 - 2296s - loss: 3.0170 - accuracy: 0.1692 - precision: 0.5228 - recall: 0.0047 - auc: 0.7937 - val_loss: 2.9807 - val_accuracy: 0.1670 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8021
+Epoch 29/40
+1358/1358 - 2510s - loss: 3.0148 - accuracy: 0.1687 - precision: 0.5685 - recall: 0.0057 - auc: 0.7940 - val_loss: 2.9942 - val_accuracy: 0.1655 - val_precision: 0.3421 - val_recall: 0.0012 - val_auc: 0.8006
+Epoch 30/40
+1358/1358 - 2763s - loss: 3.0161 - accuracy: 0.1691 - precision: 0.5847 - recall: 0.0051 - auc: 0.7934 - val_loss: 2.9693 - val_accuracy: 0.1722 - val_precision: 0.2500 - val_recall: 1.8435e-04 - val_auc: 0.8044
+Epoch 31/40
+1358/1358 - 2764s - loss: 3.0168 - accuracy: 0.1689 - precision: 0.5648 - recall: 0.0067 - auc: 0.7933 - val_loss: 3.0503 - val_accuracy: 0.1690 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7839
+Epoch 32/40
+1358/1358 - 2317s - loss: 3.0102 - accuracy: 0.1694 - precision: 0.5439 - recall: 0.0058 - auc: 0.7952 - val_loss: 3.0005 - val_accuracy: 0.1744 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8031
+Epoch 33/40
+1358/1358 - 2347s - loss: 3.0103 - accuracy: 0.1700 - precision: 0.5445 - recall: 0.0058 - auc: 0.7947 - val_loss: 2.9671 - val_accuracy: 0.1760 - val_precision: 1.0000 - val_recall: 9.2174e-05 - val_auc: 0.8034
+Epoch 34/40
+1358/1358 - 2278s - loss: 3.0065 - accuracy: 0.1695 - precision: 0.5743 - recall: 0.0053 - auc: 0.7956 - val_loss: 3.0769 - val_accuracy: 0.1589 - val_precision: 0.6043 - val_recall: 0.0312 - val_auc: 0.7841
+Epoch 35/40
+1358/1358 - 2223s - loss: 3.0061 - accuracy: 0.1711 - precision: 0.5972 - recall: 0.0058 - auc: 0.7960 - val_loss: 2.9628 - val_accuracy: 0.1708 - val_precision: 0.5985 - val_recall: 0.0146 - val_auc: 0.8055
+Epoch 36/40
+1358/1358 - 2272s - loss: 3.0036 - accuracy: 0.1715 - precision: 0.5737 - recall: 0.0057 - auc: 0.7961 - val_loss: 3.0271 - val_accuracy: 0.1862 - val_precision: 0.5435 - val_recall: 0.0069 - val_auc: 0.7948
+Epoch 37/40
+1358/1358 - 2268s - loss: 3.0041 - accuracy: 0.1725 - precision: 0.5567 - recall: 0.0063 - auc: 0.7963 - val_loss: 2.9692 - val_accuracy: 0.1696 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8039
+Epoch 38/40
+1358/1358 - 2217s - loss: 2.9927 - accuracy: 0.1739 - precision: 0.5223 - recall: 0.0057 - auc: 0.7983 - val_loss: 3.1058 - val_accuracy: 0.1591 - val_precision: 0.5524 - val_recall: 0.0126 - val_auc: 0.7765
+Epoch 39/40
+1358/1358 - 2263s - loss: 2.9961 - accuracy: 0.1743 - precision: 0.5881 - recall: 0.0078 - auc: 0.7975 - val_loss: 2.9568 - val_accuracy: 0.1746 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8079
+Epoch 40/40
+1358/1358 - 2252s - loss: 2.9898 - accuracy: 0.1737 - precision: 0.5501 - recall: 0.0072 - auc: 0.7990 - val_loss: 2.9603 - val_accuracy: 0.1724 - val_precision: 0.2414 - val_recall: 6.4522e-04 - val_auc: 0.8065
+2021-01-13 17:11:27.238468: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:tensorflow:AutoGraph could not transform <function canonicalize_signatures.<locals>.signature_wrapper at 0x2b8d86f982f0> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+{'loss': [3.3725714683532715, 3.350614070892334, 3.3370277881622314, 3.3010849952697754, 3.247711420059204, 3.1763393878936768, 3.134514331817627, 3.125530242919922, 3.0857973098754883, 3.0921993255615234, 3.067735433578491, 3.0817816257476807, 3.0656931400299072, 3.067995071411133, 3.0482399463653564, 3.052074670791626, 3.0409135818481445, 3.0393900871276855, 3.040415048599243, 3.035382032394409, 3.0283939838409424, 3.019030809402466, 3.026578664779663, 3.0276365280151367, 3.0234999656677246, 3.018815279006958, 3.023099422454834, 3.016968011856079, 3.014803409576416, 3.016101360321045, 3.0168139934539795, 3.0102334022521973, 3.0103156566619873, 3.0064876079559326, 3.0061330795288086, 3.0036461353302, 3.0041275024414062, 2.992732048034668, 2.996108055114746, 2.989811420440674], 'accuracy': [0.09929583966732025, 0.09890463948249817, 0.10767212510108948, 0.12173232436180115, 0.1361377090215683, 0.1538797914981842, 0.15914948284626007, 0.15677927434444427, 0.16706553101539612, 0.1628543883562088, 0.1650865226984024, 0.16250920295715332, 0.1651325523853302, 0.16444219648838043, 0.1653626710176468, 0.16589193046092987, 0.1655007302761078, 0.16683541238307953, 0.16485640406608582, 0.16430412232875824, 0.16658228635787964, 0.16810107231140137, 0.16697348654270172, 0.1675948053598404, 0.16632916033267975, 0.16849227249622345, 0.16828516125679016, 0.16915960609912872, 0.16872239112854004, 0.16909056901931763, 0.16888347268104553, 0.169366717338562, 0.17003405094146729, 0.1694587618112564, 0.17111560702323914, 0.17148379981517792, 0.17254234850406647, 0.1738770306110382, 0.1743142455816269, 0.17369292676448822], 'precision': [0.0, 0.0, 0.0, 0.0, 1.0, 0.5316455960273743, 0.5, 0.4470588266849518, 0.5461538434028625, 0.5771812200546265, 0.5666003823280334, 0.5128865838050842, 0.5422534942626953, 0.5390070676803589, 0.5765765905380249, 0.5557692050933838, 0.49354004859924316, 0.5292739868164062, 0.5331491827964783, 0.6030927896499634, 0.5668449401855469, 0.5793269276618958, 0.5184426307678223, 0.5524625182151794, 0.5733634233474731, 0.5705521702766418, 0.5659955143928528, 0.5228426456451416, 0.568493127822876, 0.5846560597419739, 0.5647969245910645, 0.5438972115516663, 0.5444685220718384, 0.5742574334144592, 0.5971564054489136, 0.5737327337265015, 0.5566801428794861, 0.522292971611023, 0.5881326198577881, 0.5500878691673279], 'recall': [0.0, 0.0, 0.0, 0.0, 4.6023564209463075e-05, 0.0019329896895214915, 0.0024392488412559032, 0.0026233431417495012, 0.00490150973200798, 0.005937039852142334, 0.006558357737958431, 0.004579344764351845, 0.0035438144113868475, 0.0052466862834990025, 0.004418262280523777, 0.006650405004620552, 0.004395250231027603, 0.005200662650167942, 0.0044412738643586636, 0.005384757183492184, 0.00731774652376771, 0.0055458396673202515, 0.005821981001645327, 0.005937039852142334, 0.005844992585480213, 0.006420287303626537, 0.005821981001645327, 0.004740427248179913, 0.005729933734983206, 0.005085603799670935, 0.006719440221786499, 0.005844992585480213, 0.005775957368314266, 0.005338733550161123, 0.005798968952149153, 0.005729933734983206, 0.0063282400369644165, 0.005660898517817259, 0.007754970341920853, 0.007202687673270702], 'auc': [0.6948797106742859, 0.7017914652824402, 0.7066015005111694, 0.7189710736274719, 0.7351499795913696, 0.755124568939209, 0.7658149600028992, 0.7688806056976318, 0.778132438659668, 0.7764497995376587, 0.7823501229286194, 0.7791545391082764, 0.7826332449913025, 0.782135546207428, 0.7866058349609375, 0.7855194807052612, 0.7887592911720276, 0.7889989614486694, 0.7885711789131165, 0.7894967198371887, 0.7911359071731567, 0.7934423685073853, 0.7914390563964844, 0.7911309003829956, 0.7922177910804749, 0.7931883335113525, 0.792178750038147, 0.7937297224998474, 0.7939899563789368, 0.7933627963066101, 0.7932713031768799, 0.7951580286026001, 0.7946604490280151, 0.7956212162971497, 0.7960137128829956, 0.796118438243866, 0.7962744235992432, 0.7982627749443054, 0.7974962592124939, 0.7990050315856934], 'val_loss': [3.3496196269989014, 3.353753089904785, 3.3169150352478027, 3.2432470321655273, 3.3465688228607178, 3.0794947147369385, 3.0505788326263428, 3.0458388328552246, 3.070613145828247, 3.0330214500427246, 3.1804497241973877, 3.047990083694458, 3.0128815174102783, 2.9933440685272217, 2.9846484661102295, 2.9896738529205322, 3.3546361923217773, 3.0612175464630127, 3.0057995319366455, 2.9987080097198486, 2.983541250228882, 2.975745916366577, 3.0196902751922607, 3.2865233421325684, 2.9795796871185303, 2.989222526550293, 3.000910520553589, 2.980706214904785, 2.9941954612731934, 2.969264507293701, 3.0503413677215576, 3.0004818439483643, 2.967109441757202, 3.0768933296203613, 2.9627814292907715, 3.0270919799804688, 2.96917462348938, 3.1058027744293213, 2.9568042755126953, 2.960294723510742], 'val_accuracy': [0.09871877729892731, 0.09871877729892731, 0.09844225645065308, 0.12830676138401031, 0.10010138899087906, 0.17688266932964325, 0.18407227098941803, 0.1706148087978363, 0.16563738882541656, 0.17218177020549774, 0.14692598581314087, 0.16960088908672333, 0.17255046963691711, 0.1720895916223526, 0.17328785359859467, 0.17024610936641693, 0.14323900640010834, 0.16158170998096466, 0.17006175220012665, 0.16453129053115845, 0.17172089219093323, 0.16950871050357819, 0.1631486713886261, 0.13844594359397888, 0.17098350822925568, 0.16545303165912628, 0.17411743104457855, 0.1670200079679489, 0.16554521024227142, 0.17218177020549774, 0.16904783248901367, 0.17439395189285278, 0.17596091330051422, 0.1589086502790451, 0.1707991510629654, 0.18619227409362793, 0.16960088908672333, 0.1590930074453354, 0.17457830905914307, 0.17236611247062683], 'val_precision': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.6124401688575745, 0.0, 0.0, 0.0, 0.3076923191547394, 0.0, 0.4879065752029419, 0.6012024283409119, 0.0, 0.5840336084365845, 0.1666666716337204, 0.5, 1.0, 0.0, 0.25, 0.5786163806915283, 0.0, 0.0, 0.34210526943206787, 0.25, 0.0, 0.0, 1.0, 0.6042780876159668, 0.5984848737716675, 0.54347825050354, 0.0, 0.5524193644523621, 0.0, 0.24137930572032928], 'val_recall': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.023596644401550293, 0.0, 0.0, 0.0, 0.00036869756877422333, 0.0, 0.05392201989889145, 0.02765231765806675, 0.0, 0.012812240980565548, 0.00018434878438711166, 0.00018434878438711166, 9.217439219355583e-05, 0.0, 0.000553046353161335, 0.016960088163614273, 0.0, 0.0, 0.0011982670985162258, 0.00018434878438711166, 0.0, 0.0, 9.217439219355583e-05, 0.03124712035059929, 0.014563553966581821, 0.006913079414516687, 0.0, 0.012627892196178436, 0.0, 0.0006452207453548908], 'val_auc': [0.7030975222587585, 0.7083134055137634, 0.7191049456596375, 0.7384495735168457, 0.7105422616004944, 0.7787346243858337, 0.7903229594230652, 0.7932428121566772, 0.7811580896377563, 0.7902934551239014, 0.7651557326316833, 0.786514163017273, 0.7973352670669556, 0.7985042929649353, 0.8027710914611816, 0.8031506538391113, 0.743131697177887, 0.7863640785217285, 0.7957621216773987, 0.7986395359039307, 0.8017964959144592, 0.803304135799408, 0.7950155735015869, 0.7248953580856323, 0.8022075295448303, 0.8013415932655334, 0.8027153015136719, 0.802111029624939, 0.800642728805542, 0.8043683767318726, 0.7838810682296753, 0.8030846118927002, 0.8034121990203857, 0.7840689420700073, 0.8054633140563965, 0.7948042750358582, 0.8039398193359375, 0.7764870524406433, 0.8079323172569275, 0.8064753413200378]}
+date and time = 13-01-2021_17-11-21
+Saving the model to path: /users/PAA0023/dong760/plant_leaves_diagnosis/saved_models/MobileNetV3Small_model_BatchSize_32_0.2ValSplit_13-01-2021_17-11-21_40epochs
+
+Prediction Result: 
+340/340 - 428s - loss: 2.9589 - accuracy: 0.1718 - precision: 0.2500 - recall: 5.5305e-04 - auc: 0.8067
+Result: [2.9588820934295654, 0.17181307077407837, 0.25, 0.000553046353161335, 0.8067466020584106]
+Validation accuracy: 0.17181307077407837 Validation accuracy: 2.9588820934295654
+
+
+p0302.ten.osc.edu:
+                                                                               Req'd  Req'd   Elap 
+Job id               Username Queue    Name                 SessID NDS   TSK   Memory Time Use S Time 
+-------------------- -------- -------- -------------------- ------ ----- ----- ------ ----- - -----
+2747120              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 68:24
+2747121              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 68:20
+2755236              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 24:49
+2755239              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 24:49
+2755697              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 22:47
+The date when running current script is :
+Wed Jan 13 17:18:57 EST 2021

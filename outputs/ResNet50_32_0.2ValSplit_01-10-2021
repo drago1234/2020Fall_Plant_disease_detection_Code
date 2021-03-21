@@ -1,0 +1,330 @@
+environemnt set up
+
+The following have been reloaded with a version change:
+  1) cuda/10.0.130 => cuda/11.0.3
+
+Running the batch script
+2021-01-10 20:58:15.712003: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-10 20:58:25.116668: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX512F
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-01-10 20:58:25.123285: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-10 20:58:25.126577: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2021-01-10 20:58:25.154625: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100-PCIE-16GB computeCapability: 7.0
+coreClock: 1.38GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2021-01-10 20:58:25.154658: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-10 20:58:25.161235: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-10 20:58:25.161287: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-10 20:58:25.164142: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-10 20:58:25.166463: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-10 20:58:25.171187: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-10 20:58:25.173637: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-10 20:58:25.175366: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-10 20:58:25.177753: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-10 20:58:25.178955: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-10 20:58:28.208003: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-10 20:58:28.208091: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-01-10 20:58:28.208117: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-01-10 20:58:28.212582: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 14759 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2021-01-10 20:58:28.216229: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-10 20:58:28.217708: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100-PCIE-16GB computeCapability: 7.0
+coreClock: 1.38GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2021-01-10 20:58:28.217776: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-10 20:58:28.217832: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-10 20:58:28.217864: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-10 20:58:28.217895: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-10 20:58:28.217932: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-10 20:58:28.217963: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-10 20:58:28.217993: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-10 20:58:28.218024: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-10 20:58:28.220627: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-10 20:58:28.220684: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-10 20:58:28.220706: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-01-10 20:58:28.220725: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-01-10 20:58:28.223370: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 14759 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2021-01-10 20:58:28.838504: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-10 20:58:28.839393: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100-PCIE-16GB computeCapability: 7.0
+coreClock: 1.38GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2021-01-10 20:58:28.839449: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-10 20:58:28.839479: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-10 20:58:28.839493: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-10 20:58:28.839507: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-10 20:58:28.839520: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-10 20:58:28.839533: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-10 20:58:28.839546: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-10 20:58:28.839560: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-10 20:58:28.840790: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-10 20:58:28.841121: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-10 20:58:28.841828: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100-PCIE-16GB computeCapability: 7.0
+coreClock: 1.38GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2021-01-10 20:58:28.841864: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-10 20:58:28.841889: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-10 20:58:28.841902: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-10 20:58:28.841914: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-10 20:58:28.841927: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-10 20:58:28.841942: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-10 20:58:28.841955: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-10 20:58:28.841967: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-10 20:58:28.843114: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-10 20:58:28.843157: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-10 20:58:28.843166: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-01-10 20:58:28.843175: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-01-10 20:58:28.844328: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14759 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+Using TensorFlow backend.
+WARNING:tensorflow:`input_shape` is undefined or non-square, or `rows` is not 224. Weights for input shape (224, 224) will be loaded as the default.
+WARNING:tensorflow:`input_shape` is undefined or non-square, or `rows` is not 224. Weights for input shape (224, 224) will be loaded as the default.
+2021-01-10 20:58:49.838627: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-01-10 20:58:49.839212: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2400000000 Hz
+WARNING:tensorflow:AutoGraph could not transform <function Model.make_train_function.<locals>.train_function at 0x2ad19ba42268> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+Does the system is built with CUDA?: True
+Default GPU Device: /device:GPU:0
+====> Start running baseline.py
+Classes: ['Tomato___Late_blight', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Peach___healthy', 'Grape___Esca_(Black_Measles)', 'Potato___Late_blight', 'Pepper,_bell___Bacterial_spot', 'Strawberry___healthy', 'Orange___Haunglongbing_(Citrus_greening)', 'Tomato___Leaf_Mold', 'Apple___Black_rot', 'Strawberry___Leaf_scorch', 'Tomato___Early_blight', 'Cherry_(including_sour)___healthy', 'Corn_(maize)___Common_rust_', 'Blueberry___healthy', 'Potato___Early_blight', 'Pepper,_bell___healthy', 'Apple___Cedar_apple_rust', 'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)', 'Tomato___Tomato_mosaic_virus', 'Tomato___Target_Spot', 'Tomato___healthy', 'Peach___Bacterial_spot', 'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot', 'Tomato___Spider_mites Two-spotted_spider_mite', 'Corn_(maize)___healthy', 'Squash___Powdery_mildew', 'Cherry_(including_sour)___Powdery_mildew', 'Tomato___Bacterial_spot', 'Grape___Black_rot', 'Apple___healthy', 'Potato___healthy', 'Corn_(maize)___Northern_Leaf_Blight', 'Tomato___Septoria_leaf_spot', 'Raspberry___healthy', 'Soybean___healthy', 'Apple___Apple_scab', 'Grape___healthy']
+Number of classes: 38
+Total number of images: 54305
+first_folder_path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight
+Number of folder: 38
+sample image path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight/5fdf3288-d5f4-4c70-9b12-95222b82d415___RS_Late.B 4942.JPG
+Image size: (256, 256, 3)
+Found 43456 images belonging to 38 classes.
+Found 10849 images belonging to 38 classes.
+Train size: 43456
+val_size: 10849, train_size: 43456
+
+====> Statistics: epochs=100, batch_size=32, validation_split=0.2, lr=0.001, momentum=0.9, steps_per_epoch =100, feature shape= (256, 256, 3), no_classes=38, loss_function=categorical_crossentropy
+Epoch 1/100
+2021-01-10 20:58:52.480752: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-10 20:58:52.825364: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-10 20:58:53.950085: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+WARNING:tensorflow:AutoGraph could not transform <function Model.make_test_function.<locals>.test_function at 0x2ad56d665400> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+1358/1358 - 2071s - loss: 3.4281 - accuracy: 0.1123 - precision: 0.0749 - recall: 5.2927e-04 - auc: 0.7162 - val_loss: 3.4274 - val_accuracy: 0.1043 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7213
+Epoch 2/100
+1358/1358 - 2084s - loss: 3.1925 - accuracy: 0.1331 - precision: 0.6436 - recall: 0.0043 - auc: 0.7528 - val_loss: 3.1567 - val_accuracy: 0.1456 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7677
+Epoch 3/100
+1358/1358 - 2137s - loss: 3.1567 - accuracy: 0.1426 - precision: 0.6940 - recall: 0.0121 - auc: 0.7617 - val_loss: 3.1136 - val_accuracy: 0.1520 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7767
+Epoch 4/100
+1358/1358 - 2011s - loss: 3.1285 - accuracy: 0.1513 - precision: 0.6814 - recall: 0.0177 - auc: 0.7692 - val_loss: 3.0958 - val_accuracy: 0.1591 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7764
+Epoch 5/100
+1358/1358 - 2002s - loss: 3.1063 - accuracy: 0.1595 - precision: 0.7317 - recall: 0.0235 - auc: 0.7720 - val_loss: 3.0833 - val_accuracy: 0.1574 - val_precision: 0.6337 - val_recall: 0.0727 - val_auc: 0.7780
+Epoch 6/100
+1358/1358 - 1988s - loss: 3.0935 - accuracy: 0.1611 - precision: 0.7175 - recall: 0.0272 - auc: 0.7743 - val_loss: 3.2130 - val_accuracy: 0.1278 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7485
+Epoch 7/100
+1358/1358 - 2011s - loss: 3.0901 - accuracy: 0.1628 - precision: 0.6863 - recall: 0.0276 - auc: 0.7755 - val_loss: 3.1447 - val_accuracy: 0.1823 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7574
+Epoch 8/100
+1358/1358 - 1975s - loss: 3.0776 - accuracy: 0.1680 - precision: 0.6993 - recall: 0.0283 - auc: 0.7776 - val_loss: 3.0529 - val_accuracy: 0.1842 - val_precision: 0.9000 - val_recall: 8.2957e-04 - val_auc: 0.7821
+Epoch 9/100
+1358/1358 - 1980s - loss: 3.0691 - accuracy: 0.1683 - precision: 0.6915 - recall: 0.0292 - auc: 0.7795 - val_loss: 3.0334 - val_accuracy: 0.1655 - val_precision: 0.7713 - val_recall: 0.0668 - val_auc: 0.7890
+Epoch 10/100
+1358/1358 - 1975s - loss: 3.0606 - accuracy: 0.1711 - precision: 0.6880 - recall: 0.0302 - auc: 0.7811 - val_loss: 3.0231 - val_accuracy: 0.1797 - val_precision: 0.9403 - val_recall: 0.0174 - val_auc: 0.7884
+Epoch 11/100
+1358/1358 - 1995s - loss: 3.0615 - accuracy: 0.1728 - precision: 0.6787 - recall: 0.0294 - auc: 0.7802 - val_loss: 3.0656 - val_accuracy: 0.1737 - val_precision: 1.0000 - val_recall: 0.0019 - val_auc: 0.7807
+Epoch 12/100
+1358/1358 - 2005s - loss: 3.0523 - accuracy: 0.1729 - precision: 0.6836 - recall: 0.0304 - auc: 0.7820 - val_loss: 3.0268 - val_accuracy: 0.1710 - val_precision: 0.9109 - val_recall: 0.0339 - val_auc: 0.7879
+Epoch 13/100
+1358/1358 - 1961s - loss: 3.0513 - accuracy: 0.1745 - precision: 0.6531 - recall: 0.0306 - auc: 0.7819 - val_loss: 3.0068 - val_accuracy: 0.1711 - val_precision: 0.7356 - val_recall: 0.0590 - val_auc: 0.7922
+Epoch 14/100
+1358/1358 - 1921s - loss: 3.0472 - accuracy: 0.1759 - precision: 0.6725 - recall: 0.0299 - auc: 0.7829 - val_loss: 3.0194 - val_accuracy: 0.1726 - val_precision: 0.8619 - val_recall: 0.0380 - val_auc: 0.7885
+Epoch 15/100
+1358/1358 - 1941s - loss: 3.0396 - accuracy: 0.1749 - precision: 0.6819 - recall: 0.0309 - auc: 0.7847 - val_loss: 3.0906 - val_accuracy: 0.1908 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7657
+Epoch 16/100
+1358/1358 - 1963s - loss: 3.0390 - accuracy: 0.1743 - precision: 0.6705 - recall: 0.0299 - auc: 0.7855 - val_loss: 2.9942 - val_accuracy: 0.1724 - val_precision: 0.7408 - val_recall: 0.0574 - val_auc: 0.7951
+Epoch 17/100
+1358/1358 - 1949s - loss: 3.0304 - accuracy: 0.1775 - precision: 0.6649 - recall: 0.0297 - auc: 0.7872 - val_loss: 3.1176 - val_accuracy: 0.1651 - val_precision: 0.3874 - val_recall: 0.0786 - val_auc: 0.7810
+Epoch 18/100
+1358/1358 - 2027s - loss: 3.0360 - accuracy: 0.1765 - precision: 0.6596 - recall: 0.0284 - auc: 0.7857 - val_loss: 3.0376 - val_accuracy: 0.1940 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7816
+Epoch 19/100
+1358/1358 - 2095s - loss: 3.0362 - accuracy: 0.1759 - precision: 0.6371 - recall: 0.0278 - auc: 0.7858 - val_loss: 2.9929 - val_accuracy: 0.1741 - val_precision: 0.7589 - val_recall: 0.0528 - val_auc: 0.7966
+Epoch 20/100
+1358/1358 - 1977s - loss: 3.0375 - accuracy: 0.1788 - precision: 0.6186 - recall: 0.0277 - auc: 0.7858 - val_loss: 3.0299 - val_accuracy: 0.1664 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7931
+Epoch 21/100
+1358/1358 - 2005s - loss: 3.0235 - accuracy: 0.1768 - precision: 0.6458 - recall: 0.0278 - auc: 0.7891 - val_loss: 2.9998 - val_accuracy: 0.1715 - val_precision: 0.5610 - val_recall: 0.0708 - val_auc: 0.7976
+Epoch 22/100
+1358/1358 - 1994s - loss: 3.0193 - accuracy: 0.1770 - precision: 0.6263 - recall: 0.0286 - auc: 0.7903 - val_loss: 3.0168 - val_accuracy: 0.1844 - val_precision: 0.8091 - val_recall: 0.0180 - val_auc: 0.7874
+Epoch 23/100
+1358/1358 - 1968s - loss: 3.0194 - accuracy: 0.1779 - precision: 0.6391 - recall: 0.0267 - auc: 0.7900 - val_loss: 2.9852 - val_accuracy: 0.1841 - val_precision: 0.7835 - val_recall: 0.0297 - val_auc: 0.7967
+Epoch 24/100
+1358/1358 - 2089s - loss: 3.0243 - accuracy: 0.1784 - precision: 0.5871 - recall: 0.0247 - auc: 0.7888 - val_loss: 2.9816 - val_accuracy: 0.1761 - val_precision: 0.7075 - val_recall: 0.0522 - val_auc: 0.7984
+Epoch 25/100
+1358/1358 - 2316s - loss: 3.0272 - accuracy: 0.1779 - precision: 0.6017 - recall: 0.0258 - auc: 0.7884 - val_loss: 2.9742 - val_accuracy: 0.1862 - val_precision: 0.7651 - val_recall: 0.0234 - val_auc: 0.7991
+Epoch 26/100
+1358/1358 - 2424s - loss: 3.0119 - accuracy: 0.1785 - precision: 0.5927 - recall: 0.0240 - auc: 0.7917 - val_loss: 3.0470 - val_accuracy: 0.1784 - val_precision: 0.6601 - val_recall: 0.0559 - val_auc: 0.7886
+Epoch 27/100
+1358/1358 - 2268s - loss: 3.0090 - accuracy: 0.1788 - precision: 0.5973 - recall: 0.0271 - auc: 0.7921 - val_loss: 3.0351 - val_accuracy: 0.1825 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7844
+Epoch 28/100
+1358/1358 - 2552s - loss: 3.0165 - accuracy: 0.1789 - precision: 0.5772 - recall: 0.0240 - auc: 0.7908 - val_loss: 3.0521 - val_accuracy: 0.1555 - val_precision: 0.2629 - val_recall: 0.0517 - val_auc: 0.7965
+Epoch 29/100
+1358/1358 - 2932s - loss: 3.0160 - accuracy: 0.1797 - precision: 0.6109 - recall: 0.0249 - auc: 0.7908 - val_loss: 2.9745 - val_accuracy: 0.1943 - val_precision: 0.2500 - val_recall: 3.6870e-04 - val_auc: 0.7988
+Epoch 30/100
+1358/1358 - 2426s - loss: 3.0140 - accuracy: 0.1772 - precision: 0.5769 - recall: 0.0244 - auc: 0.7916 - val_loss: 2.9839 - val_accuracy: 0.1848 - val_precision: 0.6974 - val_recall: 0.0327 - val_auc: 0.7949
+Epoch 31/100
+1358/1358 - 2186s - loss: 3.0039 - accuracy: 0.1788 - precision: 0.5774 - recall: 0.0224 - auc: 0.7934 - val_loss: 2.9737 - val_accuracy: 0.1884 - val_precision: 0.6718 - val_recall: 0.0442 - val_auc: 0.7985
+Epoch 32/100
+1358/1358 - 2765s - loss: 3.0052 - accuracy: 0.1799 - precision: 0.5591 - recall: 0.0227 - auc: 0.7927 - val_loss: 2.9694 - val_accuracy: 0.1801 - val_precision: 0.6623 - val_recall: 0.0278 - val_auc: 0.8006
+Epoch 33/100
+1358/1358 - 2687s - loss: 3.0097 - accuracy: 0.1776 - precision: 0.5458 - recall: 0.0225 - auc: 0.7926 - val_loss: 3.0080 - val_accuracy: 0.1887 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7900
+Epoch 34/100
+1358/1358 - 2764s - loss: 3.0119 - accuracy: 0.1801 - precision: 0.5280 - recall: 0.0228 - auc: 0.7916 - val_loss: 2.9715 - val_accuracy: 0.1869 - val_precision: 0.4857 - val_recall: 0.0047 - val_auc: 0.8001
+Epoch 35/100
+1358/1358 - 2385s - loss: 3.0106 - accuracy: 0.1774 - precision: 0.5277 - recall: 0.0228 - auc: 0.7924 - val_loss: 2.9722 - val_accuracy: 0.1815 - val_precision: 0.5000 - val_recall: 0.0045 - val_auc: 0.8004
+Epoch 36/100
+1358/1358 - 2363s - loss: 3.0115 - accuracy: 0.1769 - precision: 0.5398 - recall: 0.0233 - auc: 0.7921 - val_loss: 3.0795 - val_accuracy: 0.1737 - val_precision: 0.5970 - val_recall: 0.0582 - val_auc: 0.7837
+Epoch 37/100
+1358/1358 - 2340s - loss: 2.9998 - accuracy: 0.1773 - precision: 0.5075 - recall: 0.0209 - auc: 0.7943 - val_loss: 2.9906 - val_accuracy: 0.1817 - val_precision: 0.6300 - val_recall: 0.0333 - val_auc: 0.7930
+Epoch 38/100
+1358/1358 - 2410s - loss: 3.0012 - accuracy: 0.1774 - precision: 0.5254 - recall: 0.0197 - auc: 0.7941 - val_loss: 2.9720 - val_accuracy: 0.1783 - val_precision: 0.5393 - val_recall: 0.0658 - val_auc: 0.8036
+Epoch 39/100
+1358/1358 - 2640s - loss: 3.0091 - accuracy: 0.1776 - precision: 0.4847 - recall: 0.0197 - auc: 0.7931 - val_loss: 3.1256 - val_accuracy: 0.1593 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7787
+Epoch 40/100
+1358/1358 - 2849s - loss: 2.9989 - accuracy: 0.1768 - precision: 0.4816 - recall: 0.0205 - auc: 0.7952 - val_loss: 3.1076 - val_accuracy: 0.1590 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7781
+Epoch 41/100
+1358/1358 - 3124s - loss: 2.9961 - accuracy: 0.1771 - precision: 0.5048 - recall: 0.0192 - auc: 0.7954 - val_loss: 2.9879 - val_accuracy: 0.1765 - val_precision: 0.3869 - val_recall: 0.0049 - val_auc: 0.7977
+Epoch 42/100
+1358/1358 - 2978s - loss: 2.9942 - accuracy: 0.1765 - precision: 0.4858 - recall: 0.0173 - auc: 0.7958 - val_loss: 3.0186 - val_accuracy: 0.1855 - val_precision: 0.2174 - val_recall: 9.2174e-04 - val_auc: 0.7858
+Epoch 43/100
+1358/1358 - 2805s - loss: 2.9977 - accuracy: 0.1762 - precision: 0.4545 - recall: 0.0189 - auc: 0.7955 - val_loss: 2.9988 - val_accuracy: 0.1772 - val_precision: 0.4301 - val_recall: 0.0074 - val_auc: 0.8001
+Epoch 44/100
+1358/1358 - 2750s - loss: 2.9984 - accuracy: 0.1758 - precision: 0.4907 - recall: 0.0177 - auc: 0.7950 - val_loss: 2.9572 - val_accuracy: 0.1911 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8034
+Epoch 45/100
+1358/1358 - 2900s - loss: 2.9890 - accuracy: 0.1777 - precision: 0.4873 - recall: 0.0159 - auc: 0.7962 - val_loss: 2.9507 - val_accuracy: 0.1852 - val_precision: 0.3280 - val_recall: 0.0038 - val_auc: 0.8043
+Epoch 46/100
+1358/1358 - 2972s - loss: 2.9997 - accuracy: 0.1759 - precision: 0.4573 - recall: 0.0191 - auc: 0.7947 - val_loss: 2.9693 - val_accuracy: 0.1860 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8006
+Epoch 47/100
+1358/1358 - 2860s - loss: 3.0039 - accuracy: 0.1745 - precision: 0.4381 - recall: 0.0181 - auc: 0.7940 - val_loss: 2.9843 - val_accuracy: 0.1801 - val_precision: 0.5033 - val_recall: 0.0285 - val_auc: 0.7960
+Epoch 48/100
+1358/1358 - 2849s - loss: 2.9850 - accuracy: 0.1779 - precision: 0.4720 - recall: 0.0176 - auc: 0.7974 - val_loss: 3.0001 - val_accuracy: 0.1751 - val_precision: 0.4139 - val_recall: 0.0756 - val_auc: 0.8058
+Epoch 49/100
+1358/1358 - 2858s - loss: 2.9902 - accuracy: 0.1759 - precision: 0.4264 - recall: 0.0147 - auc: 0.7961 - val_loss: 2.9633 - val_accuracy: 0.1781 - val_precision: 0.3855 - val_recall: 0.0127 - val_auc: 0.8025
+Epoch 50/100
+1358/1358 - 2907s - loss: 2.9853 - accuracy: 0.1756 - precision: 0.4638 - recall: 0.0155 - auc: 0.7974 - val_loss: 2.9839 - val_accuracy: 0.1714 - val_precision: 0.8500 - val_recall: 0.0063 - val_auc: 0.7954
+Epoch 51/100
+1358/1358 - 2690s - loss: 2.9957 - accuracy: 0.1751 - precision: 0.4240 - recall: 0.0153 - auc: 0.7956 - val_loss: 3.0055 - val_accuracy: 0.1726 - val_precision: 0.5091 - val_recall: 0.0593 - val_auc: 0.7981
+Epoch 52/100
+1358/1358 - 2744s - loss: 2.9889 - accuracy: 0.1761 - precision: 0.4274 - recall: 0.0163 - auc: 0.7971 - val_loss: 3.1635 - val_accuracy: 0.1609 - val_precision: 0.4337 - val_recall: 0.0292 - val_auc: 0.7720
+Epoch 53/100
+1358/1358 - 2702s - loss: 2.9889 - accuracy: 0.1753 - precision: 0.4260 - recall: 0.0179 - auc: 0.7968 - val_loss: 3.0156 - val_accuracy: 0.1715 - val_precision: 0.4540 - val_recall: 0.0688 - val_auc: 0.7966
+Epoch 54/100
+1358/1358 - 2706s - loss: 2.9817 - accuracy: 0.1764 - precision: 0.4246 - recall: 0.0145 - auc: 0.7978 - val_loss: 2.9611 - val_accuracy: 0.1771 - val_precision: 0.4254 - val_recall: 0.0263 - val_auc: 0.8037
+Epoch 55/100
+1358/1358 - 2659s - loss: 2.9881 - accuracy: 0.1735 - precision: 0.4118 - recall: 0.0154 - auc: 0.7972 - val_loss: 3.1341 - val_accuracy: 0.1529 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7595
+Epoch 56/100
+1358/1358 - 2768s - loss: 2.9862 - accuracy: 0.1755 - precision: 0.4172 - recall: 0.0175 - auc: 0.7975 - val_loss: 2.9696 - val_accuracy: 0.1626 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7980
+Epoch 57/100
+1358/1358 - 2859s - loss: 2.9808 - accuracy: 0.1768 - precision: 0.4026 - recall: 0.0156 - auc: 0.7981 - val_loss: 2.9331 - val_accuracy: 0.1811 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8067
+Epoch 58/100
+1358/1358 - 2696s - loss: 2.9787 - accuracy: 0.1753 - precision: 0.4036 - recall: 0.0140 - auc: 0.7985 - val_loss: 2.9435 - val_accuracy: 0.1699 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8047
+Epoch 59/100
+1358/1358 - 2644s - loss: 2.9815 - accuracy: 0.1749 - precision: 0.3935 - recall: 0.0154 - auc: 0.7981 - val_loss: 3.0519 - val_accuracy: 0.1776 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7764
+Epoch 60/100
+1358/1358 - 2896s - loss: 2.9718 - accuracy: 0.1751 - precision: 0.4091 - recall: 0.0127 - auc: 0.7996 - val_loss: 2.9391 - val_accuracy: 0.1780 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8039
+Epoch 61/100
+1358/1358 - 2758s - loss: 2.9835 - accuracy: 0.1752 - precision: 0.4111 - recall: 0.0174 - auc: 0.7974 - val_loss: 2.9658 - val_accuracy: 0.1776 - val_precision: 0.9630 - val_recall: 0.0048 - val_auc: 0.8011
+Epoch 62/100
+1358/1358 - 3666s - loss: 2.9654 - accuracy: 0.1778 - precision: 0.4278 - recall: 0.0138 - auc: 0.8007 - val_loss: 2.9261 - val_accuracy: 0.1765 - val_precision: 0.0152 - val_recall: 9.2174e-05 - val_auc: 0.8090
+Epoch 63/100
+1358/1358 - 3520s - loss: 2.9742 - accuracy: 0.1747 - precision: 0.4073 - recall: 0.0128 - auc: 0.7997 - val_loss: 3.0019 - val_accuracy: 0.1813 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7950
+Epoch 64/100
+1358/1358 - 4684s - loss: 2.9689 - accuracy: 0.1763 - precision: 0.4224 - recall: 0.0143 - auc: 0.8001 - val_loss: 3.0076 - val_accuracy: 0.1755 - val_precision: 0.1783 - val_recall: 0.0064 - val_auc: 0.7899
+Epoch 65/100
+1358/1358 - 3588s - loss: 2.9718 - accuracy: 0.1774 - precision: 0.4081 - recall: 0.0155 - auc: 0.7994 - val_loss: 2.9344 - val_accuracy: 0.1791 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8089
+Epoch 66/100
+1358/1358 - 3076s - loss: 2.9770 - accuracy: 0.1768 - precision: 0.3930 - recall: 0.0158 - auc: 0.7986 - val_loss: 2.9360 - val_accuracy: 0.1796 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8050
+Epoch 67/100
+1358/1358 - 2961s - loss: 2.9768 - accuracy: 0.1765 - precision: 0.4239 - recall: 0.0170 - auc: 0.7985 - val_loss: 2.9249 - val_accuracy: 0.1831 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8077
+Epoch 68/100
+1358/1358 - 2518s - loss: 2.9702 - accuracy: 0.1780 - precision: 0.4310 - recall: 0.0154 - auc: 0.7997 - val_loss: 3.1846 - val_accuracy: 0.1584 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7453
+Epoch 69/100
+1358/1358 - 2468s - loss: 2.9636 - accuracy: 0.1772 - precision: 0.4425 - recall: 0.0138 - auc: 0.8007 - val_loss: 2.9689 - val_accuracy: 0.1796 - val_precision: 0.0500 - val_recall: 0.0010 - val_auc: 0.7980
+Epoch 70/100
+1358/1358 - 2533s - loss: 2.9602 - accuracy: 0.1791 - precision: 0.4416 - recall: 0.0158 - auc: 0.8012 - val_loss: 2.9348 - val_accuracy: 0.1807 - val_precision: 0.8400 - val_recall: 0.0252 - val_auc: 0.8044
+Epoch 71/100
+1358/1358 - 2405s - loss: 2.9609 - accuracy: 0.1820 - precision: 0.4797 - recall: 0.0166 - auc: 0.8006 - val_loss: 3.1096 - val_accuracy: 0.1736 - val_precision: 0.1670 - val_recall: 0.0077 - val_auc: 0.7679
+Epoch 72/100
+1358/1358 - 2314s - loss: 2.9611 - accuracy: 0.1805 - precision: 0.4469 - recall: 0.0156 - auc: 0.8009 - val_loss: 2.9264 - val_accuracy: 0.1784 - val_precision: 0.8597 - val_recall: 0.0220 - val_auc: 0.8077
+Epoch 73/100
+1358/1358 - 2408s - loss: 2.9599 - accuracy: 0.1807 - precision: 0.4442 - recall: 0.0170 - auc: 0.8009 - val_loss: 2.9584 - val_accuracy: 0.1859 - val_precision: 0.8644 - val_recall: 0.0253 - val_auc: 0.8022
+Epoch 74/100
+1358/1358 - 2272s - loss: 2.9607 - accuracy: 0.1820 - precision: 0.4742 - recall: 0.0199 - auc: 0.8007 - val_loss: 3.0756 - val_accuracy: 0.1692 - val_precision: 0.4439 - val_recall: 0.0595 - val_auc: 0.7839
+Epoch 75/100
+1358/1358 - 2307s - loss: 2.9602 - accuracy: 0.1832 - precision: 0.4930 - recall: 0.0194 - auc: 0.8005 - val_loss: 2.9470 - val_accuracy: 0.1820 - val_precision: 0.4460 - val_recall: 0.0594 - val_auc: 0.8106
+Epoch 76/100
+1358/1358 - 2302s - loss: 2.9567 - accuracy: 0.1849 - precision: 0.5194 - recall: 0.0191 - auc: 0.8012 - val_loss: 2.9156 - val_accuracy: 0.2105 - val_precision: 0.9400 - val_recall: 0.0130 - val_auc: 0.8099
+Epoch 77/100
+1358/1358 - 2240s - loss: 2.9627 - accuracy: 0.1847 - precision: 0.5148 - recall: 0.0208 - auc: 0.7996 - val_loss: 2.9104 - val_accuracy: 0.2067 - val_precision: 1.0000 - val_recall: 0.0013 - val_auc: 0.8089
+Epoch 78/100
+1358/1358 - 2314s - loss: 2.9609 - accuracy: 0.1852 - precision: 0.5062 - recall: 0.0207 - auc: 0.8003 - val_loss: 2.9614 - val_accuracy: 0.2020 - val_precision: 0.8523 - val_recall: 0.0277 - val_auc: 0.8023
+Epoch 79/100
+1358/1358 - 2329s - loss: 2.9470 - accuracy: 0.1867 - precision: 0.5456 - recall: 0.0213 - auc: 0.8028 - val_loss: 3.1139 - val_accuracy: 0.1743 - val_precision: 0.3163 - val_recall: 0.0842 - val_auc: 0.7900
+Epoch 80/100
+1358/1358 - 2396s - loss: 2.9493 - accuracy: 0.1882 - precision: 0.5576 - recall: 0.0225 - auc: 0.8023 - val_loss: 3.1223 - val_accuracy: 0.1747 - val_precision: 0.3722 - val_recall: 0.0783 - val_auc: 0.7791
+Epoch 81/100
+1358/1358 - 2277s - loss: 2.9540 - accuracy: 0.1870 - precision: 0.5425 - recall: 0.0247 - auc: 0.8014 - val_loss: 2.9128 - val_accuracy: 0.1872 - val_precision: 0.9091 - val_recall: 9.2174e-04 - val_auc: 0.8093
+Epoch 82/100
+1358/1358 - 2246s - loss: 2.9532 - accuracy: 0.1920 - precision: 0.5515 - recall: 0.0226 - auc: 0.8015 - val_loss: 2.9085 - val_accuracy: 0.1899 - val_precision: 0.8091 - val_recall: 0.0344 - val_auc: 0.8104
+Epoch 83/100
+1358/1358 - 2233s - loss: 2.9491 - accuracy: 0.1915 - precision: 0.5688 - recall: 0.0247 - auc: 0.8025 - val_loss: 2.9157 - val_accuracy: 0.1885 - val_precision: 0.9231 - val_recall: 0.0011 - val_auc: 0.8094
+Epoch 84/100
+1358/1358 - 2323s - loss: 2.9523 - accuracy: 0.1916 - precision: 0.5463 - recall: 0.0270 - auc: 0.8018 - val_loss: 2.8965 - val_accuracy: 0.2076 - val_precision: 0.9037 - val_recall: 0.0112 - val_auc: 0.8114
+Epoch 85/100
+1358/1358 - 2406s - loss: 2.9412 - accuracy: 0.1950 - precision: 0.5740 - recall: 0.0275 - auc: 0.8039 - val_loss: 2.8890 - val_accuracy: 0.1901 - val_precision: 0.7939 - val_recall: 0.0405 - val_auc: 0.8140
+Epoch 86/100
+1358/1358 - 2342s - loss: 2.9414 - accuracy: 0.1960 - precision: 0.5808 - recall: 0.0268 - auc: 0.8037 - val_loss: 2.9122 - val_accuracy: 0.2044 - val_precision: 0.9659 - val_recall: 0.0078 - val_auc: 0.8106
+Epoch 87/100
+1358/1358 - 2533s - loss: 2.9419 - accuracy: 0.1970 - precision: 0.6090 - recall: 0.0282 - auc: 0.8030 - val_loss: 2.8905 - val_accuracy: 0.2178 - val_precision: 0.8912 - val_recall: 0.0196 - val_auc: 0.8122
+Epoch 88/100
+1358/1358 - 2871s - loss: 2.9482 - accuracy: 0.1942 - precision: 0.6063 - recall: 0.0284 - auc: 0.8027 - val_loss: 2.8980 - val_accuracy: 0.2192 - val_precision: 0.9135 - val_recall: 0.0088 - val_auc: 0.8116
+Epoch 89/100
+1358/1358 - 3100s - loss: 2.9479 - accuracy: 0.1981 - precision: 0.5980 - recall: 0.0286 - auc: 0.8022 - val_loss: 2.9764 - val_accuracy: 0.1810 - val_precision: 0.4755 - val_recall: 0.0679 - val_auc: 0.8046
+Epoch 90/100
+1358/1358 - 3156s - loss: 2.9494 - accuracy: 0.1975 - precision: 0.5885 - recall: 0.0303 - auc: 0.8022 - val_loss: 2.9642 - val_accuracy: 0.1931 - val_precision: 0.8629 - val_recall: 0.0313 - val_auc: 0.7984
+Epoch 91/100
+1358/1358 - 2706s - loss: 2.9478 - accuracy: 0.1987 - precision: 0.6247 - recall: 0.0298 - auc: 0.8021 - val_loss: 2.9889 - val_accuracy: 0.2057 - val_precision: 0.9412 - val_recall: 0.0015 - val_auc: 0.7942
+Epoch 92/100
+1358/1358 - 2732s - loss: 2.9381 - accuracy: 0.1998 - precision: 0.6177 - recall: 0.0308 - auc: 0.8038 - val_loss: 2.9429 - val_accuracy: 0.2030 - val_precision: 0.8971 - val_recall: 0.0056 - val_auc: 0.8026
+Epoch 93/100
+1358/1358 - 2613s - loss: 2.9559 - accuracy: 0.2003 - precision: 0.6089 - recall: 0.0318 - auc: 0.8009 - val_loss: 2.9864 - val_accuracy: 0.1854 - val_precision: 0.4464 - val_recall: 0.0725 - val_auc: 0.8018
+Epoch 94/100
+1358/1358 - 2637s - loss: 2.9266 - accuracy: 0.2035 - precision: 0.6496 - recall: 0.0326 - auc: 0.8058 - val_loss: 2.9046 - val_accuracy: 0.2028 - val_precision: 0.7425 - val_recall: 0.0500 - val_auc: 0.8099
+Epoch 95/100
+1358/1358 - 2653s - loss: 2.9448 - accuracy: 0.2007 - precision: 0.6106 - recall: 0.0319 - auc: 0.8025 - val_loss: 3.0379 - val_accuracy: 0.2118 - val_precision: 0.9194 - val_recall: 0.0053 - val_auc: 0.7807
+Epoch 96/100
+1358/1358 - 2645s - loss: 2.9405 - accuracy: 0.2016 - precision: 0.6284 - recall: 0.0333 - auc: 0.8035 - val_loss: 2.8970 - val_accuracy: 0.2180 - val_precision: 0.8727 - val_recall: 0.0265 - val_auc: 0.8101
+Epoch 97/100
+1358/1358 - 2672s - loss: 2.9350 - accuracy: 0.2049 - precision: 0.6549 - recall: 0.0341 - auc: 0.8036 - val_loss: 2.9625 - val_accuracy: 0.2195 - val_precision: 0.8514 - val_recall: 0.0333 - val_auc: 0.7939
+Epoch 98/100
+1358/1358 - 2748s - loss: 2.9357 - accuracy: 0.2066 - precision: 0.6603 - recall: 0.0340 - auc: 0.8038 - val_loss: 2.9954 - val_accuracy: 0.2184 - val_precision: 0.9189 - val_recall: 0.0031 - val_auc: 0.7931
+Epoch 99/100
+1358/1358 - 2605s - loss: 2.9258 - accuracy: 0.2073 - precision: 0.6818 - recall: 0.0345 - auc: 0.8059 - val_loss: 2.8839 - val_accuracy: 0.2295 - val_precision: 0.8633 - val_recall: 0.0314 - val_auc: 0.8131
+Epoch 100/100
+1358/1358 - 2603s - loss: 2.9396 - accuracy: 0.2064 - precision: 0.6432 - recall: 0.0347 - auc: 0.8032 - val_loss: 2.9871 - val_accuracy: 0.2193 - val_precision: 0.9034 - val_recall: 0.0172 - val_auc: 0.7877
+2021-01-13 18:58:20.149463: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:tensorflow:AutoGraph could not transform <function canonicalize_signatures.<locals>.signature_wrapper at 0x2ad6229c7268> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+{'loss': [3.4281198978424072, 3.1924705505371094, 3.1567249298095703, 3.1285347938537598, 3.1063108444213867, 3.0934882164001465, 3.0900561809539795, 3.0775539875030518, 3.069138526916504, 3.060593366622925, 3.0615479946136475, 3.052278757095337, 3.0513064861297607, 3.0472183227539062, 3.0396270751953125, 3.0390002727508545, 3.030371904373169, 3.036033868789673, 3.0362420082092285, 3.037454605102539, 3.0235116481781006, 3.0193161964416504, 3.0194008350372314, 3.024346351623535, 3.027156352996826, 3.0118701457977295, 3.0089573860168457, 3.0164849758148193, 3.015990972518921, 3.0140380859375, 3.003917694091797, 3.0051751136779785, 3.009666919708252, 3.01186466217041, 3.0105724334716797, 3.011521339416504, 2.999786853790283, 3.001213788986206, 3.0090835094451904, 2.9988861083984375, 2.9961471557617188, 2.994246244430542, 2.997654676437378, 2.9983882904052734, 2.9889559745788574, 2.999695062637329, 3.0038864612579346, 2.9850168228149414, 2.9902243614196777, 2.9853248596191406, 2.995736837387085, 2.9889326095581055, 2.9889001846313477, 2.9816665649414062, 2.9881439208984375, 2.9862170219421387, 2.9807794094085693, 2.978660821914673, 2.9815444946289062, 2.9717559814453125, 2.9835121631622314, 2.9653749465942383, 2.974238395690918, 2.968858480453491, 2.97178053855896, 2.977027177810669, 2.976810932159424, 2.9702260494232178, 2.9635984897613525, 2.960174083709717, 2.9609129428863525, 2.961104393005371, 2.959886312484741, 2.9607038497924805, 2.9601776599884033, 2.9566736221313477, 2.9627110958099365, 2.9609005451202393, 2.9470036029815674, 2.9492814540863037, 2.9539954662323, 2.9531807899475098, 2.9490792751312256, 2.9523284435272217, 2.941220760345459, 2.941420316696167, 2.9418797492980957, 2.948176383972168, 2.947901487350464, 2.949442148208618, 2.9478354454040527, 2.9380815029144287, 2.955939531326294, 2.9266419410705566, 2.9448177814483643, 2.9405031204223633, 2.9350056648254395, 2.9356980323791504, 2.9257938861846924, 2.9395525455474854], 'accuracy': [0.11227448284626007, 0.13305412232875824, 0.1426270306110382, 0.15127944946289062, 0.15954068303108215, 0.16110548377037048, 0.1627853512763977, 0.16798600554466248, 0.16828516125679016, 0.17113862931728363, 0.17279547452926636, 0.17293354868888855, 0.17449834942817688, 0.17585603892803192, 0.17488954961299896, 0.1742912381887436, 0.17746686935424805, 0.1765463948249817, 0.17592507600784302, 0.1787785291671753, 0.17679952085018158, 0.17696060240268707, 0.17790408432483673, 0.1783873289823532, 0.17785806953907013, 0.1784793883562088, 0.1787785291671753, 0.17887058854103088, 0.17969900369644165, 0.17723675072193146, 0.1788015514612198, 0.17992912232875824, 0.17755891382694244, 0.18013623356819153, 0.17744384706020355, 0.17693759500980377, 0.17732879519462585, 0.17737480998039246, 0.17760492861270905, 0.17684555053710938, 0.17714469134807587, 0.1764773577451706, 0.1761782020330429, 0.17581000924110413, 0.17769698798656464, 0.17592507600784302, 0.17454436421394348, 0.17788107693195343, 0.17585603892803192, 0.17555688321590424, 0.17507363855838776, 0.1760631501674652, 0.17528074979782104, 0.1764083206653595, 0.17348583042621613, 0.17548784613609314, 0.17677651345729828, 0.17525772750377655, 0.17491255700588226, 0.17511966824531555, 0.17516568303108215, 0.17781203985214233, 0.17468243837356567, 0.1762932687997818, 0.17739783227443695, 0.17679952085018158, 0.1765463948249817, 0.17799612879753113, 0.17721372842788696, 0.17907768487930298, 0.18200019001960754, 0.18050441145896912, 0.1806655079126358, 0.18195416033267975, 0.1832198053598404, 0.18487665057182312, 0.18466955423355103, 0.1852448433637619, 0.18671759963035583, 0.18816734850406647, 0.18703976273536682, 0.1920333206653595, 0.19148103892803192, 0.19155007600784302, 0.19497883319854736, 0.19596832990646362, 0.19695784151554108, 0.1942194402217865, 0.19808541238307953, 0.19746410846710205, 0.1986607164144516, 0.19983431696891785, 0.20029455423355103, 0.20351620018482208, 0.2006857544183731, 0.20158320665359497, 0.20487388968467712, 0.20655375719070435, 0.2073131501674652, 0.20641568303108215], 'precision': [0.07491856813430786, 0.6435986161231995, 0.6940397620201111, 0.6814159154891968, 0.7317073345184326, 0.7174969911575317, 0.6863194108009338, 0.699260950088501, 0.6915125250816345, 0.6879916191101074, 0.6787042021751404, 0.683557391166687, 0.6530912518501282, 0.6725297570228577, 0.6819105744361877, 0.6704545617103577, 0.6649484634399414, 0.659551739692688, 0.6371307969093323, 0.6185831427574158, 0.6457998752593994, 0.6262575387954712, 0.6391184329986572, 0.5871108770370483, 0.6017176508903503, 0.5927396416664124, 0.5972574949264526, 0.5771997570991516, 0.610859751701355, 0.5769439935684204, 0.5774480700492859, 0.5591397881507874, 0.5457589030265808, 0.527999997138977, 0.5277481079101562, 0.5397757887840271, 0.5075376629829407, 0.525444507598877, 0.48472851514816284, 0.4816216230392456, 0.5048426389694214, 0.4858064651489258, 0.4545454680919647, 0.4907348155975342, 0.48730605840682983, 0.4572531580924988, 0.4380580484867096, 0.471965491771698, 0.42637214064598083, 0.4637681245803833, 0.42403051257133484, 0.4274486005306244, 0.4259868562221527, 0.4246298670768738, 0.4118008613586426, 0.41721490025520325, 0.4026206135749817, 0.403578519821167, 0.39352941513061523, 0.4090571701526642, 0.41112321615219116, 0.42775800824165344, 0.407299280166626, 0.422448992729187, 0.4081261456012726, 0.3930005729198456, 0.42389431595802307, 0.43095695972442627, 0.44247788190841675, 0.4415917694568634, 0.47968021035194397, 0.44686469435691833, 0.44417765736579895, 0.4742324650287628, 0.492990642786026, 0.5194235444068909, 0.5148232579231262, 0.5061936974525452, 0.5456150770187378, 0.5576484203338623, 0.5424671173095703, 0.5514912605285645, 0.5687830448150635, 0.5463437438011169, 0.5739673376083374, 0.580757737159729, 0.6090412139892578, 0.6062992215156555, 0.597977876663208, 0.5884718298912048, 0.6246985197067261, 0.6177285313606262, 0.6088869571685791, 0.649564802646637, 0.6106467247009277, 0.6284224390983582, 0.6548985242843628, 0.6602678298950195, 0.6818181872367859, 0.6432225108146667], 'recall': [0.0005292709683999419, 0.004280191380530596, 0.01205817423760891, 0.017719071358442307, 0.023472018539905548, 0.027176914736628532, 0.027591126039624214, 0.028304491192102432, 0.02924797497689724, 0.030191458761692047, 0.029409056529402733, 0.030421575531363487, 0.030628681182861328, 0.02991531603038311, 0.030881810933351517, 0.02986929379403591, 0.02968519926071167, 0.028442563489079475, 0.027798233553767204, 0.027729196473956108, 0.027775220572948456, 0.028649669140577316, 0.026693666353821754, 0.024737665429711342, 0.025796208530664444, 0.024047311395406723, 0.027061855420470238, 0.024001289159059525, 0.024852724745869637, 0.024415500462055206, 0.022390464320778847, 0.02273564040660858, 0.02250552363693714, 0.02278166450560093, 0.02275865152478218, 0.023264911025762558, 0.020917709916830063, 0.019721096381545067, 0.019721096381545067, 0.02050349861383438, 0.01919182576239109, 0.017327871173620224, 0.018869660794734955, 0.017673049122095108, 0.015901140868663788, 0.019076766446232796, 0.01806424930691719, 0.01762702502310276, 0.014658505097031593, 0.015463917516171932, 0.015348858200013638, 0.01626932993531227, 0.01788015477359295, 0.0145204346626997, 0.015417894348502159, 0.017511965706944466, 0.015555964782834053, 0.014014175161719322, 0.015394882299005985, 0.012679492123425007, 0.017350884154438972, 0.01383008062839508, 0.012840574607253075, 0.014290316961705685, 0.015486929565668106, 0.015763070434331894, 0.01698269508779049, 0.015440905466675758, 0.013807069510221481, 0.01583210565149784, 0.016568483784794807, 0.015578976832330227, 0.017028719186782837, 0.01990519091486931, 0.01942194439470768, 0.019076766446232796, 0.02077963948249817, 0.020687591284513474, 0.021331921219825745, 0.022482510656118393, 0.024691641330718994, 0.02255154587328434, 0.024737665429711342, 0.02699282020330429, 0.027499079704284668, 0.02680872566998005, 0.028212444856762886, 0.02835051529109478, 0.02858063392341137, 0.030306516215205193, 0.029800258576869965, 0.03078976459801197, 0.03184830769896507, 0.03263070806860924, 0.03194035217165947, 0.03327503800392151, 0.03414948284626007, 0.034034427255392075, 0.034517671912908554, 0.034724779427051544], 'auc': [0.716173529624939, 0.7528467774391174, 0.761718213558197, 0.7691649794578552, 0.7720311880111694, 0.7743098735809326, 0.7755264043807983, 0.7776200175285339, 0.7794758677482605, 0.7811223864555359, 0.7801657319068909, 0.7819732427597046, 0.7818523049354553, 0.7828717231750488, 0.7846789956092834, 0.7854610681533813, 0.7872410416603088, 0.7857098579406738, 0.7858240604400635, 0.7858401536941528, 0.789055585861206, 0.7903379797935486, 0.7899816632270813, 0.7887508273124695, 0.7883787751197815, 0.7916567921638489, 0.792107105255127, 0.7907823324203491, 0.7907787561416626, 0.7915875911712646, 0.7934401631355286, 0.7926890850067139, 0.7925993204116821, 0.7915849089622498, 0.7924401760101318, 0.7921403646469116, 0.7943328619003296, 0.7940713763237, 0.7930609583854675, 0.795158326625824, 0.7953529953956604, 0.7958197593688965, 0.7955201864242554, 0.7950234413146973, 0.7962308526039124, 0.7947035431861877, 0.7940129637718201, 0.7974123358726501, 0.7960718274116516, 0.7974211573600769, 0.7955547571182251, 0.7970818281173706, 0.7968237400054932, 0.7978366017341614, 0.7972162961959839, 0.7975119948387146, 0.7981184124946594, 0.7985160946846008, 0.7981400489807129, 0.7996235489845276, 0.7973710298538208, 0.8006554245948792, 0.7997161746025085, 0.8001107573509216, 0.7994405627250671, 0.7986104488372803, 0.7985058426856995, 0.7996917963027954, 0.8007340431213379, 0.8012080788612366, 0.8006051182746887, 0.8008680939674377, 0.8009329438209534, 0.800746738910675, 0.8004834651947021, 0.8011892437934875, 0.7996035218238831, 0.8003032207489014, 0.8028301000595093, 0.8023354411125183, 0.8013788461685181, 0.8015118837356567, 0.8025054931640625, 0.801801323890686, 0.8039371371269226, 0.8037311434745789, 0.8030290603637695, 0.8026885986328125, 0.8021721839904785, 0.8021790981292725, 0.8021278381347656, 0.8037595152854919, 0.8009046912193298, 0.805828332901001, 0.8024691939353943, 0.8034707307815552, 0.8036472201347351, 0.8038418292999268, 0.8058643937110901, 0.8031717538833618], 'val_loss': [3.4274067878723145, 3.1567087173461914, 3.113588809967041, 3.095780372619629, 3.0833122730255127, 3.2129828929901123, 3.144683837890625, 3.0528886318206787, 3.033435821533203, 3.0231268405914307, 3.065624475479126, 3.0268404483795166, 3.0067837238311768, 3.0193841457366943, 3.0906431674957275, 2.9942402839660645, 3.1176371574401855, 3.0376148223876953, 2.9929096698760986, 3.029857635498047, 2.99983286857605, 3.0168182849884033, 2.985203981399536, 2.981550455093384, 2.9741945266723633, 3.0469729900360107, 3.035050868988037, 3.0521113872528076, 2.9745373725891113, 2.9839460849761963, 2.9736666679382324, 2.969395399093628, 3.008021593093872, 2.9715187549591064, 2.9722049236297607, 3.0795464515686035, 2.990642786026001, 2.9720072746276855, 3.1256494522094727, 3.1075963973999023, 2.987877368927002, 3.0185911655426025, 2.9987633228302, 2.957163095474243, 2.9507381916046143, 2.9693267345428467, 2.984271764755249, 3.0000691413879395, 2.963298797607422, 2.9839203357696533, 3.0054776668548584, 3.1634624004364014, 3.015589952468872, 2.9610724449157715, 3.134063243865967, 2.969553232192993, 2.9331037998199463, 2.9435155391693115, 3.051856756210327, 2.939121961593628, 2.965801239013672, 2.9261279106140137, 3.001909017562866, 3.0075721740722656, 2.934394121170044, 2.935983180999756, 2.9248745441436768, 3.184638261795044, 2.968897581100464, 2.934814214706421, 3.1096158027648926, 2.9263596534729004, 2.9584341049194336, 3.075619697570801, 2.9470322132110596, 2.9155755043029785, 2.9104325771331787, 2.9613964557647705, 3.1138761043548584, 3.122281312942505, 2.9128057956695557, 2.9085187911987305, 2.915677785873413, 2.896472454071045, 2.8890116214752197, 2.91220760345459, 2.8905060291290283, 2.8980202674865723, 2.9763529300689697, 2.9642155170440674, 2.9888527393341064, 2.9428675174713135, 2.9864108562469482, 2.90455961227417, 3.0379161834716797, 2.896981716156006, 2.9625022411346436, 2.9954121112823486, 2.883936882019043, 2.987128496170044], 'val_accuracy': [0.10434141755104065, 0.14563554525375366, 0.15199556946754456, 0.1590930074453354, 0.1574338674545288, 0.12775370478630066, 0.1823209524154663, 0.18416443467140198, 0.16545303165912628, 0.1797400712966919, 0.17365655303001404, 0.17098350822925568, 0.17107567191123962, 0.17264263331890106, 0.1908009946346283, 0.17236611247062683, 0.1650843322277069, 0.1940270960330963, 0.17411743104457855, 0.1663747876882553, 0.17153654992580414, 0.1844409555196762, 0.18407227098941803, 0.1761452704668045, 0.18619227409362793, 0.1784496307373047, 0.1825052946805954, 0.155498206615448, 0.19430361688137054, 0.18480965495109558, 0.18840445578098297, 0.18010877072811127, 0.1886809915304184, 0.18692967295646667, 0.18149137496948242, 0.17374873161315918, 0.1816757321357727, 0.1782652735710144, 0.15927734971046448, 0.15900082886219025, 0.17651396989822388, 0.18554705381393433, 0.17715919017791748, 0.19107751548290253, 0.18517835438251495, 0.18600793182849884, 0.18010877072811127, 0.17513135075569153, 0.17808093130588531, 0.17135219275951385, 0.17264263331890106, 0.16093648970127106, 0.17153654992580414, 0.17706701159477234, 0.15291732549667358, 0.16259562969207764, 0.18112269043922424, 0.16987740993499756, 0.1776200532913208, 0.17798875272274017, 0.1776200532913208, 0.17651396989822388, 0.18130703270435333, 0.1755000501871109, 0.1790948510169983, 0.17964789271354675, 0.18305835127830505, 0.15835560858249664, 0.17964789271354675, 0.18066181242465973, 0.1735643893480301, 0.17835745215415955, 0.1859157532453537, 0.16923218965530396, 0.18195225298404694, 0.21052631735801697, 0.20665499567985535, 0.20204627513885498, 0.17430177330970764, 0.17467047274112701, 0.1872061938047409, 0.18987925350666046, 0.1884966343641281, 0.20757673680782318, 0.19006359577178955, 0.20435063540935516, 0.2178080976009369, 0.21919070184230804, 0.1810305118560791, 0.19310535490512848, 0.2057332545518875, 0.20296801626682281, 0.18536271154880524, 0.20278367400169373, 0.21181675791740417, 0.21799243986606598, 0.21946723759174347, 0.21836113929748535, 0.2295142412185669, 0.21928288042545319], 'val_precision': [0.0, 0.0, 0.0, 0.0, 0.633734941482544, 0.0, 0.0, 0.8999999761581421, 0.771276593208313, 0.9402984976768494, 1.0, 0.9108911156654358, 0.7356321811676025, 0.8619247078895569, 0.0, 0.740784764289856, 0.3873751163482666, 0.0, 0.7589403986930847, 0.0, 0.5609934329986572, 0.8091286420822144, 0.7834550142288208, 0.7074999809265137, 0.7650602459907532, 0.6601307392120361, 0.0, 0.26288658380508423, 0.25, 0.6974459886550903, 0.6718092560768127, 0.6622806787490845, 0.0, 0.48571428656578064, 0.5, 0.5969725847244263, 0.6300174593925476, 0.5392749309539795, 0.0, 0.0, 0.38686132431030273, 0.21739129722118378, 0.4301075339317322, 0.0, 0.328000009059906, 0.0, 0.5032573342323303, 0.41393235325813293, 0.3854748606681824, 0.8500000238418579, 0.5091053247451782, 0.43365252017974854, 0.45404747128486633, 0.4253731369972229, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.9629629850387573, 0.01515151560306549, 0.0, 0.1782945692539215, 0.0, 0.0, 0.0, 0.0, 0.05000000074505806, 0.8399999737739563, 0.16700200736522675, 0.8597122430801392, 0.8643532991409302, 0.4439091682434082, 0.4459833800792694, 0.9399999976158142, 1.0, 0.8522727489471436, 0.31626299023628235, 0.3721541166305542, 0.9090909361839294, 0.8091106414794922, 0.9230769276618958, 0.9037036895751953, 0.7938517332077026, 0.9659090638160706, 0.8912134170532227, 0.9134615659713745, 0.47548386454582214, 0.8629441857337952, 0.9411764740943909, 0.8970588445663452, 0.44639819860458374, 0.7424657344818115, 0.9193548560142517, 0.8727272748947144, 0.8514150977134705, 0.9189189076423645, 0.8632911443710327, 0.9033816456794739], 'val_recall': [0.0, 0.0, 0.0, 0.0, 0.07272559404373169, 0.0, 0.0, 0.0008295695297420025, 0.06682643294334412, 0.01742096059024334, 0.0019356622360646725, 0.033920176327228546, 0.05899161100387573, 0.03797585144639015, 0.0, 0.057424645870923996, 0.07862475514411926, 0.0, 0.05281592905521393, 0.0, 0.07078993320465088, 0.0179740060120821, 0.029680155217647552, 0.052170708775520325, 0.023412296548485756, 0.05585768446326256, 0.0, 0.05170983448624611, 0.00036869756877422333, 0.03272191062569618, 0.044151533395051956, 0.027836667373776436, 0.0, 0.004700894001871347, 0.004516545217484236, 0.05816204100847244, 0.03327495604753494, 0.06581252068281174, 0.0, 0.0, 0.004885242786258459, 0.0009217439219355583, 0.0073739513754844666, 0.0, 0.003779150079935789, 0.0, 0.02848188765347004, 0.07558300346136093, 0.012720066122710705, 0.006267858669161797, 0.05926813557744026, 0.029219282791018486, 0.06876210123300552, 0.0262697022408247, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.004793068394064903, 9.217439219355583e-05, 0.0, 0.006360033061355352, 0.0, 0.0, 0.0, 0.0, 0.0010139183141291142, 0.02516360953450203, 0.007650474552065134, 0.022029679268598557, 0.025255784392356873, 0.05945248529314995, 0.059360310435295105, 0.01299658976495266, 0.0012904414907097816, 0.02765231765806675, 0.0842473953962326, 0.07834823429584503, 0.0009217439219355583, 0.03438105061650276, 0.00110609270632267, 0.011245275847613811, 0.04046455770730972, 0.007834823802113533, 0.01963314600288868, 0.008756567724049091, 0.06793253123760223, 0.03133929520845413, 0.0014747902750968933, 0.005622637923806906, 0.072541244328022, 0.049958523362874985, 0.005253940355032682, 0.02654622495174408, 0.03327495604753494, 0.0031339293345808983, 0.031431470066308975, 0.017236610874533653], 'val_auc': [0.7212716937065125, 0.7676743268966675, 0.7767122387886047, 0.7764157652854919, 0.7780041098594666, 0.7485396862030029, 0.7573965191841125, 0.782082200050354, 0.7890206575393677, 0.7884035706520081, 0.7807058691978455, 0.7878590822219849, 0.792242705821991, 0.7885420322418213, 0.7657436728477478, 0.7950730919837952, 0.7809695601463318, 0.7816486358642578, 0.7965824007987976, 0.7930969595909119, 0.7975788116455078, 0.7873804569244385, 0.7966741323471069, 0.7983524203300476, 0.7991485595703125, 0.7886338233947754, 0.78436678647995, 0.7964581251144409, 0.7988386750221252, 0.7948740720748901, 0.7985407114028931, 0.8006275296211243, 0.7900197505950928, 0.8001170754432678, 0.8003947138786316, 0.7837001085281372, 0.792957067489624, 0.8035991787910461, 0.7786609530448914, 0.7780985236167908, 0.7977303266525269, 0.7857704162597656, 0.8000903129577637, 0.803355872631073, 0.8042877912521362, 0.8006079196929932, 0.7959662675857544, 0.8057642579078674, 0.8025040626525879, 0.7953694462776184, 0.7980784773826599, 0.7719586491584778, 0.7965981960296631, 0.8036597967147827, 0.7595371603965759, 0.798017144203186, 0.8067365288734436, 0.8047208189964294, 0.7764391899108887, 0.8039044141769409, 0.8010885715484619, 0.8089888691902161, 0.7950335144996643, 0.7898969054222107, 0.8089234232902527, 0.8049917817115784, 0.8076915740966797, 0.7453120946884155, 0.798039436340332, 0.8043530583381653, 0.7678617238998413, 0.8077061176300049, 0.8021920323371887, 0.7838996648788452, 0.8106423020362854, 0.8098604083061218, 0.8088573217391968, 0.8023444414138794, 0.7900483012199402, 0.7790859341621399, 0.809266209602356, 0.8104382157325745, 0.8093622922897339, 0.8113650679588318, 0.8140158653259277, 0.8105608224868774, 0.8122405409812927, 0.8116245865821838, 0.8046017289161682, 0.7984070777893066, 0.7941974997520447, 0.8026226758956909, 0.8017913699150085, 0.8098740577697754, 0.7807461619377136, 0.8100588917732239, 0.7938933968544006, 0.7931478023529053, 0.813145637512207, 0.7876869440078735]}
+date and time = 13-01-2021_18-58-13
+Saving the model to path: /users/PAA0023/dong760/plant_leaves_diagnosis/saved_models/ResNet50_BatchSize_32_0.2ValSplit_13-01-2021_18-58-13_100epochs
+
+Prediction Result: 
+340/340 - 476s - loss: 2.9897 - accuracy: 0.2218 - precision: 0.8818 - recall: 0.0179 - auc: 0.7871
+Result: [2.9896645545959473, 0.22177159786224365, 0.8818181753158569, 0.017881833016872406, 0.7871199250221252]
+Validation accuracy: 0.22177159786224365 Validation accuracy: 2.9896645545959473
+
+
+p0234.ten.osc.edu:
+                                                                               Req'd  Req'd   Elap 
+Job id               Username Queue    Name                 SessID NDS   TSK   Memory Time Use S Time 
+-------------------- -------- -------- -------------------- ------ ----- ----- ------ ----- - -----
+2747121              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 70:08
+2755697              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 24:34
+The date when running current script is :
+Wed Jan 13 19:06:39 EST 2021

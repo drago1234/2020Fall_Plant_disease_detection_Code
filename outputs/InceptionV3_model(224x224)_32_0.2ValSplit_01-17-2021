@@ -1,0 +1,995 @@
+environemnt set up
+Running the batch script
+2021-01-18 14:16:59.298617: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-18 14:17:20.096243: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX512F
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-01-18 14:17:20.104325: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-18 14:17:20.107468: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2021-01-18 14:17:20.160305: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-18 14:17:20.160351: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-18 14:17:20.166831: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-18 14:17:20.166894: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-18 14:17:20.170487: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-18 14:17:20.172503: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-18 14:17:20.177968: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-18 14:17:20.180465: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-18 14:17:20.181989: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-18 14:17:20.189073: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-18 14:17:20.190212: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-18 14:17:24.283718: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-18 14:17:24.283779: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-01-18 14:17:24.283793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-01-18 14:17:24.291137: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 30128 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2021-01-18 14:17:24.297266: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-18 14:17:24.299633: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-18 14:17:24.299673: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-18 14:17:24.299701: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-18 14:17:24.299718: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-18 14:17:24.299735: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-18 14:17:24.299756: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-18 14:17:24.299773: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-18 14:17:24.299789: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-18 14:17:24.299806: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-18 14:17:24.304172: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-18 14:17:24.304203: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-18 14:17:24.304213: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-01-18 14:17:24.304222: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-01-18 14:17:24.308555: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 30128 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2021-01-18 14:17:24.811251: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-18 14:17:24.813019: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-18 14:17:24.813065: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-18 14:17:24.813089: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-18 14:17:24.813101: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-18 14:17:24.813112: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-18 14:17:24.813123: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-18 14:17:24.813134: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-18 14:17:24.813145: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-18 14:17:24.813156: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-18 14:17:24.816237: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-18 14:17:24.816496: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-18 14:17:24.818130: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-18 14:17:24.818158: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-18 14:17:24.818178: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-18 14:17:24.818189: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-18 14:17:24.818200: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-18 14:17:24.818211: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-18 14:17:24.818225: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-18 14:17:24.818236: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-18 14:17:24.818246: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-18 14:17:24.822145: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-18 14:17:24.822181: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-18 14:17:24.822188: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-01-18 14:17:24.822195: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-01-18 14:17:24.826205: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30128 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+Does the system is built with CUDA?: True
+Default GPU Device: /device:GPU:0
+====> Start running baseline.py
+Classes: ['Tomato___Late_blight', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Peach___healthy', 'Grape___Esca_(Black_Measles)', 'Potato___Late_blight', 'Pepper,_bell___Bacterial_spot', 'Strawberry___healthy', 'Orange___Haunglongbing_(Citrus_greening)', 'Tomato___Leaf_Mold', 'Apple___Black_rot', 'Strawberry___Leaf_scorch', 'Tomato___Early_blight', 'Cherry_(including_sour)___healthy', 'Corn_(maize)___Common_rust_', 'Blueberry___healthy', 'Potato___Early_blight', 'Pepper,_bell___healthy', 'Apple___Cedar_apple_rust', 'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)', 'Tomato___Tomato_mosaic_virus', 'Tomato___Target_Spot', 'Tomato___healthy', 'Peach___Bacterial_spot', 'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot', 'Tomato___Spider_mites Two-spotted_spider_mite', 'Corn_(maize)___healthy', 'Squash___Powdery_mildew', 'Cherry_(including_sour)___Powdery_mildew', 'Tomato___Bacterial_spot', 'Grape___Black_rot', 'Apple___healthy', 'Potato___healthy', 'Corn_(maize)___Northern_Leaf_Blight', 'Tomato___Septoria_leaf_spot', 'Raspberry___healthy', 'Soybean___healthy', 'Apple___Apple_scab', 'Grape___healthy']
+Number of classes: 38
+Total number of images: 54305
+first_folder_path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight
+Number of folder: 38
+sample image path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight/5fdf3288-d5f4-4c70-9b12-95222b82d415___RS_Late.B 4942.JPG
+Image size: (256, 256, 3)
+Found 43456 images belonging to 38 classes.
+Found 10849 images belonging to 38 classes.
+Train size: 43456
+val_size: 10849, train_size: 43456
+
+====> Statistics: Model name: InceptionV3_model, epochs=100, batch_size=32, validation_split=0.2, lr=0.001, momentum=0.9, steps_per_epoch =100, feature shape= (224, 224, 3), no_classes=38, loss_function=categorical_crossentropy
+Model: "model"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_3 (InputLayer)            [(None, 224, 224, 3) 0                                            
+__________________________________________________________________________________________________
+conv2d (Conv2D)                 (None, 111, 111, 32) 864         input_3[0][0]                    
+__________________________________________________________________________________________________
+batch_normalization (BatchNorma (None, 111, 111, 32) 96          conv2d[0][0]                     
+__________________________________________________________________________________________________
+activation (Activation)         (None, 111, 111, 32) 0           batch_normalization[0][0]        
+__________________________________________________________________________________________________
+conv2d_1 (Conv2D)               (None, 109, 109, 32) 9216        activation[0][0]                 
+__________________________________________________________________________________________________
+batch_normalization_1 (BatchNor (None, 109, 109, 32) 96          conv2d_1[0][0]                   
+__________________________________________________________________________________________________
+activation_1 (Activation)       (None, 109, 109, 32) 0           batch_normalization_1[0][0]      
+__________________________________________________________________________________________________
+conv2d_2 (Conv2D)               (None, 109, 109, 64) 18432       activation_1[0][0]               
+__________________________________________________________________________________________________
+batch_normalization_2 (BatchNor (None, 109, 109, 64) 192         conv2d_2[0][0]                   
+__________________________________________________________________________________________________
+activation_2 (Activation)       (None, 109, 109, 64) 0           batch_normalization_2[0][0]      
+__________________________________________________________________________________________________
+max_pooling2d (MaxPooling2D)    (None, 54, 54, 64)   0           activation_2[0][0]               
+__________________________________________________________________________________________________
+conv2d_3 (Conv2D)               (None, 54, 54, 80)   5120        max_pooling2d[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_3 (BatchNor (None, 54, 54, 80)   240         conv2d_3[0][0]                   
+__________________________________________________________________________________________________
+activation_3 (Activation)       (None, 54, 54, 80)   0           batch_normalization_3[0][0]      
+__________________________________________________________________________________________________
+conv2d_4 (Conv2D)               (None, 52, 52, 192)  138240      activation_3[0][0]               
+__________________________________________________________________________________________________
+batch_normalization_4 (BatchNor (None, 52, 52, 192)  576         conv2d_4[0][0]                   
+__________________________________________________________________________________________________
+activation_4 (Activation)       (None, 52, 52, 192)  0           batch_normalization_4[0][0]      
+__________________________________________________________________________________________________
+max_pooling2d_1 (MaxPooling2D)  (None, 25, 25, 192)  0           activation_4[0][0]               
+__________________________________________________________________________________________________
+conv2d_8 (Conv2D)               (None, 25, 25, 64)   12288       max_pooling2d_1[0][0]            
+__________________________________________________________________________________________________
+batch_normalization_8 (BatchNor (None, 25, 25, 64)   192         conv2d_8[0][0]                   
+__________________________________________________________________________________________________
+activation_8 (Activation)       (None, 25, 25, 64)   0           batch_normalization_8[0][0]      
+__________________________________________________________________________________________________
+conv2d_6 (Conv2D)               (None, 25, 25, 48)   9216        max_pooling2d_1[0][0]            
+__________________________________________________________________________________________________
+conv2d_9 (Conv2D)               (None, 25, 25, 96)   55296       activation_8[0][0]               
+__________________________________________________________________________________________________
+batch_normalization_6 (BatchNor (None, 25, 25, 48)   144         conv2d_6[0][0]                   
+__________________________________________________________________________________________________
+batch_normalization_9 (BatchNor (None, 25, 25, 96)   288         conv2d_9[0][0]                   
+__________________________________________________________________________________________________
+activation_6 (Activation)       (None, 25, 25, 48)   0           batch_normalization_6[0][0]      
+__________________________________________________________________________________________________
+activation_9 (Activation)       (None, 25, 25, 96)   0           batch_normalization_9[0][0]      
+__________________________________________________________________________________________________
+average_pooling2d (AveragePooli (None, 25, 25, 192)  0           max_pooling2d_1[0][0]            
+__________________________________________________________________________________________________
+conv2d_5 (Conv2D)               (None, 25, 25, 64)   12288       max_pooling2d_1[0][0]            
+__________________________________________________________________________________________________
+conv2d_7 (Conv2D)               (None, 25, 25, 64)   76800       activation_6[0][0]               
+__________________________________________________________________________________________________
+conv2d_10 (Conv2D)              (None, 25, 25, 96)   82944       activation_9[0][0]               
+__________________________________________________________________________________________________
+conv2d_11 (Conv2D)              (None, 25, 25, 32)   6144        average_pooling2d[0][0]          
+__________________________________________________________________________________________________
+batch_normalization_5 (BatchNor (None, 25, 25, 64)   192         conv2d_5[0][0]                   
+__________________________________________________________________________________________________
+batch_normalization_7 (BatchNor (None, 25, 25, 64)   192         conv2d_7[0][0]                   
+__________________________________________________________________________________________________
+batch_normalization_10 (BatchNo (None, 25, 25, 96)   288         conv2d_10[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_11 (BatchNo (None, 25, 25, 32)   96          conv2d_11[0][0]                  
+__________________________________________________________________________________________________
+activation_5 (Activation)       (None, 25, 25, 64)   0           batch_normalization_5[0][0]      
+__________________________________________________________________________________________________
+activation_7 (Activation)       (None, 25, 25, 64)   0           batch_normalization_7[0][0]      
+__________________________________________________________________________________________________
+activation_10 (Activation)      (None, 25, 25, 96)   0           batch_normalization_10[0][0]     
+__________________________________________________________________________________________________
+activation_11 (Activation)      (None, 25, 25, 32)   0           batch_normalization_11[0][0]     
+__________________________________________________________________________________________________
+mixed0 (Concatenate)            (None, 25, 25, 256)  0           activation_5[0][0]               
+                                                                 activation_7[0][0]               
+                                                                 activation_10[0][0]              
+                                                                 activation_11[0][0]              
+__________________________________________________________________________________________________
+conv2d_15 (Conv2D)              (None, 25, 25, 64)   16384       mixed0[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_15 (BatchNo (None, 25, 25, 64)   192         conv2d_15[0][0]                  
+__________________________________________________________________________________________________
+activation_15 (Activation)      (None, 25, 25, 64)   0           batch_normalization_15[0][0]     
+__________________________________________________________________________________________________
+conv2d_13 (Conv2D)              (None, 25, 25, 48)   12288       mixed0[0][0]                     
+__________________________________________________________________________________________________
+conv2d_16 (Conv2D)              (None, 25, 25, 96)   55296       activation_15[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_13 (BatchNo (None, 25, 25, 48)   144         conv2d_13[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_16 (BatchNo (None, 25, 25, 96)   288         conv2d_16[0][0]                  
+__________________________________________________________________________________________________
+activation_13 (Activation)      (None, 25, 25, 48)   0           batch_normalization_13[0][0]     
+__________________________________________________________________________________________________
+activation_16 (Activation)      (None, 25, 25, 96)   0           batch_normalization_16[0][0]     
+__________________________________________________________________________________________________
+average_pooling2d_1 (AveragePoo (None, 25, 25, 256)  0           mixed0[0][0]                     
+__________________________________________________________________________________________________
+conv2d_12 (Conv2D)              (None, 25, 25, 64)   16384       mixed0[0][0]                     
+__________________________________________________________________________________________________
+conv2d_14 (Conv2D)              (None, 25, 25, 64)   76800       activation_13[0][0]              
+__________________________________________________________________________________________________
+conv2d_17 (Conv2D)              (None, 25, 25, 96)   82944       activation_16[0][0]              
+__________________________________________________________________________________________________
+conv2d_18 (Conv2D)              (None, 25, 25, 64)   16384       average_pooling2d_1[0][0]        
+__________________________________________________________________________________________________
+batch_normalization_12 (BatchNo (None, 25, 25, 64)   192         conv2d_12[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_14 (BatchNo (None, 25, 25, 64)   192         conv2d_14[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_17 (BatchNo (None, 25, 25, 96)   288         conv2d_17[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_18 (BatchNo (None, 25, 25, 64)   192         conv2d_18[0][0]                  
+__________________________________________________________________________________________________
+activation_12 (Activation)      (None, 25, 25, 64)   0           batch_normalization_12[0][0]     
+__________________________________________________________________________________________________
+activation_14 (Activation)      (None, 25, 25, 64)   0           batch_normalization_14[0][0]     
+__________________________________________________________________________________________________
+activation_17 (Activation)      (None, 25, 25, 96)   0           batch_normalization_17[0][0]     
+__________________________________________________________________________________________________
+activation_18 (Activation)      (None, 25, 25, 64)   0           batch_normalization_18[0][0]     
+__________________________________________________________________________________________________
+mixed1 (Concatenate)            (None, 25, 25, 288)  0           activation_12[0][0]              
+                                                                 activation_14[0][0]              
+                                                                 activation_17[0][0]              
+                                                                 activation_18[0][0]              
+__________________________________________________________________________________________________
+conv2d_22 (Conv2D)              (None, 25, 25, 64)   18432       mixed1[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_22 (BatchNo (None, 25, 25, 64)   192         conv2d_22[0][0]                  
+__________________________________________________________________________________________________
+activation_22 (Activation)      (None, 25, 25, 64)   0           batch_normalization_22[0][0]     
+__________________________________________________________________________________________________
+conv2d_20 (Conv2D)              (None, 25, 25, 48)   13824       mixed1[0][0]                     
+__________________________________________________________________________________________________
+conv2d_23 (Conv2D)              (None, 25, 25, 96)   55296       activation_22[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_20 (BatchNo (None, 25, 25, 48)   144         conv2d_20[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_23 (BatchNo (None, 25, 25, 96)   288         conv2d_23[0][0]                  
+__________________________________________________________________________________________________
+activation_20 (Activation)      (None, 25, 25, 48)   0           batch_normalization_20[0][0]     
+__________________________________________________________________________________________________
+activation_23 (Activation)      (None, 25, 25, 96)   0           batch_normalization_23[0][0]     
+__________________________________________________________________________________________________
+average_pooling2d_2 (AveragePoo (None, 25, 25, 288)  0           mixed1[0][0]                     
+__________________________________________________________________________________________________
+conv2d_19 (Conv2D)              (None, 25, 25, 64)   18432       mixed1[0][0]                     
+__________________________________________________________________________________________________
+conv2d_21 (Conv2D)              (None, 25, 25, 64)   76800       activation_20[0][0]              
+__________________________________________________________________________________________________
+conv2d_24 (Conv2D)              (None, 25, 25, 96)   82944       activation_23[0][0]              
+__________________________________________________________________________________________________
+conv2d_25 (Conv2D)              (None, 25, 25, 64)   18432       average_pooling2d_2[0][0]        
+__________________________________________________________________________________________________
+batch_normalization_19 (BatchNo (None, 25, 25, 64)   192         conv2d_19[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_21 (BatchNo (None, 25, 25, 64)   192         conv2d_21[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_24 (BatchNo (None, 25, 25, 96)   288         conv2d_24[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_25 (BatchNo (None, 25, 25, 64)   192         conv2d_25[0][0]                  
+__________________________________________________________________________________________________
+activation_19 (Activation)      (None, 25, 25, 64)   0           batch_normalization_19[0][0]     
+__________________________________________________________________________________________________
+activation_21 (Activation)      (None, 25, 25, 64)   0           batch_normalization_21[0][0]     
+__________________________________________________________________________________________________
+activation_24 (Activation)      (None, 25, 25, 96)   0           batch_normalization_24[0][0]     
+__________________________________________________________________________________________________
+activation_25 (Activation)      (None, 25, 25, 64)   0           batch_normalization_25[0][0]     
+__________________________________________________________________________________________________
+mixed2 (Concatenate)            (None, 25, 25, 288)  0           activation_19[0][0]              
+                                                                 activation_21[0][0]              
+                                                                 activation_24[0][0]              
+                                                                 activation_25[0][0]              
+__________________________________________________________________________________________________
+conv2d_27 (Conv2D)              (None, 25, 25, 64)   18432       mixed2[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_27 (BatchNo (None, 25, 25, 64)   192         conv2d_27[0][0]                  
+__________________________________________________________________________________________________
+activation_27 (Activation)      (None, 25, 25, 64)   0           batch_normalization_27[0][0]     
+__________________________________________________________________________________________________
+conv2d_28 (Conv2D)              (None, 25, 25, 96)   55296       activation_27[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_28 (BatchNo (None, 25, 25, 96)   288         conv2d_28[0][0]                  
+__________________________________________________________________________________________________
+activation_28 (Activation)      (None, 25, 25, 96)   0           batch_normalization_28[0][0]     
+__________________________________________________________________________________________________
+conv2d_26 (Conv2D)              (None, 12, 12, 384)  995328      mixed2[0][0]                     
+__________________________________________________________________________________________________
+conv2d_29 (Conv2D)              (None, 12, 12, 96)   82944       activation_28[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_26 (BatchNo (None, 12, 12, 384)  1152        conv2d_26[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_29 (BatchNo (None, 12, 12, 96)   288         conv2d_29[0][0]                  
+__________________________________________________________________________________________________
+activation_26 (Activation)      (None, 12, 12, 384)  0           batch_normalization_26[0][0]     
+__________________________________________________________________________________________________
+activation_29 (Activation)      (None, 12, 12, 96)   0           batch_normalization_29[0][0]     
+__________________________________________________________________________________________________
+max_pooling2d_2 (MaxPooling2D)  (None, 12, 12, 288)  0           mixed2[0][0]                     
+__________________________________________________________________________________________________
+mixed3 (Concatenate)            (None, 12, 12, 768)  0           activation_26[0][0]              
+                                                                 activation_29[0][0]              
+                                                                 max_pooling2d_2[0][0]            
+__________________________________________________________________________________________________
+conv2d_34 (Conv2D)              (None, 12, 12, 128)  98304       mixed3[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_34 (BatchNo (None, 12, 12, 128)  384         conv2d_34[0][0]                  
+__________________________________________________________________________________________________
+activation_34 (Activation)      (None, 12, 12, 128)  0           batch_normalization_34[0][0]     
+__________________________________________________________________________________________________
+conv2d_35 (Conv2D)              (None, 12, 12, 128)  114688      activation_34[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_35 (BatchNo (None, 12, 12, 128)  384         conv2d_35[0][0]                  
+__________________________________________________________________________________________________
+activation_35 (Activation)      (None, 12, 12, 128)  0           batch_normalization_35[0][0]     
+__________________________________________________________________________________________________
+conv2d_31 (Conv2D)              (None, 12, 12, 128)  98304       mixed3[0][0]                     
+__________________________________________________________________________________________________
+conv2d_36 (Conv2D)              (None, 12, 12, 128)  114688      activation_35[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_31 (BatchNo (None, 12, 12, 128)  384         conv2d_31[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_36 (BatchNo (None, 12, 12, 128)  384         conv2d_36[0][0]                  
+__________________________________________________________________________________________________
+activation_31 (Activation)      (None, 12, 12, 128)  0           batch_normalization_31[0][0]     
+__________________________________________________________________________________________________
+activation_36 (Activation)      (None, 12, 12, 128)  0           batch_normalization_36[0][0]     
+__________________________________________________________________________________________________
+conv2d_32 (Conv2D)              (None, 12, 12, 128)  114688      activation_31[0][0]              
+__________________________________________________________________________________________________
+conv2d_37 (Conv2D)              (None, 12, 12, 128)  114688      activation_36[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_32 (BatchNo (None, 12, 12, 128)  384         conv2d_32[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_37 (BatchNo (None, 12, 12, 128)  384         conv2d_37[0][0]                  
+__________________________________________________________________________________________________
+activation_32 (Activation)      (None, 12, 12, 128)  0           batch_normalization_32[0][0]     
+__________________________________________________________________________________________________
+activation_37 (Activation)      (None, 12, 12, 128)  0           batch_normalization_37[0][0]     
+__________________________________________________________________________________________________
+average_pooling2d_3 (AveragePoo (None, 12, 12, 768)  0           mixed3[0][0]                     
+__________________________________________________________________________________________________
+conv2d_30 (Conv2D)              (None, 12, 12, 192)  147456      mixed3[0][0]                     
+__________________________________________________________________________________________________
+conv2d_33 (Conv2D)              (None, 12, 12, 192)  172032      activation_32[0][0]              
+__________________________________________________________________________________________________
+conv2d_38 (Conv2D)              (None, 12, 12, 192)  172032      activation_37[0][0]              
+__________________________________________________________________________________________________
+conv2d_39 (Conv2D)              (None, 12, 12, 192)  147456      average_pooling2d_3[0][0]        
+__________________________________________________________________________________________________
+batch_normalization_30 (BatchNo (None, 12, 12, 192)  576         conv2d_30[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_33 (BatchNo (None, 12, 12, 192)  576         conv2d_33[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_38 (BatchNo (None, 12, 12, 192)  576         conv2d_38[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_39 (BatchNo (None, 12, 12, 192)  576         conv2d_39[0][0]                  
+__________________________________________________________________________________________________
+activation_30 (Activation)      (None, 12, 12, 192)  0           batch_normalization_30[0][0]     
+__________________________________________________________________________________________________
+activation_33 (Activation)      (None, 12, 12, 192)  0           batch_normalization_33[0][0]     
+__________________________________________________________________________________________________
+activation_38 (Activation)      (None, 12, 12, 192)  0           batch_normalization_38[0][0]     
+__________________________________________________________________________________________________
+activation_39 (Activation)      (None, 12, 12, 192)  0           batch_normalization_39[0][0]     
+__________________________________________________________________________________________________
+mixed4 (Concatenate)            (None, 12, 12, 768)  0           activation_30[0][0]              
+                                                                 activation_33[0][0]              
+                                                                 activation_38[0][0]              
+                                                                 activation_39[0][0]              
+__________________________________________________________________________________________________
+conv2d_44 (Conv2D)              (None, 12, 12, 160)  122880      mixed4[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_44 (BatchNo (None, 12, 12, 160)  480         conv2d_44[0][0]                  
+__________________________________________________________________________________________________
+activation_44 (Activation)      (None, 12, 12, 160)  0           batch_normalization_44[0][0]     
+__________________________________________________________________________________________________
+conv2d_45 (Conv2D)              (None, 12, 12, 160)  179200      activation_44[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_45 (BatchNo (None, 12, 12, 160)  480         conv2d_45[0][0]                  
+__________________________________________________________________________________________________
+activation_45 (Activation)      (None, 12, 12, 160)  0           batch_normalization_45[0][0]     
+__________________________________________________________________________________________________
+conv2d_41 (Conv2D)              (None, 12, 12, 160)  122880      mixed4[0][0]                     
+__________________________________________________________________________________________________
+conv2d_46 (Conv2D)              (None, 12, 12, 160)  179200      activation_45[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_41 (BatchNo (None, 12, 12, 160)  480         conv2d_41[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_46 (BatchNo (None, 12, 12, 160)  480         conv2d_46[0][0]                  
+__________________________________________________________________________________________________
+activation_41 (Activation)      (None, 12, 12, 160)  0           batch_normalization_41[0][0]     
+__________________________________________________________________________________________________
+activation_46 (Activation)      (None, 12, 12, 160)  0           batch_normalization_46[0][0]     
+__________________________________________________________________________________________________
+conv2d_42 (Conv2D)              (None, 12, 12, 160)  179200      activation_41[0][0]              
+__________________________________________________________________________________________________
+conv2d_47 (Conv2D)              (None, 12, 12, 160)  179200      activation_46[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_42 (BatchNo (None, 12, 12, 160)  480         conv2d_42[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_47 (BatchNo (None, 12, 12, 160)  480         conv2d_47[0][0]                  
+__________________________________________________________________________________________________
+activation_42 (Activation)      (None, 12, 12, 160)  0           batch_normalization_42[0][0]     
+__________________________________________________________________________________________________
+activation_47 (Activation)      (None, 12, 12, 160)  0           batch_normalization_47[0][0]     
+__________________________________________________________________________________________________
+average_pooling2d_4 (AveragePoo (None, 12, 12, 768)  0           mixed4[0][0]                     
+__________________________________________________________________________________________________
+conv2d_40 (Conv2D)              (None, 12, 12, 192)  147456      mixed4[0][0]                     
+__________________________________________________________________________________________________
+conv2d_43 (Conv2D)              (None, 12, 12, 192)  215040      activation_42[0][0]              
+__________________________________________________________________________________________________
+conv2d_48 (Conv2D)              (None, 12, 12, 192)  215040      activation_47[0][0]              
+__________________________________________________________________________________________________
+conv2d_49 (Conv2D)              (None, 12, 12, 192)  147456      average_pooling2d_4[0][0]        
+__________________________________________________________________________________________________
+batch_normalization_40 (BatchNo (None, 12, 12, 192)  576         conv2d_40[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_43 (BatchNo (None, 12, 12, 192)  576         conv2d_43[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_48 (BatchNo (None, 12, 12, 192)  576         conv2d_48[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_49 (BatchNo (None, 12, 12, 192)  576         conv2d_49[0][0]                  
+__________________________________________________________________________________________________
+activation_40 (Activation)      (None, 12, 12, 192)  0           batch_normalization_40[0][0]     
+__________________________________________________________________________________________________
+activation_43 (Activation)      (None, 12, 12, 192)  0           batch_normalization_43[0][0]     
+__________________________________________________________________________________________________
+activation_48 (Activation)      (None, 12, 12, 192)  0           batch_normalization_48[0][0]     
+__________________________________________________________________________________________________
+activation_49 (Activation)      (None, 12, 12, 192)  0           batch_normalization_49[0][0]     
+__________________________________________________________________________________________________
+mixed5 (Concatenate)            (None, 12, 12, 768)  0           activation_40[0][0]              
+                                                                 activation_43[0][0]              
+                                                                 activation_48[0][0]              
+                                                                 activation_49[0][0]              
+__________________________________________________________________________________________________
+conv2d_54 (Conv2D)              (None, 12, 12, 160)  122880      mixed5[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_54 (BatchNo (None, 12, 12, 160)  480         conv2d_54[0][0]                  
+__________________________________________________________________________________________________
+activation_54 (Activation)      (None, 12, 12, 160)  0           batch_normalization_54[0][0]     
+__________________________________________________________________________________________________
+conv2d_55 (Conv2D)              (None, 12, 12, 160)  179200      activation_54[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_55 (BatchNo (None, 12, 12, 160)  480         conv2d_55[0][0]                  
+__________________________________________________________________________________________________
+activation_55 (Activation)      (None, 12, 12, 160)  0           batch_normalization_55[0][0]     
+__________________________________________________________________________________________________
+conv2d_51 (Conv2D)              (None, 12, 12, 160)  122880      mixed5[0][0]                     
+__________________________________________________________________________________________________
+conv2d_56 (Conv2D)              (None, 12, 12, 160)  179200      activation_55[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_51 (BatchNo (None, 12, 12, 160)  480         conv2d_51[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_56 (BatchNo (None, 12, 12, 160)  480         conv2d_56[0][0]                  
+__________________________________________________________________________________________________
+activation_51 (Activation)      (None, 12, 12, 160)  0           batch_normalization_51[0][0]     
+__________________________________________________________________________________________________
+activation_56 (Activation)      (None, 12, 12, 160)  0           batch_normalization_56[0][0]     
+__________________________________________________________________________________________________
+conv2d_52 (Conv2D)              (None, 12, 12, 160)  179200      activation_51[0][0]              
+__________________________________________________________________________________________________
+conv2d_57 (Conv2D)              (None, 12, 12, 160)  179200      activation_56[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_52 (BatchNo (None, 12, 12, 160)  480         conv2d_52[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_57 (BatchNo (None, 12, 12, 160)  480         conv2d_57[0][0]                  
+__________________________________________________________________________________________________
+activation_52 (Activation)      (None, 12, 12, 160)  0           batch_normalization_52[0][0]     
+__________________________________________________________________________________________________
+activation_57 (Activation)      (None, 12, 12, 160)  0           batch_normalization_57[0][0]     
+__________________________________________________________________________________________________
+average_pooling2d_5 (AveragePoo (None, 12, 12, 768)  0           mixed5[0][0]                     
+__________________________________________________________________________________________________
+conv2d_50 (Conv2D)              (None, 12, 12, 192)  147456      mixed5[0][0]                     
+__________________________________________________________________________________________________
+conv2d_53 (Conv2D)              (None, 12, 12, 192)  215040      activation_52[0][0]              
+__________________________________________________________________________________________________
+conv2d_58 (Conv2D)              (None, 12, 12, 192)  215040      activation_57[0][0]              
+__________________________________________________________________________________________________
+conv2d_59 (Conv2D)              (None, 12, 12, 192)  147456      average_pooling2d_5[0][0]        
+__________________________________________________________________________________________________
+batch_normalization_50 (BatchNo (None, 12, 12, 192)  576         conv2d_50[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_53 (BatchNo (None, 12, 12, 192)  576         conv2d_53[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_58 (BatchNo (None, 12, 12, 192)  576         conv2d_58[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_59 (BatchNo (None, 12, 12, 192)  576         conv2d_59[0][0]                  
+__________________________________________________________________________________________________
+activation_50 (Activation)      (None, 12, 12, 192)  0           batch_normalization_50[0][0]     
+__________________________________________________________________________________________________
+activation_53 (Activation)      (None, 12, 12, 192)  0           batch_normalization_53[0][0]     
+__________________________________________________________________________________________________
+activation_58 (Activation)      (None, 12, 12, 192)  0           batch_normalization_58[0][0]     
+__________________________________________________________________________________________________
+activation_59 (Activation)      (None, 12, 12, 192)  0           batch_normalization_59[0][0]     
+__________________________________________________________________________________________________
+mixed6 (Concatenate)            (None, 12, 12, 768)  0           activation_50[0][0]              
+                                                                 activation_53[0][0]              
+                                                                 activation_58[0][0]              
+                                                                 activation_59[0][0]              
+__________________________________________________________________________________________________
+conv2d_64 (Conv2D)              (None, 12, 12, 192)  147456      mixed6[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_64 (BatchNo (None, 12, 12, 192)  576         conv2d_64[0][0]                  
+__________________________________________________________________________________________________
+activation_64 (Activation)      (None, 12, 12, 192)  0           batch_normalization_64[0][0]     
+__________________________________________________________________________________________________
+conv2d_65 (Conv2D)              (None, 12, 12, 192)  258048      activation_64[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_65 (BatchNo (None, 12, 12, 192)  576         conv2d_65[0][0]                  
+__________________________________________________________________________________________________
+activation_65 (Activation)      (None, 12, 12, 192)  0           batch_normalization_65[0][0]     
+__________________________________________________________________________________________________
+conv2d_61 (Conv2D)              (None, 12, 12, 192)  147456      mixed6[0][0]                     
+__________________________________________________________________________________________________
+conv2d_66 (Conv2D)              (None, 12, 12, 192)  258048      activation_65[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_61 (BatchNo (None, 12, 12, 192)  576         conv2d_61[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_66 (BatchNo (None, 12, 12, 192)  576         conv2d_66[0][0]                  
+__________________________________________________________________________________________________
+activation_61 (Activation)      (None, 12, 12, 192)  0           batch_normalization_61[0][0]     
+__________________________________________________________________________________________________
+activation_66 (Activation)      (None, 12, 12, 192)  0           batch_normalization_66[0][0]     
+__________________________________________________________________________________________________
+conv2d_62 (Conv2D)              (None, 12, 12, 192)  258048      activation_61[0][0]              
+__________________________________________________________________________________________________
+conv2d_67 (Conv2D)              (None, 12, 12, 192)  258048      activation_66[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_62 (BatchNo (None, 12, 12, 192)  576         conv2d_62[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_67 (BatchNo (None, 12, 12, 192)  576         conv2d_67[0][0]                  
+__________________________________________________________________________________________________
+activation_62 (Activation)      (None, 12, 12, 192)  0           batch_normalization_62[0][0]     
+__________________________________________________________________________________________________
+activation_67 (Activation)      (None, 12, 12, 192)  0           batch_normalization_67[0][0]     
+__________________________________________________________________________________________________
+average_pooling2d_6 (AveragePoo (None, 12, 12, 768)  0           mixed6[0][0]                     
+__________________________________________________________________________________________________
+conv2d_60 (Conv2D)              (None, 12, 12, 192)  147456      mixed6[0][0]                     
+__________________________________________________________________________________________________
+conv2d_63 (Conv2D)              (None, 12, 12, 192)  258048      activation_62[0][0]              
+__________________________________________________________________________________________________
+conv2d_68 (Conv2D)              (None, 12, 12, 192)  258048      activation_67[0][0]              
+__________________________________________________________________________________________________
+conv2d_69 (Conv2D)              (None, 12, 12, 192)  147456      average_pooling2d_6[0][0]        
+__________________________________________________________________________________________________
+batch_normalization_60 (BatchNo (None, 12, 12, 192)  576         conv2d_60[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_63 (BatchNo (None, 12, 12, 192)  576         conv2d_63[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_68 (BatchNo (None, 12, 12, 192)  576         conv2d_68[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_69 (BatchNo (None, 12, 12, 192)  576         conv2d_69[0][0]                  
+__________________________________________________________________________________________________
+activation_60 (Activation)      (None, 12, 12, 192)  0           batch_normalization_60[0][0]     
+__________________________________________________________________________________________________
+activation_63 (Activation)      (None, 12, 12, 192)  0           batch_normalization_63[0][0]     
+__________________________________________________________________________________________________
+activation_68 (Activation)      (None, 12, 12, 192)  0           batch_normalization_68[0][0]     
+__________________________________________________________________________________________________
+activation_69 (Activation)      (None, 12, 12, 192)  0           batch_normalization_69[0][0]     
+__________________________________________________________________________________________________
+mixed7 (Concatenate)            (None, 12, 12, 768)  0           activation_60[0][0]              
+                                                                 activation_63[0][0]              
+                                                                 activation_68[0][0]              
+                                                                 activation_69[0][0]              
+__________________________________________________________________________________________________
+conv2d_72 (Conv2D)              (None, 12, 12, 192)  147456      mixed7[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_72 (BatchNo (None, 12, 12, 192)  576         conv2d_72[0][0]                  
+__________________________________________________________________________________________________
+activation_72 (Activation)      (None, 12, 12, 192)  0           batch_normalization_72[0][0]     
+__________________________________________________________________________________________________
+conv2d_73 (Conv2D)              (None, 12, 12, 192)  258048      activation_72[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_73 (BatchNo (None, 12, 12, 192)  576         conv2d_73[0][0]                  
+__________________________________________________________________________________________________
+activation_73 (Activation)      (None, 12, 12, 192)  0           batch_normalization_73[0][0]     
+__________________________________________________________________________________________________
+conv2d_70 (Conv2D)              (None, 12, 12, 192)  147456      mixed7[0][0]                     
+__________________________________________________________________________________________________
+conv2d_74 (Conv2D)              (None, 12, 12, 192)  258048      activation_73[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_70 (BatchNo (None, 12, 12, 192)  576         conv2d_70[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_74 (BatchNo (None, 12, 12, 192)  576         conv2d_74[0][0]                  
+__________________________________________________________________________________________________
+activation_70 (Activation)      (None, 12, 12, 192)  0           batch_normalization_70[0][0]     
+__________________________________________________________________________________________________
+activation_74 (Activation)      (None, 12, 12, 192)  0           batch_normalization_74[0][0]     
+__________________________________________________________________________________________________
+conv2d_71 (Conv2D)              (None, 5, 5, 320)    552960      activation_70[0][0]              
+__________________________________________________________________________________________________
+conv2d_75 (Conv2D)              (None, 5, 5, 192)    331776      activation_74[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_71 (BatchNo (None, 5, 5, 320)    960         conv2d_71[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_75 (BatchNo (None, 5, 5, 192)    576         conv2d_75[0][0]                  
+__________________________________________________________________________________________________
+activation_71 (Activation)      (None, 5, 5, 320)    0           batch_normalization_71[0][0]     
+__________________________________________________________________________________________________
+activation_75 (Activation)      (None, 5, 5, 192)    0           batch_normalization_75[0][0]     
+__________________________________________________________________________________________________
+max_pooling2d_3 (MaxPooling2D)  (None, 5, 5, 768)    0           mixed7[0][0]                     
+__________________________________________________________________________________________________
+mixed8 (Concatenate)            (None, 5, 5, 1280)   0           activation_71[0][0]              
+                                                                 activation_75[0][0]              
+                                                                 max_pooling2d_3[0][0]            
+__________________________________________________________________________________________________
+conv2d_80 (Conv2D)              (None, 5, 5, 448)    573440      mixed8[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_80 (BatchNo (None, 5, 5, 448)    1344        conv2d_80[0][0]                  
+__________________________________________________________________________________________________
+activation_80 (Activation)      (None, 5, 5, 448)    0           batch_normalization_80[0][0]     
+__________________________________________________________________________________________________
+conv2d_77 (Conv2D)              (None, 5, 5, 384)    491520      mixed8[0][0]                     
+__________________________________________________________________________________________________
+conv2d_81 (Conv2D)              (None, 5, 5, 384)    1548288     activation_80[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_77 (BatchNo (None, 5, 5, 384)    1152        conv2d_77[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_81 (BatchNo (None, 5, 5, 384)    1152        conv2d_81[0][0]                  
+__________________________________________________________________________________________________
+activation_77 (Activation)      (None, 5, 5, 384)    0           batch_normalization_77[0][0]     
+__________________________________________________________________________________________________
+activation_81 (Activation)      (None, 5, 5, 384)    0           batch_normalization_81[0][0]     
+__________________________________________________________________________________________________
+conv2d_78 (Conv2D)              (None, 5, 5, 384)    442368      activation_77[0][0]              
+__________________________________________________________________________________________________
+conv2d_79 (Conv2D)              (None, 5, 5, 384)    442368      activation_77[0][0]              
+__________________________________________________________________________________________________
+conv2d_82 (Conv2D)              (None, 5, 5, 384)    442368      activation_81[0][0]              
+__________________________________________________________________________________________________
+conv2d_83 (Conv2D)              (None, 5, 5, 384)    442368      activation_81[0][0]              
+__________________________________________________________________________________________________
+average_pooling2d_7 (AveragePoo (None, 5, 5, 1280)   0           mixed8[0][0]                     
+__________________________________________________________________________________________________
+conv2d_76 (Conv2D)              (None, 5, 5, 320)    409600      mixed8[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_78 (BatchNo (None, 5, 5, 384)    1152        conv2d_78[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_79 (BatchNo (None, 5, 5, 384)    1152        conv2d_79[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_82 (BatchNo (None, 5, 5, 384)    1152        conv2d_82[0][0]                  2021-01-18 14:17:45.231395: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-01-18 14:17:45.232004: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2900000000 Hz
+Using TensorFlow backend.
+WARNING:tensorflow:AutoGraph could not transform <function Model.make_train_function.<locals>.train_function at 0x2ba60e137d08> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+
+__________________________________________________________________________________________________
+batch_normalization_83 (BatchNo (None, 5, 5, 384)    1152        conv2d_83[0][0]                  
+__________________________________________________________________________________________________
+conv2d_84 (Conv2D)              (None, 5, 5, 192)    245760      average_pooling2d_7[0][0]        
+__________________________________________________________________________________________________
+batch_normalization_76 (BatchNo (None, 5, 5, 320)    960         conv2d_76[0][0]                  
+__________________________________________________________________________________________________
+activation_78 (Activation)      (None, 5, 5, 384)    0           batch_normalization_78[0][0]     
+__________________________________________________________________________________________________
+activation_79 (Activation)      (None, 5, 5, 384)    0           batch_normalization_79[0][0]     
+__________________________________________________________________________________________________
+activation_82 (Activation)      (None, 5, 5, 384)    0           batch_normalization_82[0][0]     
+__________________________________________________________________________________________________
+activation_83 (Activation)      (None, 5, 5, 384)    0           batch_normalization_83[0][0]     
+__________________________________________________________________________________________________
+batch_normalization_84 (BatchNo (None, 5, 5, 192)    576         conv2d_84[0][0]                  
+__________________________________________________________________________________________________
+activation_76 (Activation)      (None, 5, 5, 320)    0           batch_normalization_76[0][0]     
+__________________________________________________________________________________________________
+mixed9_0 (Concatenate)          (None, 5, 5, 768)    0           activation_78[0][0]              
+                                                                 activation_79[0][0]              
+__________________________________________________________________________________________________
+concatenate (Concatenate)       (None, 5, 5, 768)    0           activation_82[0][0]              
+                                                                 activation_83[0][0]              
+__________________________________________________________________________________________________
+activation_84 (Activation)      (None, 5, 5, 192)    0           batch_normalization_84[0][0]     
+__________________________________________________________________________________________________
+mixed9 (Concatenate)            (None, 5, 5, 2048)   0           activation_76[0][0]              
+                                                                 mixed9_0[0][0]                   
+                                                                 concatenate[0][0]                
+                                                                 activation_84[0][0]              
+__________________________________________________________________________________________________
+conv2d_89 (Conv2D)              (None, 5, 5, 448)    917504      mixed9[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_89 (BatchNo (None, 5, 5, 448)    1344        conv2d_89[0][0]                  
+__________________________________________________________________________________________________
+activation_89 (Activation)      (None, 5, 5, 448)    0           batch_normalization_89[0][0]     
+__________________________________________________________________________________________________
+conv2d_86 (Conv2D)              (None, 5, 5, 384)    786432      mixed9[0][0]                     
+__________________________________________________________________________________________________
+conv2d_90 (Conv2D)              (None, 5, 5, 384)    1548288     activation_89[0][0]              
+__________________________________________________________________________________________________
+batch_normalization_86 (BatchNo (None, 5, 5, 384)    1152        conv2d_86[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_90 (BatchNo (None, 5, 5, 384)    1152        conv2d_90[0][0]                  
+__________________________________________________________________________________________________
+activation_86 (Activation)      (None, 5, 5, 384)    0           batch_normalization_86[0][0]     
+__________________________________________________________________________________________________
+activation_90 (Activation)      (None, 5, 5, 384)    0           batch_normalization_90[0][0]     
+__________________________________________________________________________________________________
+conv2d_87 (Conv2D)              (None, 5, 5, 384)    442368      activation_86[0][0]              
+__________________________________________________________________________________________________
+conv2d_88 (Conv2D)              (None, 5, 5, 384)    442368      activation_86[0][0]              
+__________________________________________________________________________________________________
+conv2d_91 (Conv2D)              (None, 5, 5, 384)    442368      activation_90[0][0]              
+__________________________________________________________________________________________________
+conv2d_92 (Conv2D)              (None, 5, 5, 384)    442368      activation_90[0][0]              
+__________________________________________________________________________________________________
+average_pooling2d_8 (AveragePoo (None, 5, 5, 2048)   0           mixed9[0][0]                     
+__________________________________________________________________________________________________
+conv2d_85 (Conv2D)              (None, 5, 5, 320)    655360      mixed9[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_87 (BatchNo (None, 5, 5, 384)    1152        conv2d_87[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_88 (BatchNo (None, 5, 5, 384)    1152        conv2d_88[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_91 (BatchNo (None, 5, 5, 384)    1152        conv2d_91[0][0]                  
+__________________________________________________________________________________________________
+batch_normalization_92 (BatchNo (None, 5, 5, 384)    1152        conv2d_92[0][0]                  
+__________________________________________________________________________________________________
+conv2d_93 (Conv2D)              (None, 5, 5, 192)    393216      average_pooling2d_8[0][0]        
+__________________________________________________________________________________________________
+batch_normalization_85 (BatchNo (None, 5, 5, 320)    960         conv2d_85[0][0]                  
+__________________________________________________________________________________________________
+activation_87 (Activation)      (None, 5, 5, 384)    0           batch_normalization_87[0][0]     
+__________________________________________________________________________________________________
+activation_88 (Activation)      (None, 5, 5, 384)    0           batch_normalization_88[0][0]     
+__________________________________________________________________________________________________
+activation_91 (Activation)      (None, 5, 5, 384)    0           batch_normalization_91[0][0]     
+__________________________________________________________________________________________________
+activation_92 (Activation)      (None, 5, 5, 384)    0           batch_normalization_92[0][0]     
+__________________________________________________________________________________________________
+batch_normalization_93 (BatchNo (None, 5, 5, 192)    576         conv2d_93[0][0]                  
+__________________________________________________________________________________________________
+activation_85 (Activation)      (None, 5, 5, 320)    0           batch_normalization_85[0][0]     
+__________________________________________________________________________________________________
+mixed9_1 (Concatenate)          (None, 5, 5, 768)    0           activation_87[0][0]              
+                                                                 activation_88[0][0]              
+__________________________________________________________________________________________________
+concatenate_1 (Concatenate)     (None, 5, 5, 768)    0           activation_91[0][0]              
+                                                                 activation_92[0][0]              
+__________________________________________________________________________________________________
+activation_93 (Activation)      (None, 5, 5, 192)    0           batch_normalization_93[0][0]     
+__________________________________________________________________________________________________
+mixed10 (Concatenate)           (None, 5, 5, 2048)   0           activation_85[0][0]              
+                                                                 mixed9_1[0][0]                   
+                                                                 concatenate_1[0][0]              
+                                                                 activation_93[0][0]              
+__________________________________________________________________________________________________
+flatten (Flatten)               (None, 51200)        0           mixed10[0][0]                    
+__________________________________________________________________________________________________
+dense (Dense)                   (None, 1024)         52429824    flatten[0][0]                    
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, 38)           38950       dense[0][0]                      
+==================================================================================================
+Total params: 74,271,558
+Trainable params: 52,468,774
+Non-trainable params: 21,802,784
+__________________________________________________________________________________________________
+None
+Epoch 1/100
+2021-01-18 14:17:48.500492: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-18 14:17:48.841640: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-18 14:17:49.741395: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+WARNING:tensorflow:AutoGraph could not transform <function Model.make_test_function.<locals>.test_function at 0x2ba60f508400> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+1358/1358 - 2144s - loss: 0.6668 - accuracy: 0.8010 - precision: 0.8774 - recall: 0.7525 - auc: 0.9867 - val_loss: 0.4241 - val_accuracy: 0.8613 - val_precision: 0.8967 - val_recall: 0.8271 - val_auc: 0.9948
+Epoch 2/100
+1358/1358 - 2114s - loss: 0.3461 - accuracy: 0.8861 - precision: 0.9153 - recall: 0.8622 - auc: 0.9959 - val_loss: 0.3338 - val_accuracy: 0.8874 - val_precision: 0.9114 - val_recall: 0.8661 - val_auc: 0.9960
+Epoch 3/100
+1358/1358 - 2225s - loss: 0.2802 - accuracy: 0.9058 - precision: 0.9288 - recall: 0.8877 - auc: 0.9972 - val_loss: 0.2557 - val_accuracy: 0.9146 - val_precision: 0.9355 - val_recall: 0.8999 - val_auc: 0.9976
+Epoch 4/100
+1358/1358 - 2563s - loss: 0.2432 - accuracy: 0.9185 - precision: 0.9368 - recall: 0.9040 - auc: 0.9978 - val_loss: 0.2484 - val_accuracy: 0.9202 - val_precision: 0.9383 - val_recall: 0.9064 - val_auc: 0.9968
+Epoch 5/100
+1358/1358 - 2484s - loss: 0.2261 - accuracy: 0.9246 - precision: 0.9404 - recall: 0.9122 - auc: 0.9978 - val_loss: 0.2606 - val_accuracy: 0.9143 - val_precision: 0.9342 - val_recall: 0.8992 - val_auc: 0.9971
+Epoch 6/100
+1358/1358 - 2339s - loss: 0.2062 - accuracy: 0.9275 - precision: 0.9432 - recall: 0.9154 - auc: 0.9983 - val_loss: 0.2332 - val_accuracy: 0.9238 - val_precision: 0.9373 - val_recall: 0.9129 - val_auc: 0.9972
+Epoch 7/100
+1358/1358 - 1963s - loss: 0.1943 - accuracy: 0.9343 - precision: 0.9477 - recall: 0.9232 - auc: 0.9982 - val_loss: 0.2132 - val_accuracy: 0.9303 - val_precision: 0.9434 - val_recall: 0.9186 - val_auc: 0.9978
+Epoch 8/100
+1358/1358 - 1819s - loss: 0.1811 - accuracy: 0.9384 - precision: 0.9499 - recall: 0.9293 - auc: 0.9984 - val_loss: 0.2086 - val_accuracy: 0.9287 - val_precision: 0.9420 - val_recall: 0.9186 - val_auc: 0.9971
+Epoch 9/100
+1358/1358 - 1899s - loss: 0.1721 - accuracy: 0.9405 - precision: 0.9510 - recall: 0.9318 - auc: 0.9985 - val_loss: 0.2333 - val_accuracy: 0.9217 - val_precision: 0.9370 - val_recall: 0.9111 - val_auc: 0.9970
+Epoch 10/100
+1358/1358 - 2570s - loss: 0.1629 - accuracy: 0.9447 - precision: 0.9554 - recall: 0.9366 - auc: 0.9986 - val_loss: 0.2082 - val_accuracy: 0.9312 - val_precision: 0.9432 - val_recall: 0.9220 - val_auc: 0.9974
+Epoch 11/100
+1358/1358 - 2245s - loss: 0.1582 - accuracy: 0.9454 - precision: 0.9554 - recall: 0.9379 - auc: 0.9987 - val_loss: 0.2058 - val_accuracy: 0.9311 - val_precision: 0.9436 - val_recall: 0.9224 - val_auc: 0.9980
+Epoch 12/100
+1358/1358 - 1963s - loss: 0.1503 - accuracy: 0.9491 - precision: 0.9584 - recall: 0.9421 - auc: 0.9987 - val_loss: 0.1910 - val_accuracy: 0.9362 - val_precision: 0.9469 - val_recall: 0.9268 - val_auc: 0.9979
+Epoch 13/100
+1358/1358 - 2107s - loss: 0.1451 - accuracy: 0.9494 - precision: 0.9576 - recall: 0.9429 - auc: 0.9989 - val_loss: 0.1797 - val_accuracy: 0.9417 - val_precision: 0.9522 - val_recall: 0.9328 - val_auc: 0.9978
+Epoch 14/100
+1358/1358 - 2354s - loss: 0.1426 - accuracy: 0.9507 - precision: 0.9586 - recall: 0.9441 - auc: 0.9988 - val_loss: 0.2035 - val_accuracy: 0.9306 - val_precision: 0.9428 - val_recall: 0.9237 - val_auc: 0.9971
+Epoch 15/100
+1358/1358 - 2186s - loss: 0.1380 - accuracy: 0.9526 - precision: 0.9600 - recall: 0.9459 - auc: 0.9989 - val_loss: 0.2007 - val_accuracy: 0.9320 - val_precision: 0.9427 - val_recall: 0.9247 - val_auc: 0.9971
+Epoch 16/100
+1358/1358 - 2137s - loss: 0.1323 - accuracy: 0.9538 - precision: 0.9610 - recall: 0.9482 - auc: 0.9990 - val_loss: 0.1789 - val_accuracy: 0.9396 - val_precision: 0.9490 - val_recall: 0.9331 - val_auc: 0.9978
+Epoch 17/100
+1358/1358 - 1937s - loss: 0.1254 - accuracy: 0.9561 - precision: 0.9634 - recall: 0.9511 - auc: 0.9990 - val_loss: 0.2100 - val_accuracy: 0.9328 - val_precision: 0.9426 - val_recall: 0.9250 - val_auc: 0.9969
+Epoch 18/100
+1358/1358 - 1952s - loss: 0.1229 - accuracy: 0.9560 - precision: 0.9633 - recall: 0.9504 - auc: 0.9992 - val_loss: 0.1753 - val_accuracy: 0.9405 - val_precision: 0.9481 - val_recall: 0.9340 - val_auc: 0.9977
+Epoch 19/100
+1358/1358 - 1865s - loss: 0.1178 - accuracy: 0.9588 - precision: 0.9650 - recall: 0.9539 - auc: 0.9992 - val_loss: 0.1787 - val_accuracy: 0.9416 - val_precision: 0.9510 - val_recall: 0.9364 - val_auc: 0.9977
+Epoch 20/100
+1358/1358 - 1911s - loss: 0.1164 - accuracy: 0.9593 - precision: 0.9648 - recall: 0.9549 - auc: 0.9992 - val_loss: 0.1676 - val_accuracy: 0.9425 - val_precision: 0.9534 - val_recall: 0.9375 - val_auc: 0.9977
+Epoch 21/100
+1358/1358 - 1909s - loss: 0.1118 - accuracy: 0.9609 - precision: 0.9669 - recall: 0.9566 - auc: 0.9990 - val_loss: 0.1743 - val_accuracy: 0.9427 - val_precision: 0.9506 - val_recall: 0.9373 - val_auc: 0.9972
+Epoch 22/100
+1358/1358 - 1931s - loss: 0.1075 - accuracy: 0.9621 - precision: 0.9677 - recall: 0.9574 - auc: 0.9993 - val_loss: 0.1626 - val_accuracy: 0.9463 - val_precision: 0.9530 - val_recall: 0.9409 - val_auc: 0.9978
+Epoch 23/100
+1358/1358 - 1956s - loss: 0.1050 - accuracy: 0.9635 - precision: 0.9686 - recall: 0.9593 - auc: 0.9992 - val_loss: 0.1617 - val_accuracy: 0.9451 - val_precision: 0.9522 - val_recall: 0.9397 - val_auc: 0.9980
+Epoch 24/100
+1358/1358 - 1905s - loss: 0.1082 - accuracy: 0.9621 - precision: 0.9677 - recall: 0.9582 - auc: 0.9992 - val_loss: 0.1667 - val_accuracy: 0.9439 - val_precision: 0.9532 - val_recall: 0.9380 - val_auc: 0.9980
+Epoch 25/100
+1358/1358 - 1797s - loss: 0.1061 - accuracy: 0.9630 - precision: 0.9685 - recall: 0.9588 - auc: 0.9992 - val_loss: 0.1946 - val_accuracy: 0.9360 - val_precision: 0.9424 - val_recall: 0.9305 - val_auc: 0.9967
+Epoch 26/100
+1358/1358 - 1849s - loss: 0.1010 - accuracy: 0.9649 - precision: 0.9692 - recall: 0.9613 - auc: 0.9992 - val_loss: 0.1686 - val_accuracy: 0.9463 - val_precision: 0.9534 - val_recall: 0.9416 - val_auc: 0.9973
+Epoch 27/100
+1358/1358 - 1850s - loss: 0.1010 - accuracy: 0.9648 - precision: 0.9699 - recall: 0.9612 - auc: 0.9993 - val_loss: 0.1675 - val_accuracy: 0.9423 - val_precision: 0.9491 - val_recall: 0.9373 - val_auc: 0.9977
+Epoch 28/100
+1358/1358 - 1817s - loss: 0.0950 - accuracy: 0.9668 - precision: 0.9712 - recall: 0.9633 - auc: 0.9992 - val_loss: 0.1810 - val_accuracy: 0.9420 - val_precision: 0.9485 - val_recall: 0.9370 - val_auc: 0.9971
+Epoch 29/100
+1358/1358 - 1847s - loss: 0.0964 - accuracy: 0.9664 - precision: 0.9711 - recall: 0.9634 - auc: 0.9993 - val_loss: 0.1661 - val_accuracy: 0.9445 - val_precision: 0.9511 - val_recall: 0.9410 - val_auc: 0.9976
+Epoch 30/100
+1358/1358 - 1766s - loss: 0.1002 - accuracy: 0.9652 - precision: 0.9695 - recall: 0.9618 - auc: 0.9992 - val_loss: 0.1755 - val_accuracy: 0.9439 - val_precision: 0.9509 - val_recall: 0.9377 - val_auc: 0.9976
+Epoch 31/100
+1358/1358 - 1775s - loss: 0.0907 - accuracy: 0.9684 - precision: 0.9724 - recall: 0.9651 - auc: 0.9993 - val_loss: 0.1662 - val_accuracy: 0.9452 - val_precision: 0.9532 - val_recall: 0.9402 - val_auc: 0.9975
+Epoch 32/100
+1358/1358 - 1817s - loss: 0.0941 - accuracy: 0.9664 - precision: 0.9705 - recall: 0.9628 - auc: 0.9993 - val_loss: 0.1555 - val_accuracy: 0.9493 - val_precision: 0.9556 - val_recall: 0.9442 - val_auc: 0.9976
+Epoch 33/100
+1358/1358 - 2180s - loss: 0.0902 - accuracy: 0.9690 - precision: 0.9728 - recall: 0.9662 - auc: 0.9993 - val_loss: 0.1611 - val_accuracy: 0.9475 - val_precision: 0.9538 - val_recall: 0.9418 - val_auc: 0.9980
+Epoch 34/100
+1358/1358 - 2313s - loss: 0.0894 - accuracy: 0.9684 - precision: 0.9724 - recall: 0.9649 - auc: 0.9993 - val_loss: 0.1652 - val_accuracy: 0.9488 - val_precision: 0.9547 - val_recall: 0.9429 - val_auc: 0.9972
+Epoch 35/100
+1358/1358 - 2208s - loss: 0.0886 - accuracy: 0.9698 - precision: 0.9738 - recall: 0.9666 - auc: 0.9994 - val_loss: 0.1367 - val_accuracy: 0.9557 - val_precision: 0.9601 - val_recall: 0.9519 - val_auc: 0.9978
+Epoch 36/100
+1358/1358 - 2430s - loss: 0.0855 - accuracy: 0.9691 - precision: 0.9732 - recall: 0.9659 - auc: 0.9994 - val_loss: 0.1517 - val_accuracy: 0.9509 - val_precision: 0.9565 - val_recall: 0.9458 - val_auc: 0.9976
+Epoch 37/100
+1358/1358 - 2776s - loss: 0.0840 - accuracy: 0.9698 - precision: 0.9735 - recall: 0.9667 - auc: 0.9995 - val_loss: 0.1597 - val_accuracy: 0.9490 - val_precision: 0.9548 - val_recall: 0.9463 - val_auc: 0.9970
+Epoch 38/100
+1358/1358 - 2164s - loss: 0.0824 - accuracy: 0.9715 - precision: 0.9747 - recall: 0.9686 - auc: 0.9994 - val_loss: 0.1751 - val_accuracy: 0.9450 - val_precision: 0.9514 - val_recall: 0.9411 - val_auc: 0.9967
+Epoch 39/100
+1358/1358 - 2241s - loss: 0.0805 - accuracy: 0.9720 - precision: 0.9756 - recall: 0.9693 - auc: 0.9994 - val_loss: 0.1690 - val_accuracy: 0.9446 - val_precision: 0.9504 - val_recall: 0.9405 - val_auc: 0.9970
+Epoch 40/100
+1358/1358 - 2061s - loss: 0.0778 - accuracy: 0.9724 - precision: 0.9759 - recall: 0.9699 - auc: 0.9995 - val_loss: 0.1637 - val_accuracy: 0.9464 - val_precision: 0.9527 - val_recall: 0.9429 - val_auc: 0.9977
+Epoch 41/100
+1358/1358 - 2106s - loss: 0.0793 - accuracy: 0.9722 - precision: 0.9747 - recall: 0.9698 - auc: 0.9994 - val_loss: 0.1612 - val_accuracy: 0.9473 - val_precision: 0.9528 - val_recall: 0.9441 - val_auc: 0.9972
+Epoch 42/100
+1358/1358 - 2071s - loss: 0.0784 - accuracy: 0.9719 - precision: 0.9754 - recall: 0.9697 - auc: 0.9994 - val_loss: 0.1573 - val_accuracy: 0.9488 - val_precision: 0.9548 - val_recall: 0.9447 - val_auc: 0.9977
+Epoch 43/100
+1358/1358 - 2052s - loss: 0.0737 - accuracy: 0.9747 - precision: 0.9776 - recall: 0.9723 - auc: 0.9994 - val_loss: 0.1436 - val_accuracy: 0.9523 - val_precision: 0.9578 - val_recall: 0.9481 - val_auc: 0.9976
+Epoch 44/100
+1358/1358 - 2086s - loss: 0.0753 - accuracy: 0.9738 - precision: 0.9772 - recall: 0.9717 - auc: 0.9995 - val_loss: 0.1439 - val_accuracy: 0.9531 - val_precision: 0.9590 - val_recall: 0.9502 - val_auc: 0.9974
+Epoch 45/100
+1358/1358 - 2050s - loss: 0.0775 - accuracy: 0.9730 - precision: 0.9755 - recall: 0.9706 - auc: 0.9994 - val_loss: 0.1438 - val_accuracy: 0.9517 - val_precision: 0.9566 - val_recall: 0.9478 - val_auc: 0.9979
+Epoch 46/100
+1358/1358 - 2187s - loss: 0.0739 - accuracy: 0.9737 - precision: 0.9764 - recall: 0.9718 - auc: 0.9995 - val_loss: 0.1423 - val_accuracy: 0.9537 - val_precision: 0.9578 - val_recall: 0.9505 - val_auc: 0.9975
+Epoch 47/100
+1358/1358 - 2398s - loss: 0.0691 - accuracy: 0.9754 - precision: 0.9782 - recall: 0.9732 - auc: 0.9995 - val_loss: 0.1547 - val_accuracy: 0.9528 - val_precision: 0.9577 - val_recall: 0.9506 - val_auc: 0.9966
+Epoch 48/100
+1358/1358 - 2747s - loss: 0.0750 - accuracy: 0.9737 - precision: 0.9764 - recall: 0.9713 - auc: 0.9995 - val_loss: 0.1550 - val_accuracy: 0.9517 - val_precision: 0.9564 - val_recall: 0.9488 - val_auc: 0.9975
+Epoch 49/100
+1358/1358 - 3208s - loss: 0.0710 - accuracy: 0.9748 - precision: 0.9772 - recall: 0.9724 - auc: 0.9996 - val_loss: 0.1729 - val_accuracy: 0.9464 - val_precision: 0.9515 - val_recall: 0.9417 - val_auc: 0.9965
+Epoch 50/100
+1358/1358 - 2068s - loss: 0.0699 - accuracy: 0.9751 - precision: 0.9774 - recall: 0.9731 - auc: 0.9995 - val_loss: 0.1600 - val_accuracy: 0.9499 - val_precision: 0.9551 - val_recall: 0.9468 - val_auc: 0.9970
+Epoch 51/100
+1358/1358 - 2126s - loss: 0.0694 - accuracy: 0.9765 - precision: 0.9791 - recall: 0.9745 - auc: 0.9994 - val_loss: 0.1877 - val_accuracy: 0.9423 - val_precision: 0.9485 - val_recall: 0.9382 - val_auc: 0.9962
+Epoch 52/100
+1358/1358 - 2000s - loss: 0.0695 - accuracy: 0.9758 - precision: 0.9778 - recall: 0.9734 - auc: 0.9994 - val_loss: 0.1406 - val_accuracy: 0.9539 - val_precision: 0.9588 - val_recall: 0.9520 - val_auc: 0.9975
+Epoch 53/100
+1358/1358 - 1922s - loss: 0.0680 - accuracy: 0.9751 - precision: 0.9781 - recall: 0.9729 - auc: 0.9995 - val_loss: 0.1520 - val_accuracy: 0.9511 - val_precision: 0.9564 - val_recall: 0.9485 - val_auc: 0.9977
+Epoch 54/100
+1358/1358 - 1748s - loss: 0.0698 - accuracy: 0.9760 - precision: 0.9782 - recall: 0.9742 - auc: 0.9995 - val_loss: 0.1608 - val_accuracy: 0.9504 - val_precision: 0.9558 - val_recall: 0.9468 - val_auc: 0.9964
+Epoch 55/100
+1358/1358 - 1923s - loss: 0.0628 - accuracy: 0.9787 - precision: 0.9810 - recall: 0.9765 - auc: 0.9996 - val_loss: 0.1432 - val_accuracy: 0.9556 - val_precision: 0.9595 - val_recall: 0.9533 - val_auc: 0.9975
+Epoch 56/100
+1358/1358 - 2370s - loss: 0.0652 - accuracy: 0.9773 - precision: 0.9795 - recall: 0.9752 - auc: 0.9995 - val_loss: 0.1574 - val_accuracy: 0.9493 - val_precision: 0.9537 - val_recall: 0.9466 - val_auc: 0.9976
+Epoch 57/100
+1358/1358 - 2048s - loss: 0.0641 - accuracy: 0.9776 - precision: 0.9798 - recall: 0.9758 - auc: 0.9995 - val_loss: 0.1431 - val_accuracy: 0.9545 - val_precision: 0.9597 - val_recall: 0.9515 - val_auc: 0.9975
+Epoch 58/100
+1358/1358 - 1975s - loss: 0.0641 - accuracy: 0.9769 - precision: 0.9788 - recall: 0.9748 - auc: 0.9995 - val_loss: 0.1424 - val_accuracy: 0.9580 - val_precision: 0.9623 - val_recall: 0.9552 - val_auc: 0.9967
+Epoch 59/100
+1358/1358 - 2443s - loss: 0.0670 - accuracy: 0.9765 - precision: 0.9787 - recall: 0.9750 - auc: 0.9994 - val_loss: 0.1424 - val_accuracy: 0.9548 - val_precision: 0.9599 - val_recall: 0.9529 - val_auc: 0.9973
+Epoch 60/100
+1358/1358 - 2186s - loss: 0.0644 - accuracy: 0.9774 - precision: 0.9794 - recall: 0.9760 - auc: 0.9995 - val_loss: 0.1492 - val_accuracy: 0.9534 - val_precision: 0.9576 - val_recall: 0.9499 - val_auc: 0.9974
+Epoch 61/100
+1358/1358 - 2132s - loss: 0.0614 - accuracy: 0.9785 - precision: 0.9805 - recall: 0.9765 - auc: 0.9995 - val_loss: 0.1427 - val_accuracy: 0.9563 - val_precision: 0.9597 - val_recall: 0.9532 - val_auc: 0.9974
+Epoch 62/100
+1358/1358 - 1957s - loss: 0.0609 - accuracy: 0.9783 - precision: 0.9804 - recall: 0.9769 - auc: 0.9996 - val_loss: 0.1363 - val_accuracy: 0.9543 - val_precision: 0.9590 - val_recall: 0.9513 - val_auc: 0.9980
+Epoch 63/100
+1358/1358 - 1937s - loss: 0.0618 - accuracy: 0.9779 - precision: 0.9800 - recall: 0.9763 - auc: 0.9996 - val_loss: 0.1576 - val_accuracy: 0.9518 - val_precision: 0.9573 - val_recall: 0.9497 - val_auc: 0.9967
+Epoch 64/100
+1358/1358 - 1900s - loss: 0.0605 - accuracy: 0.9793 - precision: 0.9812 - recall: 0.9777 - auc: 0.9995 - val_loss: 0.1448 - val_accuracy: 0.9552 - val_precision: 0.9591 - val_recall: 0.9521 - val_auc: 0.9970
+Epoch 65/100
+1358/1358 - 1852s - loss: 0.0604 - accuracy: 0.9785 - precision: 0.9808 - recall: 0.9771 - auc: 0.9995 - val_loss: 0.1340 - val_accuracy: 0.9570 - val_precision: 0.9608 - val_recall: 0.9547 - val_auc: 0.9977
+Epoch 66/100
+1358/1358 - 1834s - loss: 0.0586 - accuracy: 0.9792 - precision: 0.9807 - recall: 0.9779 - auc: 0.9996 - val_loss: 0.1372 - val_accuracy: 0.9570 - val_precision: 0.9603 - val_recall: 0.9542 - val_auc: 0.9974
+Epoch 67/100
+1358/1358 - 1862s - loss: 0.0605 - accuracy: 0.9786 - precision: 0.9805 - recall: 0.9771 - auc: 0.9994 - val_loss: 0.1346 - val_accuracy: 0.9562 - val_precision: 0.9600 - val_recall: 0.9526 - val_auc: 0.9978
+Epoch 68/100
+1358/1358 - 1848s - loss: 0.0616 - accuracy: 0.9780 - precision: 0.9798 - recall: 0.9766 - auc: 0.9996 - val_loss: 0.1512 - val_accuracy: 0.9550 - val_precision: 0.9591 - val_recall: 0.9517 - val_auc: 0.9971
+Epoch 69/100
+1358/1358 - 1765s - loss: 0.0583 - accuracy: 0.9797 - precision: 0.9813 - recall: 0.9784 - auc: 0.9996 - val_loss: 0.1523 - val_accuracy: 0.9523 - val_precision: 0.9564 - val_recall: 0.9500 - val_auc: 0.9970
+Epoch 70/100
+1358/1358 - 1755s - loss: 0.0611 - accuracy: 0.9785 - precision: 0.9803 - recall: 0.9768 - auc: 0.9995 - val_loss: 0.1429 - val_accuracy: 0.9564 - val_precision: 0.9607 - val_recall: 0.9532 - val_auc: 0.9972
+Epoch 71/100
+1358/1358 - 1788s - loss: 0.0582 - accuracy: 0.9796 - precision: 0.9813 - recall: 0.9780 - auc: 0.9996 - val_loss: 0.1393 - val_accuracy: 0.9551 - val_precision: 0.9598 - val_recall: 0.9514 - val_auc: 0.9977
+Epoch 72/100
+1358/1358 - 1787s - loss: 0.0575 - accuracy: 0.9802 - precision: 0.9817 - recall: 0.9787 - auc: 0.9995 - val_loss: 0.1420 - val_accuracy: 0.9582 - val_precision: 0.9621 - val_recall: 0.9559 - val_auc: 0.9972
+Epoch 73/100
+1358/1358 - 1756s - loss: 0.0552 - accuracy: 0.9800 - precision: 0.9818 - recall: 0.9790 - auc: 0.9996 - val_loss: 0.1346 - val_accuracy: 0.9590 - val_precision: 0.9618 - val_recall: 0.9561 - val_auc: 0.9975
+Epoch 74/100
+1358/1358 - 1889s - loss: 0.0596 - accuracy: 0.9794 - precision: 0.9813 - recall: 0.9779 - auc: 0.9995 - val_loss: 0.1387 - val_accuracy: 0.9553 - val_precision: 0.9592 - val_recall: 0.9524 - val_auc: 0.9972
+Epoch 75/100
+1358/1358 - 1982s - loss: 0.0570 - accuracy: 0.9800 - precision: 0.9817 - recall: 0.9789 - auc: 0.9995 - val_loss: 0.1482 - val_accuracy: 0.9551 - val_precision: 0.9589 - val_recall: 0.9520 - val_auc: 0.9966
+Epoch 76/100
+1358/1358 - 1925s - loss: 0.0541 - accuracy: 0.9806 - precision: 0.9824 - recall: 0.9793 - auc: 0.9997 - val_loss: 0.1519 - val_accuracy: 0.9569 - val_precision: 0.9600 - val_recall: 0.9546 - val_auc: 0.9965
+Epoch 77/100
+1358/1358 - 1930s - loss: 0.0557 - accuracy: 0.9806 - precision: 0.9822 - recall: 0.9793 - auc: 0.9994 - val_loss: 0.1381 - val_accuracy: 0.9568 - val_precision: 0.9616 - val_recall: 0.9535 - val_auc: 0.9974
+Epoch 78/100
+1358/1358 - 1848s - loss: 0.0531 - accuracy: 0.9810 - precision: 0.9823 - recall: 0.9797 - auc: 0.9997 - val_loss: 0.1425 - val_accuracy: 0.9560 - val_precision: 0.9594 - val_recall: 0.9544 - val_auc: 0.9973
+Epoch 79/100
+1358/1358 - 2213s - loss: 0.0561 - accuracy: 0.9805 - precision: 0.9819 - recall: 0.9792 - auc: 0.9995 - val_loss: 0.1534 - val_accuracy: 0.9526 - val_precision: 0.9569 - val_recall: 0.9503 - val_auc: 0.9968
+Epoch 80/100
+1358/1358 - 2189s - loss: 0.0547 - accuracy: 0.9799 - precision: 0.9815 - recall: 0.9786 - auc: 0.9995 - val_loss: 0.1525 - val_accuracy: 0.9539 - val_precision: 0.9583 - val_recall: 0.9509 - val_auc: 0.9970
+Epoch 81/100
+1358/1358 - 2149s - loss: 0.0536 - accuracy: 0.9815 - precision: 0.9831 - recall: 0.9800 - auc: 0.9996 - val_loss: 0.1347 - val_accuracy: 0.9605 - val_precision: 0.9635 - val_recall: 0.9579 - val_auc: 0.9974
+Epoch 82/100
+1358/1358 - 2098s - loss: 0.0524 - accuracy: 0.9813 - precision: 0.9828 - recall: 0.9801 - auc: 0.9996 - val_loss: 0.1393 - val_accuracy: 0.9563 - val_precision: 0.9601 - val_recall: 0.9542 - val_auc: 0.9973
+Epoch 83/100
+1358/1358 - 2155s - loss: 0.0532 - accuracy: 0.9818 - precision: 0.9830 - recall: 0.9807 - auc: 0.9995 - val_loss: 0.1356 - val_accuracy: 0.9597 - val_precision: 0.9628 - val_recall: 0.9574 - val_auc: 0.9970
+Epoch 84/100
+1358/1358 - 2149s - loss: 0.0479 - accuracy: 0.9827 - precision: 0.9838 - recall: 0.9817 - auc: 0.9997 - val_loss: 0.1416 - val_accuracy: 0.9554 - val_precision: 0.9585 - val_recall: 0.9534 - val_auc: 0.9973
+Epoch 85/100
+1358/1358 - 2231s - loss: 0.0514 - accuracy: 0.9825 - precision: 0.9841 - recall: 0.9813 - auc: 0.9996 - val_loss: 0.1536 - val_accuracy: 0.9548 - val_precision: 0.9582 - val_recall: 0.9531 - val_auc: 0.9965
+Epoch 86/100
+1358/1358 - 2128s - loss: 0.0502 - accuracy: 0.9826 - precision: 0.9840 - recall: 0.9814 - auc: 0.9996 - val_loss: 0.1444 - val_accuracy: 0.9558 - val_precision: 0.9589 - val_recall: 0.9533 - val_auc: 0.9968
+Epoch 87/100
+1358/1358 - 2136s - loss: 0.0523 - accuracy: 0.9815 - precision: 0.9829 - recall: 0.9803 - auc: 0.9996 - val_loss: 0.1474 - val_accuracy: 0.9552 - val_precision: 0.9587 - val_recall: 0.9528 - val_auc: 0.9970
+Epoch 88/100
+1358/1358 - 2115s - loss: 0.0489 - accuracy: 0.9828 - precision: 0.9840 - recall: 0.9818 - auc: 0.9995 - val_loss: 0.1531 - val_accuracy: 0.9550 - val_precision: 0.9586 - val_recall: 0.9532 - val_auc: 0.9968
+Epoch 89/100
+1358/1358 - 2061s - loss: 0.0484 - accuracy: 0.9832 - precision: 0.9843 - recall: 0.9820 - auc: 0.9996 - val_loss: 0.1561 - val_accuracy: 0.9531 - val_precision: 0.9569 - val_recall: 0.9514 - val_auc: 0.9964
+Epoch 90/100
+1358/1358 - 2028s - loss: 0.0505 - accuracy: 0.9823 - precision: 0.9839 - recall: 0.9812 - auc: 0.9997 - val_loss: 0.1305 - val_accuracy: 0.9583 - val_precision: 0.9625 - val_recall: 0.9559 - val_auc: 0.9976
+Epoch 91/100
+1358/1358 - 1982s - loss: 0.0476 - accuracy: 0.9835 - precision: 0.9851 - recall: 0.9822 - auc: 0.9996 - val_loss: 0.1412 - val_accuracy: 0.9582 - val_precision: 0.9600 - val_recall: 0.9558 - val_auc: 0.9970
+Epoch 92/100
+1358/1358 - 2121s - loss: 0.0457 - accuracy: 0.9838 - precision: 0.9849 - recall: 0.9829 - auc: 0.9997 - val_loss: 0.1430 - val_accuracy: 0.9592 - val_precision: 0.9626 - val_recall: 0.9573 - val_auc: 0.9965
+Epoch 93/100
+1358/1358 - 2084s - loss: 0.0490 - accuracy: 0.9829 - precision: 0.9841 - recall: 0.9820 - auc: 0.9996 - val_loss: 0.1510 - val_accuracy: 0.9563 - val_precision: 0.9586 - val_recall: 0.9547 - val_auc: 0.9967
+Epoch 94/100
+1358/1358 - 2106s - loss: 0.0494 - accuracy: 0.9825 - precision: 0.9838 - recall: 0.9814 - auc: 0.9995 - val_loss: 0.1343 - val_accuracy: 0.9589 - val_precision: 0.9615 - val_recall: 0.9568 - val_auc: 0.9971
+Epoch 95/100
+1358/1358 - 1974s - loss: 0.0486 - accuracy: 0.9830 - precision: 0.9845 - recall: 0.9818 - auc: 0.9997 - val_loss: 0.1474 - val_accuracy: 0.9560 - val_precision: 0.9588 - val_recall: 0.9536 - val_auc: 0.9970
+Epoch 96/100
+1358/1358 - 2020s - loss: 0.0439 - accuracy: 0.9852 - precision: 0.9864 - recall: 0.9843 - auc: 0.9997 - val_loss: 0.1376 - val_accuracy: 0.9591 - val_precision: 0.9627 - val_recall: 0.9570 - val_auc: 0.9970
+Epoch 97/100
+1358/1358 - 2039s - loss: 0.0481 - accuracy: 0.9832 - precision: 0.9845 - recall: 0.9820 - auc: 0.9997 - val_loss: 0.1482 - val_accuracy: 0.9564 - val_precision: 0.9600 - val_recall: 0.9545 - val_auc: 0.9967
+Epoch 98/100
+1358/1358 - 2092s - loss: 0.0462 - accuracy: 0.9834 - precision: 0.9848 - recall: 0.9825 - auc: 0.9997 - val_loss: 0.1353 - val_accuracy: 0.9591 - val_precision: 0.9621 - val_recall: 0.9568 - val_auc: 0.9973
+Epoch 99/100
+1358/1358 - 2113s - loss: 0.0444 - accuracy: 0.9836 - precision: 0.9848 - recall: 0.9826 - auc: 0.9997 - val_loss: 0.1365 - val_accuracy: 0.9600 - val_precision: 0.9637 - val_recall: 0.9579 - val_auc: 0.9973
+Epoch 100/100
+1358/1358 - 2117s - loss: 0.0459 - accuracy: 0.9842 - precision: 0.9853 - recall: 0.9830 - auc: 0.9996 - val_loss: 0.1489 - val_accuracy: 0.9554 - val_precision: 0.9583 - val_recall: 0.9534 - val_auc: 0.9969
+2021-01-20 23:50:06.726589: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:tensorflow:AutoGraph could not transform <function canonicalize_signatures.<locals>.signature_wrapper at 0x2baf43d40950> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+{'loss': [0.6668399572372437, 0.34610992670059204, 0.28019481897354126, 0.24318374693393707, 0.22608044743537903, 0.2062450498342514, 0.19432571530342102, 0.1811084896326065, 0.17207032442092896, 0.16294588148593903, 0.15820744633674622, 0.15030457079410553, 0.14511340856552124, 0.14263203740119934, 0.13804113864898682, 0.1322745680809021, 0.12538129091262817, 0.12287373840808868, 0.11782775074243546, 0.1164497509598732, 0.11176563799381256, 0.1075257733464241, 0.10498623549938202, 0.10820155590772629, 0.10611319541931152, 0.10103154182434082, 0.10100924223661423, 0.09504677355289459, 0.09644334763288498, 0.1001962423324585, 0.09070216119289398, 0.09406446665525436, 0.09018103778362274, 0.08939341455698013, 0.0885695368051529, 0.08554277569055557, 0.08395464718341827, 0.08242328464984894, 0.08048871904611588, 0.07783530652523041, 0.0792820081114769, 0.07843431085348129, 0.07374655455350876, 0.0753319188952446, 0.07754131406545639, 0.0739251971244812, 0.06913042068481445, 0.07503046095371246, 0.07098069041967392, 0.06991501152515411, 0.06941334158182144, 0.06948339939117432, 0.06797614693641663, 0.06976645439863205, 0.0627593994140625, 0.06523048132658005, 0.06414606422185898, 0.06407561898231506, 0.0670076236128807, 0.06438543647527695, 0.06144833564758301, 0.06087203323841095, 0.061814192682504654, 0.060467686504125595, 0.0603681243956089, 0.05857478454709053, 0.06048697605729103, 0.061593376100063324, 0.05827632173895836, 0.061101190745830536, 0.058150213211774826, 0.05750740319490433, 0.055206675082445145, 0.05960903316736221, 0.057028695940971375, 0.054105766117572784, 0.055715568363666534, 0.053143542259931564, 0.05610601231455803, 0.05467940866947174, 0.05360248684883118, 0.05241439491510391, 0.05318010598421097, 0.04792782664299011, 0.05139986425638199, 0.050177864730358124, 0.05227416008710861, 0.04893837496638298, 0.04839309677481651, 0.05052409693598747, 0.04758136346936226, 0.04572107270359993, 0.04901482164859772, 0.0494406558573246, 0.048624925315380096, 0.04394695535302162, 0.04806770384311676, 0.046203985810279846, 0.044395677745342255, 0.04585304483771324], 'accuracy': [0.8009710907936096, 0.8860686421394348, 0.9057897925376892, 0.9184922575950623, 0.9245904088020325, 0.9274898767471313, 0.93434739112854, 0.9383514523506165, 0.9405145645141602, 0.9446796774864197, 0.9453700184822083, 0.9490519165992737, 0.9494431018829346, 0.9507087469100952, 0.9526417255401611, 0.9538153409957886, 0.9560934901237488, 0.9560014605522156, 0.9588319063186646, 0.9593151807785034, 0.960902988910675, 0.9620535969734192, 0.9635263085365295, 0.9620766043663025, 0.9629970788955688, 0.9648840427398682, 0.9647919535636902, 0.9668170213699341, 0.9663797616958618, 0.9652292132377625, 0.9683818221092224, 0.9664258360862732, 0.9690031409263611, 0.9683818221092224, 0.9697625041007996, 0.9691411852836609, 0.9698315262794495, 0.9715344309806824, 0.9720176458358765, 0.9724088907241821, 0.9721787571907043, 0.9719486236572266, 0.9747330546379089, 0.9738355875015259, 0.9729841947555542, 0.9736975431442261, 0.9754003882408142, 0.9736515283584595, 0.9747790694236755, 0.9750552177429199, 0.9764819741249084, 0.9758146405220032, 0.9751012325286865, 0.975952684879303, 0.978714108467102, 0.9773333668708801, 0.9776325225830078, 0.9769421815872192, 0.9765049815177917, 0.9774484634399414, 0.978460967540741, 0.9782999157905579, 0.9779086709022522, 0.9793354272842407, 0.9785299897193909, 0.9791513085365295, 0.9785990715026855, 0.9780467748641968, 0.9797036051750183, 0.978460967540741, 0.9796115756034851, 0.9802328944206238, 0.9799567461013794, 0.979358434677124, 0.9800487756729126, 0.9805780649185181, 0.9806010723114014, 0.980969250202179, 0.9804629683494568, 0.9799337387084961, 0.9814985394477844, 0.9812914133071899, 0.9817976951599121, 0.9827181696891785, 0.9825340509414673, 0.9826490879058838, 0.9814755320549011, 0.9827641844749451, 0.983155369758606, 0.9823039174079895, 0.9834775328636169, 0.9838457107543945, 0.9829252362251282, 0.9824650287628174, 0.9829713106155396, 0.9851804375648499, 0.9831783771514893, 0.9834315180778503, 0.9835925698280334, 0.9841678738594055], 'precision': [0.8774283528327942, 0.91525799036026, 0.9288465976715088, 0.936762273311615, 0.9403629302978516, 0.9432351589202881, 0.9477463960647583, 0.9499412178993225, 0.9509875178337097, 0.9553573727607727, 0.9554373025894165, 0.9583557844161987, 0.9575825333595276, 0.9585514068603516, 0.9600158929824829, 0.9610486626625061, 0.963379979133606, 0.963266134262085, 0.9650090932846069, 0.9648429155349731, 0.9669008255004883, 0.96771639585495, 0.9685859084129333, 0.9676504731178284, 0.9684805274009705, 0.9692133069038391, 0.9699277877807617, 0.9712296724319458, 0.9710971713066101, 0.9695205688476562, 0.9724315404891968, 0.9704954624176025, 0.9728226661682129, 0.972449004650116, 0.9737586379051208, 0.9731534123420715, 0.9735128283500671, 0.974690854549408, 0.9755668044090271, 0.9758966565132141, 0.9747421145439148, 0.9753946661949158, 0.9776476621627808, 0.9771596789360046, 0.97548508644104, 0.9763941764831543, 0.978165328502655, 0.9764278531074524, 0.977198600769043, 0.9773715138435364, 0.9790756106376648, 0.977830708026886, 0.9780908823013306, 0.9781880378723145, 0.9809514880180359, 0.9795206189155579, 0.9798054695129395, 0.9787877798080444, 0.9787479639053345, 0.9794250130653381, 0.9804533123970032, 0.9804161787033081, 0.9800180196762085, 0.9812458157539368, 0.9808269739151001, 0.9807071089744568, 0.9804641604423523, 0.9797765016555786, 0.9813498258590698, 0.9803237915039062, 0.9813198447227478, 0.9816964864730835, 0.9818375110626221, 0.981319010257721, 0.9816532731056213, 0.9823634028434753, 0.9822059273719788, 0.9823257923126221, 0.9819314479827881, 0.9815362095832825, 0.9831255674362183, 0.9827864766120911, 0.9830000400543213, 0.9837883710861206, 0.984054446220398, 0.9839650988578796, 0.9829257130622864, 0.9840171337127686, 0.9842928051948547, 0.9838940501213074, 0.9850901365280151, 0.9849190711975098, 0.9841331839561462, 0.9838062524795532, 0.9844943284988403, 0.9863711595535278, 0.984519898891449, 0.984844982624054, 0.984824001789093, 0.985306978225708], 'recall': [0.7524852752685547, 0.8621824383735657, 0.8876795172691345, 0.9040178656578064, 0.9122100472450256, 0.9154086709022522, 0.9232326745986938, 0.9292618036270142, 0.931839108467102, 0.9366485476493835, 0.9379141926765442, 0.9421023726463318, 0.9428847432136536, 0.9440813660621643, 0.9458993077278137, 0.9481774568557739, 0.9510539174079895, 0.9504095911979675, 0.9538613557815552, 0.9548739194869995, 0.9565767645835876, 0.9574282169342041, 0.9592691659927368, 0.9581645727157593, 0.958785891532898, 0.9613401889801025, 0.9611561298370361, 0.9632731676101685, 0.9633652567863464, 0.9618234634399414, 0.9651141166687012, 0.9628129601478577, 0.9662187099456787, 0.9649300575256348, 0.9666329026222229, 0.9659425616264343, 0.9667249917984009, 0.9686349630355835, 0.9693483114242554, 0.9699006080627441, 0.9697625041007996, 0.9696934819221497, 0.9722707867622375, 0.9716954827308655, 0.970613956451416, 0.9718105792999268, 0.9731682538986206, 0.9713273048400879, 0.9724088907241821, 0.9730532169342041, 0.9744569063186646, 0.9733753800392151, 0.9728690981864929, 0.9742037653923035, 0.9764819741249084, 0.9751703143119812, 0.9758146405220032, 0.9747560620307922, 0.9750092029571533, 0.9760217070579529, 0.9765049815177917, 0.9769191741943359, 0.9762518405914307, 0.9776555299758911, 0.9770802855491638, 0.9779086709022522, 0.9770572781562805, 0.9766200184822083, 0.9783689379692078, 0.9768271446228027, 0.9779777526855469, 0.9787371158599854, 0.9790132641792297, 0.9779316782951355, 0.9788521528244019, 0.9792664051055908, 0.9793354272842407, 0.9797036051750183, 0.9791973233222961, 0.9786450862884521, 0.9800487756729126, 0.9801177978515625, 0.9806700944900513, 0.9817056059837341, 0.9813144207000732, 0.9814065098762512, 0.9803019165992737, 0.9818207025527954, 0.9820277690887451, 0.98122239112854, 0.9821658730506897, 0.9828792214393616, 0.9819817543029785, 0.9814065098762512, 0.9818437099456787, 0.9842829704284668, 0.9820277690887451, 0.9824880361557007, 0.9826030731201172, 0.9829943180084229], 'auc': [0.9867461323738098, 0.9959327578544617, 0.9971535801887512, 0.9977810382843018, 0.9978336691856384, 0.9982632398605347, 0.9981701970100403, 0.9983813166618347, 0.9984930753707886, 0.9986234903335571, 0.9987336993217468, 0.9987035989761353, 0.9989439249038696, 0.9987834692001343, 0.9989255666732788, 0.9990118145942688, 0.9990166425704956, 0.9991828203201294, 0.9991848468780518, 0.9992234110832214, 0.9990358948707581, 0.9993188381195068, 0.9992128610610962, 0.9991675615310669, 0.9992196559906006, 0.9991888999938965, 0.9993273615837097, 0.9992281794548035, 0.9993035793304443, 0.9992270469665527, 0.9993194341659546, 0.9993220567703247, 0.9992986917495728, 0.9992547631263733, 0.9994025230407715, 0.9994230270385742, 0.9995073676109314, 0.9994309544563293, 0.9993786811828613, 0.9994500875473022, 0.9993906617164612, 0.9994388222694397, 0.9994474649429321, 0.9994561672210693, 0.9994076490402222, 0.9995049238204956, 0.9995125532150269, 0.9994686841964722, 0.999592125415802, 0.9995020031929016, 0.999375581741333, 0.9994205236434937, 0.9995288252830505, 0.9995012879371643, 0.9995836615562439, 0.9995110630989075, 0.9995131492614746, 0.9995233416557312, 0.9993926286697388, 0.9995262622833252, 0.9995172023773193, 0.9995526671409607, 0.9995846152305603, 0.9995407462120056, 0.9995288848876953, 0.9995801448822021, 0.9994276165962219, 0.9995627999305725, 0.9995905160903931, 0.9994832873344421, 0.9996031522750854, 0.999511182308197, 0.9995737671852112, 0.9994522929191589, 0.9995006918907166, 0.9996675848960876, 0.9994456768035889, 0.9996695518493652, 0.9995014667510986, 0.9995288848876953, 0.9995747208595276, 0.9996113181114197, 0.9995166659355164, 0.9997113347053528, 0.9995551109313965, 0.9995927214622498, 0.9995901584625244, 0.999535858631134, 0.9995697736740112, 0.9997308254241943, 0.9995609521865845, 0.9997004270553589, 0.9995704293251038, 0.9995364546775818, 0.9996638298034668, 0.9996585249900818, 0.9996538758277893, 0.9997347593307495, 0.9996699690818787, 0.999596357345581], 'val_loss': [0.42408066987991333, 0.3337745666503906, 0.2557051181793213, 0.24838417768478394, 0.26056915521621704, 0.23319941759109497, 0.2131584882736206, 0.20862802863121033, 0.23333173990249634, 0.20818297564983368, 0.20575660467147827, 0.19102708995342255, 0.17972537875175476, 0.20349547266960144, 0.20065359771251678, 0.17886634171009064, 0.21001297235488892, 0.17528046667575836, 0.17867231369018555, 0.16761726140975952, 0.1742626428604126, 0.1625666469335556, 0.1617201715707779, 0.1666640192270279, 0.19457310438156128, 0.16859614849090576, 0.167469322681427, 0.18098260462284088, 0.1660735160112381, 0.17553722858428955, 0.1662198156118393, 0.15545044839382172, 0.1611284464597702, 0.16521668434143066, 0.13670645654201508, 0.15172578394412994, 0.15968292951583862, 0.17514431476593018, 0.16903911530971527, 0.1636846512556076, 0.16124895215034485, 0.15727315843105316, 0.14361588656902313, 0.14388498663902283, 0.14381417632102966, 0.14234378933906555, 0.15473736822605133, 0.15504994988441467, 0.1728988140821457, 0.16002948582172394, 0.1877482831478119, 0.14055685698986053, 0.15202070772647858, 0.16083121299743652, 0.14318202435970306, 0.15735246241092682, 0.14308221638202667, 0.14238440990447998, 0.14237605035305023, 0.1491784304380417, 0.14273767173290253, 0.136275053024292, 0.15758641064167023, 0.14477930963039398, 0.13402466475963593, 0.13720038533210754, 0.13457083702087402, 0.15124449133872986, 0.152250736951828, 0.14294034242630005, 0.13934914767742157, 0.1419956088066101, 0.13458757102489471, 0.1387479305267334, 0.14823445677757263, 0.15185301005840302, 0.13809671998023987, 0.14250537753105164, 0.15335862338542938, 0.15247175097465515, 0.13468727469444275, 0.13931313157081604, 0.13563081622123718, 0.1416020393371582, 0.15360026061534882, 0.14437872171401978, 0.1473962962627411, 0.15314234793186188, 0.1561223268508911, 0.13053672015666962, 0.14120011031627655, 0.14302681386470795, 0.15100347995758057, 0.13426895439624786, 0.14739415049552917, 0.13759151101112366, 0.14821244776248932, 0.13533800840377808, 0.13651224970817566, 0.14894293248653412], 'val_accuracy': [0.8612775206565857, 0.8873628973960876, 0.9146465063095093, 0.9201769828796387, 0.9142777919769287, 0.9237717986106873, 0.930316150188446, 0.9286569952964783, 0.9217439293861389, 0.9312378764152527, 0.9311457276344299, 0.936215341091156, 0.9417457580566406, 0.9305926561355591, 0.9319753050804138, 0.9396257996559143, 0.9328048825263977, 0.940547525882721, 0.9415614604949951, 0.9424831867218018, 0.942667543888092, 0.9462623000144958, 0.9450640678405762, 0.9438657760620117, 0.9360309839248657, 0.9462623000144958, 0.9422988295555115, 0.9420223236083984, 0.9445109963417053, 0.9438657760620117, 0.9451562166213989, 0.9493041038513184, 0.9474605917930603, 0.948843240737915, 0.9556640982627869, 0.9508710503578186, 0.9490275382995605, 0.9449718594551086, 0.9446032047271729, 0.9464466571807861, 0.94727623462677, 0.948843240737915, 0.9522536396980286, 0.9530832171440125, 0.9517006278038025, 0.953728437423706, 0.9528067111968994, 0.9517006278038025, 0.9464466571807861, 0.9498571157455444, 0.9422988295555115, 0.9539127945899963, 0.9511475563049316, 0.9504101872444153, 0.9555719494819641, 0.9493041038513184, 0.9544658660888672, 0.9579684734344482, 0.954834520816803, 0.9533597826957703, 0.9563093185424805, 0.9542815089225769, 0.9517927765846252, 0.9552032351493835, 0.9570467472076416, 0.9570467472076416, 0.9562171697616577, 0.9550188779830933, 0.9522536396980286, 0.956401526927948, 0.9551110863685608, 0.9582449793815613, 0.9589824080467224, 0.9552954435348511, 0.9551110863685608, 0.9568623900413513, 0.9567701816558838, 0.9560328125953674, 0.9526223540306091, 0.9539127945899963, 0.9605493545532227, 0.9563093185424805, 0.9597197771072388, 0.9553875923156738, 0.954834520816803, 0.9557563066482544, 0.9552032351493835, 0.9550188779830933, 0.9530832171440125, 0.9583371877670288, 0.9581528306007385, 0.9591667652130127, 0.9563093185424805, 0.9588901996612549, 0.9560328125953674, 0.9590745568275452, 0.956401526927948, 0.9590745568275452, 0.9599963426589966, 0.9553875923156738], 'val_precision': [0.8966723084449768, 0.9114366173744202, 0.9355117082595825, 0.9382633566856384, 0.9342080354690552, 0.9372575283050537, 0.9433926343917847, 0.9419659972190857, 0.9369668364524841, 0.9432343244552612, 0.9436115026473999, 0.9468876719474792, 0.9522017240524292, 0.9427980184555054, 0.9426799416542053, 0.9490016102790833, 0.942607581615448, 0.948072612285614, 0.9509500861167908, 0.9534120559692383, 0.9506403803825378, 0.9530389308929443, 0.952180802822113, 0.9531660079956055, 0.9424010515213013, 0.953425407409668, 0.949131965637207, 0.9484978318214417, 0.9510899782180786, 0.9509254097938538, 0.9531819224357605, 0.9555970430374146, 0.9537944793701172, 0.9547321200370789, 0.9601153135299683, 0.9564690589904785, 0.9547991156578064, 0.9514490962028503, 0.9504470825195312, 0.952691376209259, 0.952832818031311, 0.954816460609436, 0.9578173160552979, 0.9589767456054688, 0.9566471576690674, 0.9578301906585693, 0.9576562643051147, 0.9564207196235657, 0.9514762163162231, 0.9550906419754028, 0.9484718441963196, 0.9587820172309875, 0.9564085602760315, 0.9558016061782837, 0.9594582319259644, 0.9536632895469666, 0.9596541523933411, 0.9622991681098938, 0.9598885774612427, 0.9576286673545837, 0.959721565246582, 0.9590224623680115, 0.9572609663009644, 0.9591419696807861, 0.9607606530189514, 0.9602968692779541, 0.9599665403366089, 0.9591267704963684, 0.9563885927200317, 0.9607023596763611, 0.9598289132118225, 0.9621486067771912, 0.9617987871170044, 0.9591571688652039, 0.958871066570282, 0.9600445032119751, 0.961609959602356, 0.9594143629074097, 0.9569333791732788, 0.9582907557487488, 0.9634711742401123, 0.9601187109947205, 0.962829053401947, 0.9584839344024658, 0.9582059383392334, 0.958924412727356, 0.9587275385856628, 0.9585650563240051, 0.9568925499916077, 0.9625058174133301, 0.9600074291229248, 0.9625579118728638, 0.9586302638053894, 0.9614672064781189, 0.9587619304656982, 0.9627225399017334, 0.960040807723999, 0.9620910286903381, 0.9637392163276672, 0.9583063125610352], 'val_recall': [0.8270808458328247, 0.8660706281661987, 0.8998985886573792, 0.9063507914543152, 0.8991612195968628, 0.9128952026367188, 0.9186100363731384, 0.9186100363731384, 0.9111438989639282, 0.922020435333252, 0.9223891496658325, 0.926813542842865, 0.9328048825263977, 0.9236795902252197, 0.9246935248374939, 0.9330813884735107, 0.9249700307846069, 0.9340031147003174, 0.9363996386528015, 0.9375057816505432, 0.9373214244842529, 0.9409162402153015, 0.9397179484367371, 0.9379666447639465, 0.9305005073547363, 0.9415614604949951, 0.9373214244842529, 0.9370449185371399, 0.9410083889961243, 0.9376901388168335, 0.9401788115501404, 0.9442344903945923, 0.9418379664421082, 0.9428519010543823, 0.9518849849700928, 0.9458014369010925, 0.9462623000144958, 0.941100537776947, 0.940547525882721, 0.9429440498352051, 0.944050133228302, 0.9446953535079956, 0.9481058120727539, 0.950225830078125, 0.9478293061256409, 0.950502336025238, 0.9505945444107056, 0.9487510323524475, 0.9416536092758179, 0.9468153715133667, 0.9382431507110596, 0.9519771337509155, 0.9484745264053345, 0.9468153715133667, 0.9532675743103027, 0.9466310143470764, 0.9515162706375122, 0.9552032351493835, 0.9528988599777222, 0.949949324131012, 0.95317542552948, 0.9513319134712219, 0.9496727585792542, 0.9520693421363831, 0.9546502232551575, 0.9541893005371094, 0.9526223540306091, 0.9517006278038025, 0.9500414729118347, 0.95317542552948, 0.9514241218566895, 0.9559406638145447, 0.9561249613761902, 0.9524379968643188, 0.9519771337509155, 0.9545580148696899, 0.9535440802574158, 0.9543736577033997, 0.9503179788589478, 0.9508710503578186, 0.9578763246536255, 0.9541893005371094, 0.9574154019355774, 0.9533597826957703, 0.9530832171440125, 0.9532675743103027, 0.9528067111968994, 0.95317542552948, 0.9514241218566895, 0.9559406638145447, 0.9558484554290771, 0.9573232531547546, 0.9547423720359802, 0.9567701816558838, 0.9536362886428833, 0.9569545388221741, 0.9544658660888672, 0.9567701816558838, 0.9578763246536255, 0.9533597826957703], 'val_auc': [0.9947696328163147, 0.9960443377494812, 0.9975789785385132, 0.9968045353889465, 0.9971379637718201, 0.9972026348114014, 0.9977552890777588, 0.9970781803131104, 0.9970355033874512, 0.9973962306976318, 0.9979530572891235, 0.9979346990585327, 0.9977996945381165, 0.9971305131912231, 0.9971356987953186, 0.997765064239502, 0.996867299079895, 0.9976965188980103, 0.9976889491081238, 0.997713565826416, 0.9972487688064575, 0.9978463649749756, 0.9979880452156067, 0.9979618191719055, 0.9966878890991211, 0.9972890019416809, 0.9977399110794067, 0.9971147179603577, 0.9976072907447815, 0.9975780248641968, 0.9975218772888184, 0.9976474046707153, 0.9979856014251709, 0.9971566200256348, 0.9978413581848145, 0.9975829124450684, 0.9970145225524902, 0.9966748356819153, 0.9970142841339111, 0.9977301359176636, 0.9972296357154846, 0.9977414011955261, 0.9975510239601135, 0.9973726272583008, 0.997925341129303, 0.9974711537361145, 0.9965720176696777, 0.997530996799469, 0.9964707493782043, 0.9970141053199768, 0.9961910247802734, 0.9974756240844727, 0.9976770877838135, 0.9964213967323303, 0.9974754452705383, 0.9975789785385132, 0.9975202083587646, 0.9967446327209473, 0.9973286986351013, 0.9973680377006531, 0.9973840713500977, 0.9980459809303284, 0.9966718554496765, 0.9969705939292908, 0.9977235198020935, 0.9974371194839478, 0.9978187680244446, 0.9970954060554504, 0.9970452189445496, 0.9972391724586487, 0.997706949710846, 0.9972169399261475, 0.9974575042724609, 0.9971776604652405, 0.9966457486152649, 0.9965145587921143, 0.9974111914634705, 0.9973000884056091, 0.9968119859695435, 0.9970079660415649, 0.9973718523979187, 0.9973007440567017, 0.9969534277915955, 0.9973075985908508, 0.9964531064033508, 0.9968031048774719, 0.9970148801803589, 0.9968310594558716, 0.9964070320129395, 0.9976112842559814, 0.9969822764396667, 0.9964860677719116, 0.9966502785682678, 0.9970828294754028, 0.9969813227653503, 0.9969605207443237, 0.9966623187065125, 0.9972853064537048, 0.9973198771476746, 0.9968873262405396]}
+date and time = 20-01-2021_23-49-57
+Saving the model to path: /users/PAA0023/dong760/plant_leaves_diagnosis/saved_models/InceptionV3_model_BatchSize_32_0.2ValSplit_20-01-2021_23-49-57_100epochs
+
+Prediction Result: 
+340/340 - 369s - loss: 0.1419 - accuracy: 0.9562 - precision: 0.9591 - recall: 0.9544 - auc: 0.9969
+Result: [0.1418668031692505, 0.9562171697616577, 0.9591477513313293, 0.9543736577033997, 0.9968999028205872]
+Validation accuracy: 0.9562171697616577 Validation accuracy: 0.1418668031692505
+
+
+p0305.ten.osc.edu:
+                                                                               Req'd  Req'd   Elap 
+Job id               Username Queue    Name                 SessID NDS   TSK   Memory Time Use S Time 
+-------------------- -------- -------- -------------------- ------ ----- ----- ------ ----- - -----
+2792235              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 57:39
+The date when running current script is :
+Wed Jan 20 23:56:41 EST 2021

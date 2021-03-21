@@ -1,0 +1,366 @@
+environemnt set up
+
+The following have been reloaded with a version change:
+  1) cuda/10.0.130 => cuda/11.0.3
+
+Running the batch script
+2020-12-28 04:03:27.777071: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2020-12-28 04:04:22.227136: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX512F
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2020-12-28 04:04:22.244782: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2020-12-28 04:04:22.257336: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2020-12-28 04:04:22.351383: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100-PCIE-16GB computeCapability: 7.0
+coreClock: 1.38GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-12-28 04:04:22.351438: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2020-12-28 04:04:22.403404: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2020-12-28 04:04:22.403512: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2020-12-28 04:04:22.428349: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2020-12-28 04:04:22.453038: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2020-12-28 04:04:22.542391: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2020-12-28 04:04:22.606021: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2020-12-28 04:04:22.619832: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2020-12-28 04:04:22.627805: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2020-12-28 04:04:22.631828: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2020-12-28 04:04:26.134481: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-12-28 04:04:26.134543: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2020-12-28 04:04:26.134558: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2020-12-28 04:04:26.137892: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 14759 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2020-12-28 04:04:26.150857: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2020-12-28 04:04:26.151933: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100-PCIE-16GB computeCapability: 7.0
+coreClock: 1.38GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-12-28 04:04:26.151983: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2020-12-28 04:04:26.152017: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2020-12-28 04:04:26.152038: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2020-12-28 04:04:26.152058: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2020-12-28 04:04:26.152082: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2020-12-28 04:04:26.152102: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2020-12-28 04:04:26.152121: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2020-12-28 04:04:26.152141: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2020-12-28 04:04:26.153987: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2020-12-28 04:04:26.154026: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-12-28 04:04:26.154039: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2020-12-28 04:04:26.154051: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2020-12-28 04:04:26.156002: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 14759 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2020-12-28 04:04:26.996028: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2020-12-28 04:04:26.997593: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100-PCIE-16GB computeCapability: 7.0
+coreClock: 1.38GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-12-28 04:04:26.997704: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2020-12-28 04:04:26.997799: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2020-12-28 04:04:26.997829: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2020-12-28 04:04:26.997856: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2020-12-28 04:04:26.997881: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2020-12-28 04:04:26.997907: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2020-12-28 04:04:26.997930: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2020-12-28 04:04:26.997954: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2020-12-28 04:04:27.000206: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2020-12-28 04:04:27.000717: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2020-12-28 04:04:27.001957: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100-PCIE-16GB computeCapability: 7.0
+coreClock: 1.38GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-12-28 04:04:27.002002: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2020-12-28 04:04:27.002033: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2020-12-28 04:04:27.002057: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2020-12-28 04:04:27.002080: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2020-12-28 04:04:27.002103: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2020-12-28 04:04:27.002131: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2020-12-28 04:04:27.002154: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2020-12-28 04:04:27.002176: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2020-12-28 04:04:27.004385: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2020-12-28 04:04:27.004455: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-12-28 04:04:27.004471: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2020-12-28 04:04:27.004486: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2020-12-28 04:04:27.006690: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14759 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+Using TensorFlow backend.
+WARNING:tensorflow:`input_shape` is undefined or non-square, or `rows` is not 224. Weights for input shape (224, 224) will be loaded as the default.
+WARNING:tensorflow:`input_shape` is undefined or non-square, or `rows` is not 224. Weights for input shape (224, 224) will be loaded as the default.
+2020-12-28 04:04:42.428865: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2020-12-28 04:04:42.429368: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2400000000 Hz
+WARNING:tensorflow:AutoGraph could not transform <function Model.make_train_function.<locals>.train_function at 0x2b04eac99268> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+Does the system is built with CUDA?: True
+Default GPU Device: /device:GPU:0
+====> Start running baseline.py
+Classes: ['Tomato___Late_blight', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Peach___healthy', 'Grape___Esca_(Black_Measles)', 'Potato___Late_blight', 'Pepper,_bell___Bacterial_spot', 'Strawberry___healthy', 'Orange___Haunglongbing_(Citrus_greening)', 'Tomato___Leaf_Mold', 'Apple___Black_rot', 'Strawberry___Leaf_scorch', 'Tomato___Early_blight', 'Cherry_(including_sour)___healthy', 'Corn_(maize)___Common_rust_', 'Blueberry___healthy', 'Potato___Early_blight', 'Pepper,_bell___healthy', 'Apple___Cedar_apple_rust', 'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)', 'Tomato___Tomato_mosaic_virus', 'Tomato___Target_Spot', 'Tomato___healthy', 'Peach___Bacterial_spot', 'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot', 'Tomato___Spider_mites Two-spotted_spider_mite', 'Corn_(maize)___healthy', 'Squash___Powdery_mildew', 'Cherry_(including_sour)___Powdery_mildew', 'Tomato___Bacterial_spot', 'Grape___Black_rot', 'Apple___healthy', 'Potato___healthy', 'Corn_(maize)___Northern_Leaf_Blight', 'Tomato___Septoria_leaf_spot', 'Raspberry___healthy', 'Soybean___healthy', 'Apple___Apple_scab', 'Grape___healthy']
+Number of classes: 38
+Total number of images: 54305
+first_folder_path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight
+Number of folder: 38
+sample image path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight/5fdf3288-d5f4-4c70-9b12-95222b82d415___RS_Late.B 4942.JPG
+Image size: (256, 256, 3)
+Found 48888 images belonging to 38 classes.
+Found 5417 images belonging to 38 classes.
+Train size: 48888
+
+====> Statistics: epochs=250, batch_size=32, validation_split=0.1, lr=0.001, momentum=0.9, steps_per_epoch =100, feature shape= (256, 256, 3), no_classes=38, loss_function=categorical_crossentropy
+Epoch 1/250
+2020-12-28 04:04:45.278636: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2020-12-28 04:04:46.530200: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2020-12-28 04:04:46.632651: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+                                                                                                                                                                                                                                            WARNING:tensorflow:AutoGraph could not transform <function Model.make_test_function.<locals>.test_function at 0x2b04f4192ea0> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+1528/1528 - 1840s - loss: 3.8117 - accuracy: 0.1006 - precision: 0.0469 - recall: 4.9092e-04 - auc: 0.6914 - val_loss: 3.2724 - val_accuracy: 0.1041 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7232
+                                                                                                                                                                                                                                            Epoch 2/250
+1528/1528 - 1860s - loss: 3.2321 - accuracy: 0.1359 - precision: 0.2258 - recall: 1.4318e-04 - auc: 0.7411 - val_loss: 3.1277 - val_accuracy: 0.1512 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7695
+                                                                                                                                                                                                                                            Epoch 3/250
+1528/1528 - 1857s - loss: 3.1281 - accuracy: 0.1541 - precision: 0.5385 - recall: 0.0014 - auc: 0.7700 - val_loss: 3.0982 - val_accuracy: 0.1711 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7805
+                                                                                                                                                                                                                                            Epoch 4/250
+1528/1528 - 1803s - loss: 3.0875 - accuracy: 0.1614 - precision: 0.5282 - recall: 0.0033 - auc: 0.7790 - val_loss: 3.0483 - val_accuracy: 0.1684 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7879
+                                                                                                                                                                                                                                            Epoch 5/250
+1528/1528 - 1867s - loss: 3.0643 - accuracy: 0.1629 - precision: 0.5082 - recall: 0.0032 - auc: 0.7843 - val_loss: 3.0311 - val_accuracy: 0.1687 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7924
+                                                                                                                                                                                                                                             Epoch 6/250
+1528/1528 - 1908s - loss: 3.0493 - accuracy: 0.1658 - precision: 0.5488 - recall: 0.0043 - auc: 0.7870 - val_loss: 3.0247 - val_accuracy: 0.1625 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7932
+                                                                                                                                                                                                                                             Epoch 7/250
+1528/1528 - 1828s - loss: 3.0471 - accuracy: 0.1646 - precision: 0.5353 - recall: 0.0040 - auc: 0.7872 - val_loss: 3.0193 - val_accuracy: 0.1649 - val_precision: 0.3448 - val_recall: 0.0018 - val_auc: 0.7954
+                                                                                                                                                                                                                                             Epoch 8/250
+1528/1528 - 1884s - loss: 3.0398 - accuracy: 0.1650 - precision: 0.5692 - recall: 0.0052 - auc: 0.7888 - val_loss: 3.0464 - val_accuracy: 0.1671 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7872
+                                                                                                                                                                                                                                             Epoch 9/250
+1528/1528 - 1841s - loss: 3.0367 - accuracy: 0.1651 - precision: 0.5893 - recall: 0.0054 - auc: 0.7901 - val_loss: 3.0045 - val_accuracy: 0.1685 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7976
+                                                                                                                                                                                                                                             Epoch 10/250
+1528/1528 - 1858s - loss: 3.0324 - accuracy: 0.1662 - precision: 0.5819 - recall: 0.0050 - auc: 0.7908 - val_loss: 3.0115 - val_accuracy: 0.1706 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7965
+                                                                                                                                                                                                                                             Epoch 11/250
+1528/1528 - 1887s - loss: 3.0289 - accuracy: 0.1667 - precision: 0.5620 - recall: 0.0047 - auc: 0.7913 - val_loss: 3.0038 - val_accuracy: 0.1674 - val_precision: 0.5702 - val_recall: 0.0127 - val_auc: 0.7990
+                                                                                                                                                                                                                                             Epoch 12/250
+1528/1528 - 1855s - loss: 3.0246 - accuracy: 0.1664 - precision: 0.5622 - recall: 0.0048 - auc: 0.7930 - val_loss: 3.0138 - val_accuracy: 0.1650 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7965
+                                                                                                                                                                                                                                             Epoch 13/250
+1528/1528 - 1803s - loss: 3.0203 - accuracy: 0.1669 - precision: 0.5865 - recall: 0.0060 - auc: 0.7936 - val_loss: 3.0155 - val_accuracy: 0.1663 - val_precision: 0.4054 - val_recall: 0.0028 - val_auc: 0.7957
+                                                                                                                                                                                                                                                             Epoch 14/250
+1528/1528 - 1864s - loss: 3.0254 - accuracy: 0.1668 - precision: 0.5714 - recall: 0.0060 - auc: 0.7923 - val_loss: 3.0442 - val_accuracy: 0.1621 - val_precision: 0.4937 - val_recall: 0.0072 - val_auc: 0.7892
+                                                                                                                                                                                                                                             Epoch 15/250
+1528/1528 - 1856s - loss: 3.0160 - accuracy: 0.1658 - precision: 0.5635 - recall: 0.0056 - auc: 0.7948 - val_loss: 3.0188 - val_accuracy: 0.1649 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7938
+Epoch 21/250
+1528/1528 - 1766s - loss: 3.3449 - accuracy: 0.1006 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7037 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                     Epoch 22/250
+1528/1528 - 1788s - loss: 3.3449 - accuracy: 0.1012 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                                     Epoch 23/250
+1528/1528 - 1802s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 24/250
+1528/1528 - 1807s - loss: 3.3449 - accuracy: 0.1016 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                                     Epoch 25/250
+1528/1528 - 1925s - loss: 3.3449 - accuracy: 0.1012 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                             Epoch 26/250
+1528/1528 - 1923s - loss: 3.3449 - accuracy: 0.1008 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                     Epoch 27/250
+1528/1528 - 2550s - loss: 3.3449 - accuracy: 0.1012 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                     Epoch 28/250
+1528/1528 - 1953s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                                     Epoch 29/250
+1528/1528 - 2015s - loss: 3.3449 - accuracy: 0.1009 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                     Epoch 30/250
+1528/1528 - 1982s - loss: 3.3449 - accuracy: 0.1010 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7037
+                                                                                                                                                                                                                                     Epoch 31/250
+1528/1528 - 1918s - loss: 3.3449 - accuracy: 0.1010 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                     Epoch 32/250
+1528/1528 - 1995s - loss: 3.3449 - accuracy: 0.1015 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3434 - val_accuracy: 0.0988 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+                                                                                                                                                                                                                                     Epoch 33/250
+1528/1528 - 1999s - loss: 3.3449 - accuracy: 0.1007 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7033 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                     Epoch 34/250
+1528/1528 - 2166s - loss: 3.3449 - accuracy: 0.1001 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                             Epoch 35/250
+1528/1528 - 1971s - loss: 3.3449 - accuracy: 0.1010 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                                     Epoch 36/250
+1528/1528 - 2104s - loss: 3.3449 - accuracy: 0.1015 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3434 - val_accuracy: 0.0988 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                     Epoch 37/250
+1528/1528 - 2102s - loss: 3.3449 - accuracy: 0.1005 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                             Epoch 38/250
+1528/1528 - 2031s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 39/250
+1528/1528 - 2323s - loss: 3.3449 - accuracy: 0.1008 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 40/250
+1528/1528 - 2110s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                             Epoch 41/250
+1528/1528 - 2045s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 42/250
+1528/1528 - 2064s - loss: 3.3449 - accuracy: 0.0999 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                     Epoch 43/250
+1528/1528 - 2094s - loss: 3.3449 - accuracy: 0.1001 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7033 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                                 Epoch 44/250
+1528/1528 - 2007s - loss: 3.3448 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                             Epoch 45/250
+1528/1528 - 1938s - loss: 3.3449 - accuracy: 0.1012 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7037
+                                                                                                                                                                                                                                 Epoch 46/250
+1528/1528 - 1869s - loss: 3.3449 - accuracy: 0.1012 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 47/250
+1528/1528 - 2006s - loss: 3.3449 - accuracy: 0.1009 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 48/250
+1528/1528 - 1891s - loss: 3.3449 - accuracy: 0.1009 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3435 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                                     Epoch 49/250
+1528/1528 - 1956s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                     Epoch 50/250
+1528/1528 - 2134s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+Epoch 51/250
+1528/1528 - 2134s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+Epoch 52/250
+1528/1528 - 2160s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 53/250
+1528/1528 - 2151s - loss: 3.3449 - accuracy: 0.1010 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 54/250
+1528/1528 - 1992s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.0988 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 55/250
+1528/1528 - 1856s - loss: 3.3449 - accuracy: 0.1008 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+                                                                                                                                                                                                                                     Epoch 56/250
+1528/1528 - 1969s - loss: 3.3449 - accuracy: 0.1004 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7033 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 57/250
+1528/1528 - 1777s - loss: 3.3449 - accuracy: 0.1003 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 51/250
+1528/1528 - 1889s - loss: 2.9912 - accuracy: 0.1733 - precision: 0.5664 - recall: 0.0129 - auc: 0.7997 - val_loss: 2.9823 - val_accuracy: 0.1732 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8015
+                                                                                                                                                                                                                                             Epoch 52/250
+1528/1528 - 1890s - loss: 2.9876 - accuracy: 0.1735 - precision: 0.5590 - recall: 0.0125 - auc: 0.8005 - val_loss: 2.9835 - val_accuracy: 0.1708 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8019
+                                                                                                                                                                                                                                             Epoch 53/250
+1528/1528 - 1840s - loss: 2.9840 - accuracy: 0.1743 - precision: 0.5862 - recall: 0.0132 - auc: 0.8011 - val_loss: 2.9725 - val_accuracy: 0.1741 - val_precision: 0.5700 - val_recall: 0.0308 - val_auc: 0.8043
+                                                                                                                                                                                                                                             Epoch 54/250
+1528/1528 - 1840s - loss: 2.9882 - accuracy: 0.1738 - precision: 0.6009 - recall: 0.0144 - auc: 0.8002 - val_loss: 2.9851 - val_accuracy: 0.1745 - val_precision: 0.3611 - val_recall: 0.0024 - val_auc: 0.8002
+                                                                                                                                                                                                                                             Epoch 55/250
+1528/1528 - 1998s - loss: 2.9900 - accuracy: 0.1738 - precision: 0.5647 - recall: 0.0132 - auc: 0.7998 - val_loss: 3.0678 - val_accuracy: 0.1722 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7815
+                                                                                                                                                                                                                                             Epoch 56/250
+1528/1528 - 1978s - loss: 2.9871 - accuracy: 0.1750 - precision: 0.5847 - recall: 0.0143 - auc: 0.8002 - val_loss: 2.9774 - val_accuracy: 0.1752 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8020
+                                                                                                                                                                                                                                             Epoch 57/250
+1528/1528 - 2051s - loss: 2.9893 - accuracy: 0.1739 - precision: 0.5644 - recall: 0.0132 - auc: 0.7996 - val_loss: 2.9803 - val_accuracy: 0.1756 - val_precision: 0.3833 - val_recall: 0.0042 - val_auc: 0.8022
+                                                                                                                                                                                                                                             Epoch 58/250
+1528/1528 - 2035s - loss: 2.9826 - accuracy: 0.1747 - precision: 0.5718 - recall: 0.0144 - auc: 0.8014 - val_loss: 2.9715 - val_accuracy: 0.1756 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8047
+                                                                                                                                                                                                                                             Epoch 59/250
+1528/1528 - 2241s - loss: 2.9852 - accuracy: 0.1737 - precision: 0.5562 - recall: 0.0128 - auc: 0.8008 - val_loss: 2.9675 - val_accuracy: 0.1791 - val_precision: 0.5392 - val_recall: 0.0203 - val_auc: 0.8051
+                                                                                                                                                                                                                                             Epoch 60/250
+1528/1528 - 2095s - loss: 2.9891 - accuracy: 0.1737 - precision: 0.5699 - recall: 0.0146 - auc: 0.7999 - val_loss: 2.9697 - val_accuracy: 0.1750 - val_precision: 0.4444 - val_recall: 0.0059 - val_auc: 0.8035
+                                                                                                                                                                                                                                             Epoch 61/250
+1528/1528 - 2196s - loss: 2.9850 - accuracy: 0.1742 - precision: 0.5396 - recall: 0.0130 - auc: 0.8008 - val_loss: 2.9962 - val_accuracy: 0.1756 - val_precision: 0.1111 - val_recall: 1.8460e-04 - val_auc: 0.7978
+                                                                                                                                                                                                                                             Epoch 62/250
+1528/1528 - 2458s - loss: 2.9848 - accuracy: 0.1740 - precision: 0.5657 - recall: 0.0145 - auc: 0.8007 - val_loss: 2.9761 - val_accuracy: 0.1772 - val_precision: 0.5425 - val_recall: 0.0153 - val_auc: 0.8023
+                                                                                                                                                                                                                                             Epoch 63/250
+1528/1528 - 2632s - loss: 2.9830 - accuracy: 0.1733 - precision: 0.5786 - recall: 0.0151 - auc: 0.8013 - val_loss: 3.0018 - val_accuracy: 0.1721 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7966
+                                                                                                                                                                                                                                             Epoch 64/250
+1528/1528 - 2282s - loss: 2.9857 - accuracy: 0.1734 - precision: 0.5570 - recall: 0.0140 - auc: 0.8007 - val_loss: 2.9763 - val_accuracy: 0.1767 - val_precision: 0.4727 - val_recall: 0.0096 - val_auc: 0.8027
+                                                                                                                                                                                                                                             Epoch 65/250
+1528/1528 - 2219s - loss: 2.9828 - accuracy: 0.1752 - precision: 0.5816 - recall: 0.0146 - auc: 0.8011 - val_loss: 2.9629 - val_accuracy: 0.1798 - val_precision: 0.2069 - val_recall: 0.0011 - val_auc: 0.8062
+                                                                                                                                                                                                                                             Epoch 66/250
+1528/1528 - 2503s - loss: 2.9796 - accuracy: 0.1756 - precision: 0.5492 - recall: 0.0140 - auc: 0.8020 - val_loss: 2.9866 - val_accuracy: 0.1708 - val_precision: 0.5314 - val_recall: 0.0343 - val_auc: 0.8032
+                                                                                                                                                                                                                                             Epoch 67/250
+1528/1528 - 2585s - loss: 2.9845 - accuracy: 0.1757 - precision: 0.5767 - recall: 0.0159 - auc: 0.8006 - val_loss: 2.9695 - val_accuracy: 0.1759 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.8059
+                                                                                                                                                                                                                                             Epoch 68/250
+1528/1528 - 2401s - loss: 2.9833 - accuracy: 0.1740 - precision: 0.5755 - recall: 0.0146 - auc: 0.8012 - val_loss: 2.9631 - val_accuracy: 0.1757 - val_precision: 0.5759 - val_recall: 0.0238 - val_auc: 0.8056
+                                                                                                                                                                                                                                             Epoch 69/250
+1528/1528 - 2485s - loss: 2.9806 - accuracy: 0.1750 - precision: 0.5783 - recall: 0.0159 - auc: 0.8015 - val_loss: 2.9625 - val_accuracy: 0.1802 - val_precision: 0.1250 - val_recall: 5.5381e-04 - val_auc: 0.8054
+                                                                                                                                                                                                                                             Epoch 70/250
+1528/1528 - 2259s - loss: 2.9853 - accuracy: 0.1760 - precision: 0.5701 - recall: 0.0148 - auc: 0.8005 - val_loss: 3.0013 - val_accuracy: 0.1724 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7963
+                                                                                                                                                                                                                                             Epoch 71/250
+1528/1528 - 2269s - loss: 2.9799 - accuracy: 0.1761 - precision: 0.5788 - recall: 0.0159 - auc: 0.8017 - val_loss: 2.9758 - val_accuracy: 0.1737 - val_precision: 0.5482 - val_recall: 0.0305 - val_auc: 0.8035
+                                                                                                                                                                                                                                             Epoch 72/250
+1528/1528 - 2378s - loss: 2.9819 - accuracy: 0.1748 - precision: 0.5616 - recall: 0.0154 - auc: 0.8013 - val_loss: 2.9629 - val_accuracy: 0.1730 - val_precision: 0.5277 - val_recall: 0.0334 - val_auc: 0.8082
+                                                                                                                                                                                                                                             Epoch 73/250
+1528/1528 - 2388s - loss: 2.9789 - accuracy: 0.1754 - precision: 0.5604 - recall: 0.0159 - auc: 0.8022 - val_loss: 3.0322 - val_accuracy: 0.1709 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7882
+                                                                                                                                                                                                                                             Epoch 74/250
+1528/1528 - 2490s - loss: 2.9848 - accuracy: 0.1750 - precision: 0.5634 - recall: 0.0154 - auc: 0.8009 - val_loss: 2.9677 - val_accuracy: 0.1809 - val_precision: 0.4699 - val_recall: 0.0072 - val_auc: 0.8040
+                                                                                                                                                                                                                                             Epoch 75/250
+1528/1528 - 2488s - loss: 2.9822 - accuracy: 0.1755 - precision: 0.5674 - recall: 0.0152 - auc: 0.8013 - val_loss: 2.9646 - val_accuracy: 0.1737 - val_precision: 0.2857 - val_recall: 0.0011 - val_auc: 0.8052
+                                                                                                                                                                                                                                             Epoch 76/250
+1528/1528 - 2863s - loss: 2.9804 - accuracy: 0.1753 - precision: 0.5685 - recall: 0.0156 - auc: 0.8019 - val_loss: 2.9589 - val_accuracy: 0.1815 - val_precision: 0.5703 - val_recall: 0.0135 - val_auc: 0.8058
+                                                                                                                                                                                                                                             Epoch 77/250
+1528/1528 - 2520s - loss: 2.9793 - accuracy: 0.1746 - precision: 0.5725 - recall: 0.0162 - auc: 0.8015 - val_loss: 3.0056 - val_accuracy: 0.1754 - val_precision: 0.2000 - val_recall: 5.5381e-04 - val_auc: 0.7961
+Epoch 84/250
+1528/1528 - 2309s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7033 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 85/250
+1528/1528 - 2040s - loss: 3.3449 - accuracy: 0.1010 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+                                                                                                                                                                                                                             Epoch 86/250
+1528/1528 - 2108s - loss: 3.3449 - accuracy: 0.0997 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 87/250
+1528/1528 - 2080s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7033 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                 Epoch 88/250
+1528/1528 - 2087s - loss: 3.3449 - accuracy: 0.1004 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 89/250
+1528/1528 - 1995s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 90/250
+1528/1528 - 2050s - loss: 3.3449 - accuracy: 0.1012 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 91/250
+1528/1528 - 1968s - loss: 3.3449 - accuracy: 0.1010 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7033 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                     Epoch 92/250
+1528/1528 - 1939s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                             Epoch 93/250
+1528/1528 - 1941s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                     Epoch 94/250
+1528/1528 - 1858s - loss: 3.3449 - accuracy: 0.1013 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                             Epoch 95/250
+1528/1528 - 1848s - loss: 3.3449 - accuracy: 0.1011 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 96/250
+1528/1528 - 1835s - loss: 3.3449 - accuracy: 0.1005 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                             Epoch 97/250
+1528/1528 - 1851s - loss: 3.3449 - accuracy: 0.1008 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 98/250
+1528/1528 - 1836s - loss: 3.3448 - accuracy: 0.1012 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.0988 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 99/250
+1528/1528 - 1941s - loss: 3.3449 - accuracy: 0.1009 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                             Epoch 100/250
+1528/1528 - 1909s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                             Epoch 101/250
+1528/1528 - 1924s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+                                                                                                                                                                                                                             Epoch 102/250
+1528/1528 - 1888s - loss: 3.3449 - accuracy: 0.1000 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7033 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+                                                                                                                                                                                                                             Epoch 103/250
+1528/1528 - 1855s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                 Epoch 104/250
+1528/1528 - 1988s - loss: 3.3449 - accuracy: 0.1016 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7041
+                                                                                                                                                                                                                             Epoch 105/250
+1528/1528 - 1902s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7041
+                                                                                                                                                                                                                             Epoch 106/250
+1528/1528 - 1939s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7042
+                                                                                                                                                                                                                                 Epoch 107/250
+1528/1528 - 1955s - loss: 3.3449 - accuracy: 0.1003 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7041
+                                                                                                                                                                                                                              Epoch 108/250
+1528/1528 - 1977s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                              Epoch 109/250
+1528/1528 - 1961s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                                  Epoch 110/250
+1528/1528 - 1940s - loss: 3.3449 - accuracy: 0.1006 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                              Epoch 111/250
+1528/1528 - 1952s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+                                                                                                                                                                                                                              Epoch 112/250
+1528/1528 - 1922s - loss: 3.3449 - accuracy: 0.1011 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7037
+                                                                                                                                                                                                                              Epoch 113/250
+1528/1528 - 1965s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                              Epoch 114/250
+1528/1528 - 2115s - loss: 3.3449 - accuracy: 0.1011 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7033 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                              Epoch 115/250
+1528/1528 - 2013s - loss: 3.3449 - accuracy: 0.1012 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7033 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                              Epoch 116/250
+1528/1528 - 2373s - loss: 3.3449 - accuracy: 0.1009 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                      Epoch 117/250
+1528/1528 - 1952s - loss: 3.3449 - accuracy: 0.1010 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                  Epoch 118/250
+1528/1528 - 1954s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                              Epoch 119/250
+1528/1528 - 2020s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7032 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                              Epoch 120/250
+1528/1528 - 2205s - loss: 3.3449 - accuracy: 0.1008 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7041
+                                                                                                                                                                                                                              Epoch 121/250
+1528/1528 - 1914s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                                      Epoch 122/250
+1528/1528 - 2041s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                              Epoch 123/250
+1528/1528 - 2109s - loss: 3.3449 - accuracy: 0.1008 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+                                                                                                                                                                                                                              Epoch 124/250
+1528/1528 - 1993s - loss: 3.3449 - accuracy: 0.1010 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7033 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+                                                                                                                                                                                                                              Epoch 125/250
+1528/1528 - 1976s - loss: 3.3449 - accuracy: 0.1002 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7042
+                                                                                                                                                                                                                              Epoch 126/250
+1528/1528 - 1926s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+Epoch 127/250
+1528/1528 - 1882s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 128/250
+1528/1528 - 1896s - loss: 3.3449 - accuracy: 0.1011 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3434 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7042
+slurmstepd: error: *** JOB 2653547 ON p0239 CANCELLED AT 2020-12-31T01:39:58 DUE TO TIME LIMIT ***
+Epoch 121/250
+1528/1528 - 1968s - loss: 2.9698 - accuracy: 0.1790 - precision: 0.5638 - recall: 0.0202 - auc: 0.8036 - val_loss: 2.9889 - val_accuracy: 0.1750 - val_precision: 0.5149 - val_recall: 0.0543 - val_auc: 0.8027
+Epoch 122/250
+1528/1528 - 1957s - loss: 2.9665 - accuracy: 0.1791 - precision: 0.5604 - recall: 0.0204 - auc: 0.8043 - val_loss: 2.9516 - val_accuracy: 0.1837 - val_precision: 0.5248 - val_recall: 0.0137 - val_auc: 0.8077
+Epoch 123/250
+1528/1528 - 2165s - loss: 2.9666 - accuracy: 0.1801 - precision: 0.5688 - recall: 0.0203 - auc: 0.8043 - val_loss: 2.9591 - val_accuracy: 0.1824 - val_precision: 0.4958 - val_recall: 0.0109 - val_auc: 0.8063
+Epoch 124/250
+1528/1528 - 2024s - loss: 2.9643 - accuracy: 0.1799 - precision: 0.5529 - recall: 0.0205 - auc: 0.8049 - val_loss: 2.9501 - val_accuracy: 0.1826 - val_precision: 0.5415 - val_recall: 0.0253 - val_auc: 0.8101
+Epoch 125/250
+1528/1528 - 1986s - loss: 2.9636 - accuracy: 0.1795 - precision: 0.5718 - recall: 0.0218 - auc: 0.8049 - val_loss: 3.0326 - val_accuracy: 0.1719 - val_precision: 0.5164 - val_recall: 0.0495 - val_auc: 0.7956
+slurmstepd: error: *** JOB 2653550 ON p0226 CANCELLED AT 2020-12-31T04:03:30 DUE TO TIME LIMIT ***

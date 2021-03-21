@@ -1,0 +1,337 @@
+environemnt set up
+
+The following have been reloaded with a version change:
+  1) cuda/10.0.130 => cuda/11.0.3
+
+Running the batch script
+2021-01-10 20:59:58.328451: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-10 21:00:06.934900: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX512F
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-01-10 21:00:06.941095: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-10 21:00:06.943848: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2021-01-10 21:00:06.971376: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-10 21:00:06.971406: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-10 21:00:06.976548: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-10 21:00:06.976593: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-10 21:00:06.997302: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-10 21:00:07.015493: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-10 21:00:07.055439: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-10 21:00:07.073720: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-10 21:00:07.081400: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-10 21:00:07.087345: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-10 21:00:07.088460: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-10 21:00:08.348056: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-10 21:00:08.348111: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-01-10 21:00:08.348119: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-01-10 21:00:08.352245: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 30128 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2021-01-10 21:00:08.356830: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-10 21:00:08.358230: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-10 21:00:08.358264: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-10 21:00:08.358284: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-10 21:00:08.358295: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-10 21:00:08.358305: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-10 21:00:08.358318: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-10 21:00:08.358328: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-10 21:00:08.358337: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-10 21:00:08.358347: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-10 21:00:08.360894: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-10 21:00:08.360917: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-10 21:00:08.360924: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-01-10 21:00:08.360930: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-01-10 21:00:08.363498: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 30128 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2021-01-10 21:00:08.862614: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-10 21:00:08.864595: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-10 21:00:08.864643: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-10 21:00:08.864670: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-10 21:00:08.864683: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-10 21:00:08.864697: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-10 21:00:08.864709: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-10 21:00:08.864722: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-10 21:00:08.864734: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-10 21:00:08.864747: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-10 21:00:08.868153: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-10 21:00:08.868434: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-01-10 21:00:08.870222: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-01-10 21:00:08.870252: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-01-10 21:00:08.870272: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-10 21:00:08.870285: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-10 21:00:08.870298: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-01-10 21:00:08.870310: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-01-10 21:00:08.870325: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-01-10 21:00:08.870338: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-01-10 21:00:08.870351: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-01-10 21:00:08.873732: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-01-10 21:00:08.873765: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-10 21:00:08.873774: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-01-10 21:00:08.873782: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-01-10 21:00:08.877134: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30128 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+Using TensorFlow backend.
+WARNING:tensorflow:`input_shape` is undefined or non-square, or `rows` is not 224. Weights for input shape (224, 224) will be loaded as the default.
+WARNING:tensorflow:`input_shape` is undefined or non-square, or `rows` is not 224. Weights for input shape (224, 224) will be loaded as the default.
+2021-01-10 21:00:26.675194: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-01-10 21:00:26.675906: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2900000000 Hz
+WARNING:tensorflow:AutoGraph could not transform <function Model.make_train_function.<locals>.train_function at 0x2b1581c62268> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+Does the system is built with CUDA?: True
+Default GPU Device: /device:GPU:0
+====> Start running baseline.py
+Classes: ['Tomato___Late_blight', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Peach___healthy', 'Grape___Esca_(Black_Measles)', 'Potato___Late_blight', 'Pepper,_bell___Bacterial_spot', 'Strawberry___healthy', 'Orange___Haunglongbing_(Citrus_greening)', 'Tomato___Leaf_Mold', 'Apple___Black_rot', 'Strawberry___Leaf_scorch', 'Tomato___Early_blight', 'Cherry_(including_sour)___healthy', 'Corn_(maize)___Common_rust_', 'Blueberry___healthy', 'Potato___Early_blight', 'Pepper,_bell___healthy', 'Apple___Cedar_apple_rust', 'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)', 'Tomato___Tomato_mosaic_virus', 'Tomato___Target_Spot', 'Tomato___healthy', 'Peach___Bacterial_spot', 'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot', 'Tomato___Spider_mites Two-spotted_spider_mite', 'Corn_(maize)___healthy', 'Squash___Powdery_mildew', 'Cherry_(including_sour)___Powdery_mildew', 'Tomato___Bacterial_spot', 'Grape___Black_rot', 'Apple___healthy', 'Potato___healthy', 'Corn_(maize)___Northern_Leaf_Blight', 'Tomato___Septoria_leaf_spot', 'Raspberry___healthy', 'Soybean___healthy', 'Apple___Apple_scab', 'Grape___healthy']
+Number of classes: 38
+Total number of images: 54305
+first_folder_path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight
+Number of folder: 38
+sample image path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight/5fdf3288-d5f4-4c70-9b12-95222b82d415___RS_Late.B 4942.JPG
+Image size: (256, 256, 3)
+Found 43456 images belonging to 38 classes.
+Found 10849 images belonging to 38 classes.
+Train size: 43456
+val_size: 10849, train_size: 43456
+
+====> Statistics: epochs=100, batch_size=32, validation_split=0.2, lr=0.001, momentum=0.9, steps_per_epoch =100, feature shape= (256, 256, 3), no_classes=38, loss_function=categorical_crossentropy
+Epoch 1/100
+2021-01-10 21:00:38.616069: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-01-10 21:00:39.033501: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-01-10 21:00:39.632817: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+WARNING:tensorflow:AutoGraph could not transform <function Model.make_test_function.<locals>.test_function at 0x2b15835dd7b8> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+1358/1358 - 1965s - loss: 5.7208 - accuracy: 0.0980 - precision: 0.0601 - recall: 5.2927e-04 - auc: 0.6486 - val_loss: 3.4549 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.6838
+Epoch 2/100
+1358/1358 - 1862s - loss: 3.4178 - accuracy: 0.1015 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.6934 - val_loss: 3.3915 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.6966
+Epoch 3/100
+1358/1358 - 1964s - loss: 3.3804 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.6962 - val_loss: 3.3708 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7006
+Epoch 4/100
+1358/1358 - 1836s - loss: 3.3664 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7004 - val_loss: 3.3616 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7015
+Epoch 5/100
+1358/1358 - 1811s - loss: 3.3595 - accuracy: 0.1012 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7016 - val_loss: 3.3563 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7025
+Epoch 6/100
+1358/1358 - 1814s - loss: 3.3556 - accuracy: 0.1013 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7023 - val_loss: 3.3529 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7030
+Epoch 7/100
+1358/1358 - 1847s - loss: 3.3528 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7026 - val_loss: 3.3507 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7034
+Epoch 8/100
+1358/1358 - 1874s - loss: 3.3507 - accuracy: 0.1013 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7032 - val_loss: 3.3491 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7035
+Epoch 9/100
+1358/1358 - 1835s - loss: 3.3493 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7032 - val_loss: 3.3479 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7034
+Epoch 10/100
+1358/1358 - 1812s - loss: 3.3483 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7030 - val_loss: 3.3471 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7034
+Epoch 11/100
+1358/1358 - 1829s - loss: 3.3476 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7029 - val_loss: 3.3464 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7034
+Epoch 12/100
+1358/1358 - 1885s - loss: 3.3470 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7030 - val_loss: 3.3459 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7034
+Epoch 13/100
+1358/1358 - 1870s - loss: 3.3466 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7030 - val_loss: 3.3456 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7034
+Epoch 14/100
+1358/1358 - 1823s - loss: 3.3463 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7030 - val_loss: 3.3453 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7031
+Epoch 15/100
+1358/1358 - 1794s - loss: 3.3460 - accuracy: 0.1009 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7029 - val_loss: 3.3450 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7032
+Epoch 16/100
+1358/1358 - 1769s - loss: 3.3458 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7028 - val_loss: 3.3448 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7033
+Epoch 17/100
+1358/1358 - 1784s - loss: 3.3456 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7033 - val_loss: 3.3446 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 18/100
+1358/1358 - 1855s - loss: 3.3455 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3445 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 19/100
+1358/1358 - 1841s - loss: 3.3453 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3444 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 20/100
+1358/1358 - 1913s - loss: 3.3453 - accuracy: 0.1012 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3443 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 21/100
+1358/1358 - 1875s - loss: 3.3452 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3442 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 22/100
+1358/1358 - 1811s - loss: 3.3451 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3442 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 23/100
+1358/1358 - 1865s - loss: 3.3450 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3441 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 24/100
+1358/1358 - 1866s - loss: 3.3450 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3441 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 25/100
+1358/1358 - 1816s - loss: 3.3450 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3440 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 26/100
+1358/1358 - 1989s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3440 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 27/100
+1358/1358 - 2136s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3440 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 28/100
+1358/1358 - 2280s - loss: 3.3449 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3440 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 29/100
+1358/1358 - 2067s - loss: 3.3448 - accuracy: 0.1009 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3439 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 30/100
+1358/1358 - 2248s - loss: 3.3448 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3439 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 31/100
+1358/1358 - 2852s - loss: 3.3448 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3439 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 32/100
+1358/1358 - 2265s - loss: 3.3448 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3439 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 33/100
+1358/1358 - 2035s - loss: 3.3448 - accuracy: 0.1010 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3439 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 34/100
+1358/1358 - 2172s - loss: 3.3448 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3439 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 35/100
+1358/1358 - 2730s - loss: 3.3448 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3439 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 36/100
+1358/1358 - 2381s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 37/100
+1358/1358 - 2476s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 38/100
+1358/1358 - 2228s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 39/100
+1358/1358 - 2148s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 40/100
+1358/1358 - 2189s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 41/100
+1358/1358 - 2258s - loss: 3.3447 - accuracy: 0.1011 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 42/100
+1358/1358 - 2432s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 43/100
+1358/1358 - 2614s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7039
+Epoch 44/100
+1358/1358 - 2872s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 45/100
+1358/1358 - 2926s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 46/100
+1358/1358 - 2573s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 47/100
+1358/1358 - 2516s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 48/100
+1358/1358 - 2646s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 49/100
+1358/1358 - 2821s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 50/100
+1358/1358 - 2677s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 51/100
+1358/1358 - 2634s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 52/100
+1358/1358 - 2689s - loss: 3.3447 - accuracy: 0.1008 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 53/100
+1358/1358 - 2678s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 54/100
+1358/1358 - 2709s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 55/100
+1358/1358 - 2502s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 56/100
+1358/1358 - 2552s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 57/100
+1358/1358 - 2502s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 58/100
+1358/1358 - 2516s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 59/100
+1358/1358 - 2482s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 60/100
+1358/1358 - 2508s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7034 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 61/100
+1358/1358 - 2607s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 62/100
+1358/1358 - 2574s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 63/100
+1358/1358 - 2497s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 64/100
+1358/1358 - 2470s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 65/100
+1358/1358 - 2709s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 66/100
+1358/1358 - 2837s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 67/100
+1358/1358 - 3208s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 68/100
+1358/1358 - 3525s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 69/100
+1358/1358 - 4376s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 70/100
+1358/1358 - 3387s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 71/100
+1358/1358 - 2919s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 72/100
+1358/1358 - 2658s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 73/100
+1358/1358 - 2502s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 74/100
+1358/1358 - 2272s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 75/100
+1358/1358 - 2350s - loss: 3.3447 - accuracy: 0.1009 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 76/100
+1358/1358 - 2263s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 77/100
+1358/1358 - 2174s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 78/100
+1358/1358 - 2188s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 79/100
+1358/1358 - 2232s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 80/100
+1358/1358 - 2137s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 81/100
+1358/1358 - 2088s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 82/100
+1358/1358 - 2133s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7037 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 83/100
+1358/1358 - 2079s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 84/100
+1358/1358 - 2147s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 85/100
+1358/1358 - 2137s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 86/100
+1358/1358 - 2239s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 87/100
+1358/1358 - 2120s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 88/100
+1358/1358 - 2076s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 89/100
+1358/1358 - 2060s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 90/100
+1358/1358 - 2119s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 91/100
+1358/1358 - 2195s - loss: 3.3447 - accuracy: 0.1010 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 92/100
+1358/1358 - 2201s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 93/100
+1358/1358 - 2152s - loss: 3.3447 - accuracy: 0.1010 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 94/100
+1358/1358 - 2394s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 95/100
+1358/1358 - 2701s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7040
+Epoch 96/100
+1358/1358 - 2957s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3437 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 97/100
+1358/1358 - 2951s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 98/100
+1358/1358 - 2509s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 99/100
+1358/1358 - 2571s - loss: 3.3447 - accuracy: 0.1008 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7036 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+Epoch 100/100
+1358/1358 - 2468s - loss: 3.3447 - accuracy: 0.1014 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7035 - val_loss: 3.3438 - val_accuracy: 0.1015 - val_precision: 0.0000e+00 - val_recall: 0.0000e+00 - val_auc: 0.7038
+2021-01-13 13:39:22.282492: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:tensorflow:AutoGraph could not transform <function canonicalize_signatures.<locals>.signature_wrapper at 0x2b1627450950> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+{'loss': [5.720758438110352, 3.417764902114868, 3.380384683609009, 3.3664495944976807, 3.3595194816589355, 3.3556137084960938, 3.3527767658233643, 3.350660800933838, 3.349318504333496, 3.3483216762542725, 3.3475916385650635, 3.347029209136963, 3.3465945720672607, 3.34625506401062, 3.3459925651550293, 3.3457837104797363, 3.34560489654541, 3.3454654216766357, 3.345337390899658, 3.3453209400177, 3.34517240524292, 3.345102548599243, 3.345036745071411, 3.344996929168701, 3.3449602127075195, 3.3449268341064453, 3.3448829650878906, 3.344870090484619, 3.344841718673706, 3.3448269367218018, 3.3447935581207275, 3.344794273376465, 3.344775915145874, 3.344763994216919, 3.3447539806365967, 3.3447422981262207, 3.344731330871582, 3.34472393989563, 3.3447265625, 3.3447186946868896, 3.344712495803833, 3.344698190689087, 3.3446967601776123, 3.3447020053863525, 3.344700574874878, 3.3446998596191406, 3.344681978225708, 3.344695568084717, 3.3446848392486572, 3.344686269760132, 3.344677686691284, 3.344681978225708, 3.3446764945983887, 3.3446743488311768, 3.344681978225708, 3.344667911529541, 3.344670534133911, 3.3446719646453857, 3.3446686267852783, 3.344672679901123, 3.3446741104125977, 3.3446621894836426, 3.344663619995117, 3.34468412399292, 3.3446733951568604, 3.3446707725524902, 3.344655752182007, 3.344672203063965, 3.3446719646453857, 3.3446643352508545, 3.3446648120880127, 3.3446528911590576, 3.34466552734375, 3.3446621894836426, 3.344651460647583, 3.344700574874878, 3.3446574211120605, 3.3446593284606934, 3.344665765762329, 3.344655752182007, 3.344661235809326, 3.344663619995117, 3.3446595668792725, 3.3446714878082275, 3.344663381576538, 3.344670534133911, 3.344658851623535, 3.344660520553589, 3.344653606414795, 3.344656467437744, 3.3446707725524902, 3.3446662425994873, 3.344658136367798, 3.3446550369262695, 3.344653844833374, 3.344660520553589, 3.34466290473938, 3.3446531295776367, 3.3446521759033203, 3.3446614742279053], 'accuracy': [0.09798416495323181, 0.10148195922374725, 0.10141292214393616, 0.10138991475105286, 0.10118280351161957, 0.10134388506412506, 0.10138991475105286, 0.10132087767124176, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10088365525007248, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10120581835508347, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10092967748641968, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10099871456623077, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10109075903892517, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10076859593391418, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10088365525007248, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10104473680257797, 0.10138991475105286, 0.10099871456623077, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10138991475105286, 0.10083762556314468, 0.10138991475105286], 'precision': [0.06005221977829933, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'recall': [0.0005292709683999419, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'auc': [0.6485959887504578, 0.6934230327606201, 0.6961556673049927, 0.7004449963569641, 0.7015833258628845, 0.7023091912269592, 0.7026407122612, 0.7031856179237366, 0.7032095193862915, 0.7030068039894104, 0.7029333710670471, 0.703002393245697, 0.7030436992645264, 0.7030267119407654, 0.7029187083244324, 0.7027978301048279, 0.7033413648605347, 0.7034391164779663, 0.7034451961517334, 0.7034701704978943, 0.7034674882888794, 0.7034370303153992, 0.7033997774124146, 0.703514814376831, 0.7034738063812256, 0.7035428881645203, 0.7035108208656311, 0.7035324573516846, 0.7034899592399597, 0.7034792900085449, 0.7035097479820251, 0.7034741640090942, 0.7034838795661926, 0.7035630941390991, 0.703578531742096, 0.7035754323005676, 0.7035161256790161, 0.7036086320877075, 0.7035317420959473, 0.7035236954689026, 0.7035669684410095, 0.7035435438156128, 0.7034657597541809, 0.7035335302352905, 0.703533947467804, 0.7035551071166992, 0.7035335898399353, 0.70357745885849, 0.703553318977356, 0.7036160826683044, 0.7035257816314697, 0.7034521698951721, 0.7035608887672424, 0.703583836555481, 0.7034925818443298, 0.7034702301025391, 0.7036497592926025, 0.7034808993339539, 0.7035704851150513, 0.7034159302711487, 0.7035485506057739, 0.703514039516449, 0.703604519367218, 0.7035528421401978, 0.7035690546035767, 0.7035446166992188, 0.7035955190658569, 0.7035703063011169, 0.7035547494888306, 0.7036248445510864, 0.7035127282142639, 0.7035669088363647, 0.7035486698150635, 0.7035335302352905, 0.7034586668014526, 0.7035880088806152, 0.7035791277885437, 0.7035455703735352, 0.7035923004150391, 0.7034578919410706, 0.7035666704177856, 0.7036811113357544, 0.7035293579101562, 0.7034925222396851, 0.7035375237464905, 0.7035971283912659, 0.7035930156707764, 0.7035778760910034, 0.7035272717475891, 0.7035195231437683, 0.7035393714904785, 0.703550398349762, 0.7035560011863708, 0.7035704255104065, 0.7035634517669678, 0.7036440372467041, 0.7035439014434814, 0.703557550907135, 0.7035889029502869, 0.7035396099090576], 'val_loss': [3.4549050331115723, 3.391475200653076, 3.3708035945892334, 3.3616034984588623, 3.356313467025757, 3.352933645248413, 3.350658416748047, 3.349071979522705, 3.347921133041382, 3.3470754623413086, 3.3464324474334717, 3.3459413051605225, 3.3455545902252197, 3.3452510833740234, 3.3450074195861816, 3.344811201095581, 3.3446483612060547, 3.344517707824707, 3.344416379928589, 3.3443217277526855, 3.3442442417144775, 3.344182014465332, 3.3441319465637207, 3.3440873622894287, 3.3440470695495605, 3.3440139293670654, 3.343992233276367, 3.3439581394195557, 3.3439369201660156, 3.3439207077026367, 3.3439016342163086, 3.343884229660034, 3.343874931335449, 3.343863010406494, 3.3438515663146973, 3.343841552734375, 3.343832015991211, 3.343834161758423, 3.3438172340393066, 3.3438141345977783, 3.3438069820404053, 3.3438048362731934, 3.3438057899475098, 3.343797206878662, 3.3437917232513428, 3.3437867164611816, 3.3437907695770264, 3.34378719329834, 3.3437798023223877, 3.343780279159546, 3.3437790870666504, 3.34377121925354, 3.3437697887420654, 3.343768835067749, 3.3437671661376953, 3.343766450881958, 3.3437647819519043, 3.343768835067749, 3.3437647819519043, 3.343764305114746, 3.3437650203704834, 3.3437650203704834, 3.343766212463379, 3.3437576293945312, 3.3437583446502686, 3.343761920928955, 3.3437600135803223, 3.3437564373016357, 3.343757152557373, 3.343756914138794, 3.343759298324585, 3.3437607288360596, 3.3437554836273193, 3.3437535762786865, 3.3437604904174805, 3.3437533378601074, 3.3437533378601074, 3.3437578678131104, 3.3437554836273193, 3.34375262260437, 3.343754768371582, 3.3437564373016357, 3.3437578678131104, 3.34375262260437, 3.343754291534424, 3.343752861022949, 3.3437535762786865, 3.3437557220458984, 3.343759775161743, 3.3437557220458984, 3.343752861022949, 3.343752145767212, 3.3437507152557373, 3.34375262260437, 3.3437533378601074, 3.3437492847442627, 3.343754291534424, 3.3437511920928955, 3.3437511920928955, 3.3437535762786865], 'val_accuracy': [0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141, 0.10148400813341141], 'val_precision': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'val_recall': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'val_auc': [0.6838296055793762, 0.6965579986572266, 0.7005620002746582, 0.7015093564987183, 0.7024929523468018, 0.7030344605445862, 0.7033675909042358, 0.7034823894500732, 0.7034351229667664, 0.7033752799034119, 0.7033752799034119, 0.7033968567848206, 0.7033964991569519, 0.7031249403953552, 0.7031619548797607, 0.703299343585968, 0.7037689089775085, 0.7037689089775085, 0.7037689089775085, 0.7037689089775085, 0.7037689089775085, 0.7037689089775085, 0.7038374543190002, 0.7038375735282898, 0.7038378119468689, 0.7038374543190002, 0.7038001418113708, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7039560675621033, 0.7038374543190002, 0.7039557695388794, 0.7038374543190002, 0.7039557695388794, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.70391845703125, 0.7039557695388794, 0.7038374543190002, 0.7039557695388794, 0.7039557695388794, 0.7039560079574585, 0.7039557695388794, 0.7039557695388794, 0.7039564251899719, 0.7039557695388794, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7039557695388794, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038371562957764, 0.7039557695388794, 0.7039560079574585, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7039557695388794, 0.7039557695388794, 0.7039557695388794, 0.7039557695388794, 0.7039557695388794, 0.7039557695388794, 0.7039557695388794, 0.7039557695388794, 0.7039557695388794, 0.7039557695388794, 0.7038374543190002, 0.7039557695388794, 0.7039557695388794, 0.7038374543190002, 0.7039557695388794, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7039557695388794, 0.7038374543190002, 0.7039557695388794, 0.7039557695388794, 0.7039557695388794, 0.7038374543190002, 0.7039557695388794, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7039557695388794, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002, 0.7038374543190002]}
+date and time = 13-01-2021_13-38-51
+Saving the model to path: /users/PAA0023/dong760/plant_leaves_diagnosis/saved_models/NASNetMobile_BatchSize_32_0.2ValSplit_13-01-2021_13-38-51_100epochs
+
+Prediction Result: 
+340/340 - 461s - loss: 3.3438 - accuracy: 0.1015 - precision: 0.0000e+00 - recall: 0.0000e+00 - auc: 0.7038
+Result: [3.343752861022949, 0.10148400813341141, 0.0, 0.0, 0.7038374543190002]
+Validation accuracy: 0.10148400813341141 Validation accuracy: 3.343752861022949
+
+
+p0318.ten.osc.edu:
+                                                                               Req'd  Req'd   Elap 
+Job id               Username Queue    Name                 SessID NDS   TSK   Memory Time Use S Time 
+-------------------- -------- -------- -------------------- ------ ----- ----- ------ ----- - -----
+2747120              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 64:54
+2747121              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 64:50
+2747122              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 64:49
+2747123              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 64:48
+2747124              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 64:48
+2755236              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 21:19
+2755238              dong760  gpuseria plant_disease_diagno --         1    40     -- 24:00 R 21:18
+2755239              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 21:18
+2755697              dong760  gpuseria plant_disease_diagno --         1    40     -- 72:00 R 19:16
+The date when running current script is :
+Wed Jan 13 13:48:29 EST 2021

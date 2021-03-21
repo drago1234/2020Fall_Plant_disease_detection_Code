@@ -1,0 +1,135 @@
+environemnt set up
+Running the batch script
+2020-12-19 12:19:06.351115: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2020-12-19 12:19:13.773719: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2020-12-19 12:19:13.789474: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2900000000 Hz
+2020-12-19 12:19:13.792557: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5566a48e7a90 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-12-19 12:19:13.792587: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-12-19 12:19:13.797539: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2020-12-19 12:19:13.979782: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5566a48ea290 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-12-19 12:19:13.979847: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100S-PCIE-32GB, Compute Capability 7.0
+2020-12-19 12:19:13.986725: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2020-12-19 12:19:13.986797: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2020-12-19 12:19:14.061030: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2020-12-19 12:19:14.081812: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2020-12-19 12:19:14.092664: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2020-12-19 12:19:14.168176: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2020-12-19 12:19:14.184881: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2020-12-19 12:19:14.251009: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2020-12-19 12:19:14.255215: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2020-12-19 12:19:14.295655: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2020-12-19 12:19:15.712060: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-12-19 12:19:15.712111: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0 
+2020-12-19 12:19:15.712121: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N 
+2020-12-19 12:19:15.716204: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/device:GPU:0 with 30132 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2020-12-19 12:19:15.720216: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2020-12-19 12:19:15.720258: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2020-12-19 12:19:15.720283: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2020-12-19 12:19:15.720302: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2020-12-19 12:19:15.720316: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2020-12-19 12:19:15.720329: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2020-12-19 12:19:15.720343: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2020-12-19 12:19:15.720357: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2020-12-19 12:19:15.724125: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2020-12-19 12:19:15.724153: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-12-19 12:19:15.724162: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0 
+2020-12-19 12:19:15.724169: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N 
+2020-12-19 12:19:15.727845: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/device:GPU:0 with 30132 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2020-12-19 12:19:16.417329: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2020-12-19 12:19:16.417382: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2020-12-19 12:19:16.417406: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2020-12-19 12:19:16.417417: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2020-12-19 12:19:16.417428: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2020-12-19 12:19:16.417437: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2020-12-19 12:19:16.417447: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2020-12-19 12:19:16.417457: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2020-12-19 12:19:16.420199: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2020-12-19 12:19:16.421997: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2020-12-19 12:19:16.422025: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2020-12-19 12:19:16.422042: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2020-12-19 12:19:16.422052: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2020-12-19 12:19:16.422062: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2020-12-19 12:19:16.422071: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2020-12-19 12:19:16.422080: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2020-12-19 12:19:16.422090: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2020-12-19 12:19:16.424812: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2020-12-19 12:19:16.424842: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-12-19 12:19:16.424849: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0 
+2020-12-19 12:19:16.424855: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N 
+2020-12-19 12:19:16.427693: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30132 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+Using TensorFlow backend.
+WARNING:tensorflow:AutoGraph could not transform <function Model.make_train_function.<locals>.train_function at 0x2b8153d66488> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+Does the system is built with CUDA?: True
+Default GPU Device: /device:GPU:0
+====> Start running baseline.py
+Classes: ['Tomato___Late_blight', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Peach___healthy', 'Grape___Esca_(Black_Measles)', 'Potato___Late_blight', 'Pepper,_bell___Bacterial_spot', 'Strawberry___healthy', 'Orange___Haunglongbing_(Citrus_greening)', 'Tomato___Leaf_Mold', 'Apple___Black_rot', 'Strawberry___Leaf_scorch', 'Tomato___Early_blight', 'Cherry_(including_sour)___healthy', 'Corn_(maize)___Common_rust_', 'Blueberry___healthy', 'Potato___Early_blight', 'Pepper,_bell___healthy', 'Apple___Cedar_apple_rust', 'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)', 'Tomato___Tomato_mosaic_virus', 'Tomato___Target_Spot', 'Tomato___healthy', 'Peach___Bacterial_spot', 'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot', 'Tomato___Spider_mites Two-spotted_spider_mite', 'Corn_(maize)___healthy', 'Squash___Powdery_mildew', 'Cherry_(including_sour)___Powdery_mildew', 'Tomato___Bacterial_spot', 'Grape___Black_rot', 'Apple___healthy', 'Potato___healthy', 'Corn_(maize)___Northern_Leaf_Blight', 'Tomato___Septoria_leaf_spot', 'Raspberry___healthy', 'Soybean___healthy', 'Apple___Apple_scab', 'Grape___healthy']
+Number of classes: 38
+Total number of images: 54305
+first_folder_path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight
+Number of folder: 38
+sample image path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight/5fdf3288-d5f4-4c70-9b12-95222b82d415___RS_Late.B 4942.JPG
+Image size: (256, 256, 3)
+Found 43456 images belonging to 38 classes.
+Found 10849 images belonging to 38 classes.
+Train size: 43456
+
+====> Statistics: epochs=5, batch_size=2048, validation_split=0.2, lr=0.001, momentum=0.9, steps_per_epoch =100, feature shape= (256, 256, 3), no_classes=38, loss_function=categorical_crossentropy
+Epoch 1/5
+2020-12-19 12:20:06.673003: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2020-12-19 12:20:49.634203: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2020-12-19 12:20:52.295031: W tensorflow/core/kernels/gpu_utils.cc:49] Failed to allocate memory for convolution redzone checking; skipping this check. This is benign and only means that we won't check cudnn for out-of-bounds reads and writes. This message will only be printed once.
+WARNING:tensorflow:AutoGraph could not transform <function Model.make_test_function.<locals>.test_function at 0x2b8159621268> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+22/22 - 1132s - loss: 2.7790 - accuracy: 0.3252 - precision: 0.9823 - recall: 0.0677 - auc: 0.8101 - val_loss: 1.9738 - val_accuracy: 0.5662 - val_precision: 0.9860 - val_recall: 0.1691 - val_auc: 0.9333
+Epoch 2/5
+22/22 - 1053s - loss: 1.5188 - accuracy: 0.6599 - precision: 0.9731 - recall: 0.3150 - auc: 0.9658 - val_loss: 1.1791 - val_accuracy: 0.7458 - val_precision: 0.9747 - val_recall: 0.4290 - val_auc: 0.9824
+Epoch 3/5
+22/22 - 1053s - loss: 0.9919 - accuracy: 0.7906 - precision: 0.9773 - recall: 0.5090 - auc: 0.9889 - val_loss: 0.8450 - val_accuracy: 0.8209 - val_precision: 0.9745 - val_recall: 0.5770 - val_auc: 0.9923
+Epoch 4/5
+22/22 - 1036s - loss: 0.7413 - accuracy: 0.8500 - precision: 0.9785 - recall: 0.6263 - auc: 0.9944 - val_loss: 0.6747 - val_accuracy: 0.8615 - val_precision: 0.9742 - val_recall: 0.6609 - val_auc: 0.9957
+Epoch 5/5
+22/22 - 1047s - loss: 0.6006 - accuracy: 0.8810 - precision: 0.9797 - recall: 0.6988 - auc: 0.9969 - val_loss: 0.5691 - val_accuracy: 0.8835 - val_precision: 0.9756 - val_recall: 0.7199 - val_auc: 0.9970
+WARNING:tensorflow:From /users/PAA0023/dong760/miniconda3/envs/tf_latest/lib/python3.6/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2020-12-19 13:52:32.509542: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:tensorflow:From /users/PAA0023/dong760/miniconda3/envs/tf_latest/lib/python3.6/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+WARNING:tensorflow:AutoGraph could not transform <function canonicalize_signatures.<locals>.signature_wrapper at 0x2b815bd2fbf8> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+{'loss': [2.779026985168457, 1.5188264846801758, 0.991860032081604, 0.7413183450698853, 0.6005802154541016], 'accuracy': [0.32520249485969543, 0.6598628759384155, 0.79063880443573, 0.8499631881713867, 0.8810060620307922], 'precision': [0.982297956943512, 0.9730594158172607, 0.9772908091545105, 0.9785367846488953, 0.9796748161315918], 'recall': [0.06767765432596207, 0.315008282661438, 0.5090206265449524, 0.6263346672058105, 0.6987757682800293], 'auc': [0.8100936412811279, 0.9657531380653381, 0.9888719916343689, 0.9944280385971069, 0.9968775510787964], 'val_loss': [1.97380793094635, 1.17909836769104, 0.8449835777282715, 0.6747199892997742, 0.5691121816635132], 'val_accuracy': [0.5662273168563843, 0.7457830309867859, 0.8209051489830017, 0.861461877822876, 0.883491575717926], 'val_precision': [0.9860290288925171, 0.9746596813201904, 0.9744707345962524, 0.9741848111152649, 0.9756402373313904], 'val_recall': [0.1691400110721588, 0.42897963523864746, 0.5770117044448853, 0.6608904004096985, 0.7198820114135742], 'val_auc': [0.9332928657531738, 0.9823704957962036, 0.9922969937324524, 0.9957311749458313, 0.9970433712005615]}
+date and time = 19-12-2020_13-52-25
+Saving the model to path: /users/PAA0023/dong760/plant_leaves_diagnosis/saved_models/InceptionV3_BatchSize_2048_0.2ValSplit_19-12-2020_13-52-25
+
+
+p0329.ten.osc.edu:
+                                                                               Req'd  Req'd   Elap 
+Job id               Username Queue    Name                 SessID NDS   TSK   Memory Time Use S Time 
+-------------------- -------- -------- -------------------- ------ ----- ----- ------ ----- - -----
+2564371              dong760  gpuseria ondemand/sys/dashboa --         1    28     -- 05:00 R 04:02
+2565109              dong760  gpuseria plant_disease_diagno --         1    48     -- 04:00 C 01:32
+2565110              dong760  gpuseria plant_disease_diagno --         1    48     -- 04:00 C 01:33
+2565113              dong760  gpuseria plant_disease_diagno --         1    48     -- 04:00 C 01:32
+2565115              dong760  gpuseria plant_disease_diagno --         1    48     -- 04:00 C 01:32
+2565116              dong760  condo-os plant_disease_diagno --         1    48     -- 04:00 R 01:34
+2565118              dong760  condo-os plant_disease_diagno --         1    48     -- 04:00 R 01:33
+2565119              dong760  condo-os plant_disease_diagno --         1    48     -- 04:00 R 01:33
+The date when running current script is :
+Sat Dec 19 13:52:53 EST 2020

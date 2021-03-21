@@ -1,0 +1,205 @@
+environemnt set up
+Running the batch script
+2020-12-26 16:10:02.501961: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2020-12-26 16:10:43.073470: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX512F
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2020-12-26 16:10:43.081837: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2020-12-26 16:10:43.088782: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2020-12-26 16:10:43.168737: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:d8:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2020-12-26 16:10:43.168800: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2020-12-26 16:10:43.251768: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2020-12-26 16:10:43.251877: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2020-12-26 16:10:43.269779: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2020-12-26 16:10:43.284775: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2020-12-26 16:10:43.310348: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2020-12-26 16:10:43.369783: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2020-12-26 16:10:43.380535: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2020-12-26 16:10:43.390833: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2020-12-26 16:10:43.392846: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2020-12-26 16:10:46.267217: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-12-26 16:10:46.267267: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2020-12-26 16:10:46.267278: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2020-12-26 16:10:46.273540: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 30128 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:d8:00.0, compute capability: 7.0)
+2020-12-26 16:10:46.282777: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2020-12-26 16:10:46.284796: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:d8:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2020-12-26 16:10:46.284843: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2020-12-26 16:10:46.284893: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2020-12-26 16:10:46.284911: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2020-12-26 16:10:46.284927: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2020-12-26 16:10:46.284948: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2020-12-26 16:10:46.284964: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2020-12-26 16:10:46.284981: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2020-12-26 16:10:46.284996: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2020-12-26 16:10:46.288784: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2020-12-26 16:10:46.288813: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-12-26 16:10:46.288822: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2020-12-26 16:10:46.288830: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2020-12-26 16:10:46.292503: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 30128 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:d8:00.0, compute capability: 7.0)
+2020-12-26 16:10:46.937013: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2020-12-26 16:10:46.940409: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:d8:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2020-12-26 16:10:46.940481: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2020-12-26 16:10:46.940529: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2020-12-26 16:10:46.940555: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2020-12-26 16:10:46.940583: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2020-12-26 16:10:46.940607: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2020-12-26 16:10:46.940631: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2020-12-26 16:10:46.940665: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2020-12-26 16:10:46.940697: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2020-12-26 16:10:46.946667: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2020-12-26 16:10:46.947523: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2020-12-26 16:10:46.951188: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:d8:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2020-12-26 16:10:46.951248: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2020-12-26 16:10:46.951290: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2020-12-26 16:10:46.951322: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2020-12-26 16:10:46.951352: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2020-12-26 16:10:46.951381: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2020-12-26 16:10:46.951416: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2020-12-26 16:10:46.951452: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2020-12-26 16:10:46.951474: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2020-12-26 16:10:46.958178: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2020-12-26 16:10:46.958238: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-12-26 16:10:46.958256: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2020-12-26 16:10:46.958271: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2020-12-26 16:10:46.965255: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30128 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:d8:00.0, compute capability: 7.0)
+Using TensorFlow backend.
+WARNING:tensorflow:`input_shape` is undefined or non-square, or `rows` is not 224. Weights for input shape (224, 224) will be loaded as the default.
+WARNING:tensorflow:`input_shape` is undefined or non-square, or `rows` is not 224. Weights for input shape (224, 224) will be loaded as the default.
+2020-12-26 16:11:02.097587: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2020-12-26 16:11:02.098199: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2900000000 Hz
+WARNING:tensorflow:AutoGraph could not transform <function Model.make_train_function.<locals>.train_function at 0x2b145e1676a8> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+Does the system is built with CUDA?: True
+Default GPU Device: /device:GPU:0
+====> Start running baseline.py
+Classes: ['Tomato___Late_blight', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Peach___healthy', 'Grape___Esca_(Black_Measles)', 'Potato___Late_blight', 'Pepper,_bell___Bacterial_spot', 'Strawberry___healthy', 'Orange___Haunglongbing_(Citrus_greening)', 'Tomato___Leaf_Mold', 'Apple___Black_rot', 'Strawberry___Leaf_scorch', 'Tomato___Early_blight', 'Cherry_(including_sour)___healthy', 'Corn_(maize)___Common_rust_', 'Blueberry___healthy', 'Potato___Early_blight', 'Pepper,_bell___healthy', 'Apple___Cedar_apple_rust', 'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)', 'Tomato___Tomato_mosaic_virus', 'Tomato___Target_Spot', 'Tomato___healthy', 'Peach___Bacterial_spot', 'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot', 'Tomato___Spider_mites Two-spotted_spider_mite', 'Corn_(maize)___healthy', 'Squash___Powdery_mildew', 'Cherry_(including_sour)___Powdery_mildew', 'Tomato___Bacterial_spot', 'Grape___Black_rot', 'Apple___healthy', 'Potato___healthy', 'Corn_(maize)___Northern_Leaf_Blight', 'Tomato___Septoria_leaf_spot', 'Raspberry___healthy', 'Soybean___healthy', 'Apple___Apple_scab', 'Grape___healthy']
+Number of classes: 38
+Total number of images: 54305
+first_folder_path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight
+Number of folder: 38
+sample image path: /fs/scratch/PAA0023/dong760/PlantVillage-Dataset/raw/color/Tomato___Late_blight/5fdf3288-d5f4-4c70-9b12-95222b82d415___RS_Late.B 4942.JPG
+Image size: (256, 256, 3)
+Found 10876 images belonging to 38 classes.
+Found 43429 images belonging to 38 classes.
+Train size: 10876
+
+====> Statistics: MODEL_NAME=NASNetMobile, epochs=40, batch_size=32, validation_split=0.8, lr=0.001, momentum=0.9, steps_per_epoch =10, feature shape= (256, 256, 3), no_classes=38, loss_function=categorical_crossentropy
+Epoch 1/40
+2020-12-26 16:11:11.792111: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2020-12-26 16:11:12.856319: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2020-12-26 16:11:12.918306: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+WARNING:tensorflow:AutoGraph could not transform <function Model.make_test_function.<locals>.test_function at 0x2b145f171048> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+340/340 - 1030s - loss: 4.2800 - accuracy: 0.1145 - precision: 0.1839 - recall: 0.0101 - auc: 0.6900 - val_loss: 3.0356 - val_accuracy: 0.2078 - val_precision: 0.6961 - val_recall: 0.0465 - val_auc: 0.7722
+Epoch 2/40
+340/340 - 1013s - loss: 2.9605 - accuracy: 0.2132 - precision: 0.6400 - recall: 0.0521 - auc: 0.7901 - val_loss: 3.0902 - val_accuracy: 0.1755 - val_precision: 0.8112 - val_recall: 0.0312 - val_auc: 0.7726
+Epoch 3/40
+340/340 - 1016s - loss: 2.9469 - accuracy: 0.2110 - precision: 0.5809 - recall: 0.0465 - auc: 0.7934 - val_loss: 2.8396 - val_accuracy: 0.2377 - val_precision: 0.5729 - val_recall: 0.0506 - val_auc: 0.8133
+Epoch 4/40
+340/340 - 1016s - loss: 2.7963 - accuracy: 0.2369 - precision: 0.6087 - recall: 0.0659 - auc: 0.8256 - val_loss: 2.6746 - val_accuracy: 0.2586 - val_precision: 0.5394 - val_recall: 0.0931 - val_auc: 0.8496
+Epoch 5/40
+340/340 - 1017s - loss: 2.6174 - accuracy: 0.2649 - precision: 0.6421 - recall: 0.1043 - auc: 0.8568 - val_loss: 2.6201 - val_accuracy: 0.2641 - val_precision: 0.6941 - val_recall: 0.1380 - val_auc: 0.8535
+Epoch 6/40
+340/340 - 1014s - loss: 2.6225 - accuracy: 0.2617 - precision: 0.6379 - recall: 0.1046 - auc: 0.8551 - val_loss: 2.6539 - val_accuracy: 0.2623 - val_precision: 0.5575 - val_recall: 0.0901 - val_auc: 0.8503
+Epoch 7/40
+340/340 - 1014s - loss: 2.5533 - accuracy: 0.2764 - precision: 0.6521 - recall: 0.1137 - auc: 0.8664 - val_loss: 2.4609 - val_accuracy: 0.2975 - val_precision: 0.7106 - val_recall: 0.1429 - val_auc: 0.8762
+Epoch 8/40
+340/340 - 1029s - loss: 2.5328 - accuracy: 0.2785 - precision: 0.6472 - recall: 0.1251 - auc: 0.8682 - val_loss: 2.4714 - val_accuracy: 0.2900 - val_precision: 0.6781 - val_recall: 0.1307 - val_auc: 0.8777
+Epoch 9/40
+340/340 - 1008s - loss: 2.5410 - accuracy: 0.2811 - precision: 0.6575 - recall: 0.1228 - auc: 0.8665 - val_loss: 2.6361 - val_accuracy: 0.2612 - val_precision: 0.5435 - val_recall: 0.1019 - val_auc: 0.8562
+Epoch 10/40
+340/340 - 1008s - loss: 2.4927 - accuracy: 0.2905 - precision: 0.6572 - recall: 0.1343 - auc: 0.8729 - val_loss: 2.7710 - val_accuracy: 0.2662 - val_precision: 0.5901 - val_recall: 0.1247 - val_auc: 0.8332
+Epoch 11/40
+340/340 - 1008s - loss: 2.5408 - accuracy: 0.2841 - precision: 0.6605 - recall: 0.1336 - auc: 0.8647 - val_loss: 2.7502 - val_accuracy: 0.2494 - val_precision: 0.5526 - val_recall: 0.1438 - val_auc: 0.8405
+Epoch 12/40
+340/340 - 1192s - loss: 2.5395 - accuracy: 0.2892 - precision: 0.6726 - recall: 0.1347 - auc: 0.8650 - val_loss: 2.4491 - val_accuracy: 0.2927 - val_precision: 0.7511 - val_recall: 0.1434 - val_auc: 0.8787
+Epoch 13/40
+340/340 - 994s - loss: 2.4539 - accuracy: 0.3102 - precision: 0.6964 - recall: 0.1508 - auc: 0.8764 - val_loss: 2.3328 - val_accuracy: 0.3411 - val_precision: 0.7969 - val_recall: 0.1812 - val_auc: 0.8899
+Epoch 14/40
+340/340 - 1000s - loss: 2.6230 - accuracy: 0.2733 - precision: 0.6851 - recall: 0.1278 - auc: 0.8473 - val_loss: 2.6291 - val_accuracy: 0.2586 - val_precision: 0.7345 - val_recall: 0.1175 - val_auc: 0.8478
+Epoch 15/40
+340/340 - 989s - loss: 2.6309 - accuracy: 0.2643 - precision: 0.6643 - recall: 0.1210 - auc: 0.8475 - val_loss: 2.6670 - val_accuracy: 0.2480 - val_precision: 0.5426 - val_recall: 0.0830 - val_auc: 0.8486
+Epoch 16/40
+340/340 - 1009s - loss: 2.6393 - accuracy: 0.2616 - precision: 0.6372 - recall: 0.1227 - auc: 0.8492 - val_loss: 2.7213 - val_accuracy: 0.2415 - val_precision: 0.6404 - val_recall: 0.0862 - val_auc: 0.8393
+Epoch 17/40
+340/340 - 994s - loss: 2.5464 - accuracy: 0.2774 - precision: 0.6623 - recall: 0.1307 - auc: 0.8650 - val_loss: 2.5174 - val_accuracy: 0.2717 - val_precision: 0.6364 - val_recall: 0.1766 - val_auc: 0.8705
+Epoch 18/40
+340/340 - 1004s - loss: 2.5350 - accuracy: 0.2741 - precision: 0.6458 - recall: 0.1338 - auc: 0.8667 - val_loss: 2.4880 - val_accuracy: 0.2876 - val_precision: 0.8044 - val_recall: 0.1291 - val_auc: 0.8714
+Epoch 19/40
+340/340 - 1020s - loss: 2.5187 - accuracy: 0.2860 - precision: 0.6658 - recall: 0.1363 - auc: 0.8676 - val_loss: 2.4146 - val_accuracy: 0.3083 - val_precision: 0.7194 - val_recall: 0.1263 - val_auc: 0.8852
+Epoch 20/40
+340/340 - 1046s - loss: 2.5048 - accuracy: 0.2796 - precision: 0.6719 - recall: 0.1409 - auc: 0.8708 - val_loss: 2.7486 - val_accuracy: 0.2661 - val_precision: 0.6978 - val_recall: 0.1076 - val_auc: 0.8277
+Epoch 21/40
+340/340 - 1035s - loss: 2.5009 - accuracy: 0.2849 - precision: 0.6660 - recall: 0.1428 - auc: 0.8711 - val_loss: 2.4629 - val_accuracy: 0.2976 - val_precision: 0.7593 - val_recall: 0.1680 - val_auc: 0.8789
+Epoch 22/40
+340/340 - 1032s - loss: 2.4465 - accuracy: 0.2966 - precision: 0.6763 - recall: 0.1464 - auc: 0.8776 - val_loss: 2.3495 - val_accuracy: 0.3009 - val_precision: 0.6566 - val_recall: 0.1565 - val_auc: 0.8903
+Epoch 23/40
+340/340 - 1096s - loss: 2.4330 - accuracy: 0.2978 - precision: 0.6727 - recall: 0.1479 - auc: 0.8795 - val_loss: 2.4322 - val_accuracy: 0.2882 - val_precision: 0.6694 - val_recall: 0.1142 - val_auc: 0.8837
+Epoch 24/40
+340/340 - 1011s - loss: 2.4428 - accuracy: 0.3008 - precision: 0.6689 - recall: 0.1478 - auc: 0.8782 - val_loss: 2.3478 - val_accuracy: 0.3219 - val_precision: 0.7276 - val_recall: 0.1751 - val_auc: 0.8900
+Epoch 25/40
+340/340 - 1024s - loss: 2.4820 - accuracy: 0.2890 - precision: 0.6715 - recall: 0.1447 - auc: 0.8721 - val_loss: 2.4898 - val_accuracy: 0.2894 - val_precision: 0.7424 - val_recall: 0.1219 - val_auc: 0.8743
+Epoch 26/40
+340/340 - 1052s - loss: 2.4134 - accuracy: 0.3134 - precision: 0.6955 - recall: 0.1577 - auc: 0.8804 - val_loss: 2.4311 - val_accuracy: 0.2866 - val_precision: 0.5784 - val_recall: 0.1809 - val_auc: 0.8809
+Epoch 27/40
+340/340 - 1059s - loss: 2.4019 - accuracy: 0.3100 - precision: 0.6857 - recall: 0.1631 - auc: 0.8819 - val_loss: 2.3751 - val_accuracy: 0.3189 - val_precision: 0.7216 - val_recall: 0.1392 - val_auc: 0.8878
+Epoch 28/40
+340/340 - 1053s - loss: 2.4192 - accuracy: 0.3092 - precision: 0.6835 - recall: 0.1579 - auc: 0.8799 - val_loss: 2.2681 - val_accuracy: 0.3483 - val_precision: 0.7868 - val_recall: 0.1764 - val_auc: 0.8976
+Epoch 29/40
+340/340 - 1089s - loss: 2.3613 - accuracy: 0.3319 - precision: 0.7208 - recall: 0.1681 - auc: 0.8863 - val_loss: 2.3167 - val_accuracy: 0.3406 - val_precision: 0.7041 - val_recall: 0.1934 - val_auc: 0.8913
+Epoch 30/40
+340/340 - 1049s - loss: 2.3708 - accuracy: 0.3275 - precision: 0.7069 - recall: 0.1703 - auc: 0.8848 - val_loss: 2.2339 - val_accuracy: 0.3427 - val_precision: 0.7416 - val_recall: 0.1940 - val_auc: 0.9023
+Epoch 31/40
+340/340 - 1024s - loss: 2.3626 - accuracy: 0.3249 - precision: 0.7114 - recall: 0.1697 - auc: 0.8859 - val_loss: 2.2347 - val_accuracy: 0.3529 - val_precision: 0.7192 - val_recall: 0.1948 - val_auc: 0.9022
+Epoch 32/40
+340/340 - 1032s - loss: 2.3961 - accuracy: 0.3271 - precision: 0.7260 - recall: 0.1728 - auc: 0.8800 - val_loss: 2.6014 - val_accuracy: 0.2890 - val_precision: 0.5705 - val_recall: 0.1824 - val_auc: 0.8520
+Epoch 33/40
+340/340 - 1024s - loss: 2.3406 - accuracy: 0.3397 - precision: 0.7079 - recall: 0.1819 - auc: 0.8882 - val_loss: 2.6115 - val_accuracy: 0.2931 - val_precision: 0.6089 - val_recall: 0.1954 - val_auc: 0.8527
+Epoch 34/40
+340/340 - 1049s - loss: 2.3315 - accuracy: 0.3393 - precision: 0.7245 - recall: 0.1811 - auc: 0.8887 - val_loss: 2.3467 - val_accuracy: 0.3275 - val_precision: 0.6256 - val_recall: 0.2104 - val_auc: 0.8896
+Epoch 35/40
+340/340 - 1014s - loss: 2.3121 - accuracy: 0.3499 - precision: 0.7355 - recall: 0.1915 - auc: 0.8907 - val_loss: 2.2347 - val_accuracy: 0.3688 - val_precision: 0.7721 - val_recall: 0.2251 - val_auc: 0.8971
+Epoch 36/40
+340/340 - 1034s - loss: 2.2814 - accuracy: 0.3545 - precision: 0.7407 - recall: 0.2003 - auc: 0.8934 - val_loss: 2.3346 - val_accuracy: 0.3588 - val_precision: 0.7834 - val_recall: 0.1777 - val_auc: 0.8864
+Epoch 37/40
+340/340 - 1100s - loss: 2.2880 - accuracy: 0.3534 - precision: 0.7345 - recall: 0.1977 - auc: 0.8933 - val_loss: 2.2864 - val_accuracy: 0.3715 - val_precision: 0.8567 - val_recall: 0.1551 - val_auc: 0.8935
+Epoch 38/40
+340/340 - 1094s - loss: 2.2997 - accuracy: 0.3506 - precision: 0.7288 - recall: 0.1974 - auc: 0.8917 - val_loss: 2.8071 - val_accuracy: 0.2487 - val_precision: 0.6911 - val_recall: 0.1346 - val_auc: 0.8230
+Epoch 39/40
+340/340 - 1035s - loss: 2.2244 - accuracy: 0.3688 - precision: 0.7557 - recall: 0.2187 - auc: 0.8991 - val_loss: 2.1200 - val_accuracy: 0.3820 - val_precision: 0.8129 - val_recall: 0.2197 - val_auc: 0.9131
+Epoch 40/40
+340/340 - 1016s - loss: 2.2468 - accuracy: 0.3639 - precision: 0.7250 - recall: 0.2096 - auc: 0.8976 - val_loss: 2.1967 - val_accuracy: 0.3785 - val_precision: 0.7983 - val_recall: 0.2092 - val_auc: 0.9065
+2020-12-27 03:40:27.472158: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:tensorflow:AutoGraph could not transform <function canonicalize_signatures.<locals>.signature_wrapper at 0x2b1d9aef0158> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'arguments' object has no attribute 'posonlyargs'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+{'loss': [4.279971599578857, 2.960494041442871, 2.946924924850464, 2.7963383197784424, 2.617363929748535, 2.6224918365478516, 2.5533134937286377, 2.5327980518341064, 2.541024684906006, 2.4927496910095215, 2.540849447250366, 2.5394740104675293, 2.4539411067962646, 2.6230196952819824, 2.630856513977051, 2.639301061630249, 2.5463709831237793, 2.5350186824798584, 2.518707036972046, 2.5048329830169678, 2.50085186958313, 2.446537494659424, 2.4330332279205322, 2.4427881240844727, 2.4819891452789307, 2.4134132862091064, 2.4018774032592773, 2.419175863265991, 2.3613414764404297, 2.3708198070526123, 2.36262583732605, 2.396116256713867, 2.3406293392181396, 2.3315067291259766, 2.312143325805664, 2.28135085105896, 2.288003444671631, 2.2996714115142822, 2.224397897720337, 2.246791124343872], 'accuracy': [0.11447223275899887, 0.21322177350521088, 0.21101507544517517, 0.23694373667240143, 0.26489517092704773, 0.261677086353302, 0.27638837695121765, 0.2785031199455261, 0.2810775935649872, 0.29045605659484863, 0.28411179780960083, 0.2891688048839569, 0.31022435426712036, 0.27326223254203796, 0.2643435001373291, 0.26158514618873596, 0.27739977836608887, 0.2740897536277771, 0.2859507203102112, 0.2796064615249634, 0.28493931889533997, 0.29661640524864197, 0.29781168699264526, 0.30075395107269287, 0.28898492455482483, 0.31335049867630005, 0.3100404441356659, 0.30921295285224915, 0.3319235146045685, 0.32751011848449707, 0.324935644865036, 0.3271423280239105, 0.3397388756275177, 0.3392791450023651, 0.34985288977622986, 0.3545421063899994, 0.35343876481056213, 0.35058844089508057, 0.36879366636276245, 0.36392056941986084], 'precision': [0.18394649028778076, 0.6399548649787903, 0.5809414386749268, 0.6086587309837341, 0.642129123210907, 0.6378923654556274, 0.6520822644233704, 0.6471707224845886, 0.6574802994728088, 0.6572199463844299, 0.6604545712471008, 0.6726354360580444, 0.6963906288146973, 0.6850665211677551, 0.6643109321594238, 0.6372315287590027, 0.662319540977478, 0.6458055973052979, 0.6657682061195374, 0.6719298362731934, 0.6659519672393799, 0.6762956380844116, 0.6726588606834412, 0.6688851714134216, 0.6715016961097717, 0.6954582333564758, 0.685736358165741, 0.6835191249847412, 0.7208201885223389, 0.7068702578544617, 0.7113680243492126, 0.7260432839393616, 0.7079455852508545, 0.7245310544967651, 0.7355226278305054, 0.7406526207923889, 0.7345404624938965, 0.7287847995758057, 0.755717933177948, 0.7249602675437927], 'recall': [0.010114012286067009, 0.05213313549757004, 0.04652445763349533, 0.06592497229576111, 0.10426627099514008, 0.10463405400514603, 0.11373666673898697, 0.12513792514801025, 0.12283927947282791, 0.13433247804641724, 0.13359691202640533, 0.1347002536058426, 0.150790736079216, 0.12780433893203735, 0.12100036442279816, 0.12274733185768127, 0.13074660301208496, 0.1337808072566986, 0.13626332581043243, 0.14086061716079712, 0.14279146492481232, 0.1463773399591446, 0.14794041216373444, 0.1478484719991684, 0.1447223275899887, 0.15768665075302124, 0.16311143338680267, 0.15787054598331451, 0.1680765002965927, 0.17028319835662842, 0.1697315126657486, 0.17276571691036224, 0.18186832964420319, 0.18113276362419128, 0.19152261316776276, 0.20034939050674438, 0.19768297672271729, 0.19740714132785797, 0.21873851120471954, 0.2096358984708786], 'auc': [0.6899534463882446, 0.7900649905204773, 0.7934301495552063, 0.825581431388855, 0.8567764759063721, 0.8551318645477295, 0.866351306438446, 0.8682190775871277, 0.8664699196815491, 0.8729264736175537, 0.8646776676177979, 0.8650198578834534, 0.8764086961746216, 0.8473221063613892, 0.8475239872932434, 0.8492057919502258, 0.8649896383285522, 0.8666651844978333, 0.86761075258255, 0.8708481192588806, 0.8710712194442749, 0.8775712847709656, 0.8794730305671692, 0.8782126307487488, 0.8720592856407166, 0.8804454207420349, 0.8819389939308167, 0.8798641562461853, 0.8862966895103455, 0.8848363757133484, 0.8858805894851685, 0.8799732327461243, 0.8882253766059875, 0.888652503490448, 0.8907153606414795, 0.8934317827224731, 0.8933232426643372, 0.8916715979576111, 0.89912348985672, 0.8976432681083679], 'val_loss': [3.0355677604675293, 3.0901896953582764, 2.8396451473236084, 2.6745779514312744, 2.620124578475952, 2.6538569927215576, 2.4609286785125732, 2.4714043140411377, 2.6361076831817627, 2.770960807800293, 2.7502124309539795, 2.449066400527954, 2.3328373432159424, 2.6290814876556396, 2.667003631591797, 2.721298933029175, 2.5173885822296143, 2.4880006313323975, 2.41459059715271, 2.7485508918762207, 2.4628958702087402, 2.3495383262634277, 2.432218313217163, 2.3477697372436523, 2.489821434020996, 2.4311165809631348, 2.3750715255737305, 2.268143892288208, 2.3167319297790527, 2.2338507175445557, 2.234672784805298, 2.6014487743377686, 2.6114776134490967, 2.346747398376465, 2.2347097396850586, 2.3345799446105957, 2.2863576412200928, 2.807065010070801, 2.1199827194213867, 2.1966912746429443], 'val_accuracy': [0.2078104466199875, 0.17550484836101532, 0.237675279378891, 0.2586290240287781, 0.2641322612762451, 0.26233622431755066, 0.29749706387519836, 0.28996753692626953, 0.2611618936061859, 0.2661585509777069, 0.24937254190444946, 0.2927076518535614, 0.3411084711551666, 0.2585829794406891, 0.24803702533245087, 0.24145156145095825, 0.27166178822517395, 0.28761887550354004, 0.3082732856273651, 0.2661125063896179, 0.2976352274417877, 0.30090492963790894, 0.28821754455566406, 0.321904718875885, 0.2894379198551178, 0.28655967116355896, 0.31886526942253113, 0.34829261898994446, 0.3405558466911316, 0.34269726276397705, 0.35292086005210876, 0.28897741436958313, 0.2931451201438904, 0.32747703790664673, 0.3688318729400635, 0.3587694764137268, 0.37150290608406067, 0.24868175387382507, 0.3820028007030487, 0.37850284576416016], 'val_precision': [0.6961020827293396, 0.8111510872840881, 0.5728813409805298, 0.5394368171691895, 0.694071352481842, 0.5574541091918945, 0.710589587688446, 0.6781362295150757, 0.54347825050354, 0.5901460647583008, 0.5525873303413391, 0.7511153817176819, 0.796920895576477, 0.7345234751701355, 0.542594850063324, 0.64043790102005, 0.6364088654518127, 0.8043602705001831, 0.7194018363952637, 0.697820246219635, 0.7593171000480652, 0.6565549373626709, 0.6693657040596008, 0.7275683879852295, 0.7423562407493591, 0.5784241557121277, 0.7216187119483948, 0.7867926359176636, 0.704132080078125, 0.741614580154419, 0.7191908955574036, 0.5704818964004517, 0.60892653465271, 0.6256160736083984, 0.7720739245414734, 0.7834298014640808, 0.8567069172859192, 0.6910530924797058, 0.8128993511199951, 0.7983126640319824], 'val_recall': [0.0464666448533535, 0.031154297292232513, 0.05058831721544266, 0.09307145327329636, 0.13801836967468262, 0.09014713764190674, 0.14292293787002563, 0.13069607317447662, 0.1018904447555542, 0.12466324120759964, 0.14384397864341736, 0.14342950284481049, 0.1811692714691162, 0.1174791008234024, 0.08300904929637909, 0.08620967715978622, 0.1766100972890854, 0.1291303038597107, 0.12627506256103516, 0.10762393474578857, 0.1679522842168808, 0.15648530423641205, 0.11420939862728119, 0.17513643205165863, 0.12187708914279938, 0.180869922041893, 0.13919270038604736, 0.17640286684036255, 0.19344216585159302, 0.19397176802158356, 0.1948467642068863, 0.18236662447452545, 0.19539938867092133, 0.2104354202747345, 0.22510303556919098, 0.17766930162906647, 0.15514978766441345, 0.13463354110717773, 0.2196919173002243, 0.20916898548603058], 'val_auc': [0.7721714973449707, 0.7726172804832458, 0.8132930994033813, 0.8495833277702332, 0.8534989953041077, 0.8503145575523376, 0.876220703125, 0.8776739239692688, 0.856209397315979, 0.8332249522209167, 0.8405079245567322, 0.8786649107933044, 0.8898820281028748, 0.8478361368179321, 0.8485701680183411, 0.8393027186393738, 0.8705465197563171, 0.8713728189468384, 0.8851725459098816, 0.8276838660240173, 0.8788762092590332, 0.8903141617774963, 0.88365238904953, 0.889954686164856, 0.8742503523826599, 0.8809320330619812, 0.8878132104873657, 0.8975639939308167, 0.8913216590881348, 0.9023209810256958, 0.9022034406661987, 0.8519901037216187, 0.8527262210845947, 0.8895668387413025, 0.8970792293548584, 0.8863738775253296, 0.8934557437896729, 0.8230105042457581, 0.913118302822113, 0.9064703583717346]}
+date and time = 27-12-2020_03-40-05
+Saving the model to path: /users/PAA0023/dong760/plant_leaves_diagnosis/saved_models/NASNetMobile_BatchSize_32_0.8ValSplit_27-12-2020_03-40-05_40epochs
+
+Prediction Result: 
+1358/1358 - 809s - loss: 2.1967 - accuracy: 0.3785 - precision: 0.7983 - recall: 0.2092 - auc: 0.9065
+Result: [2.1966898441314697, 0.37850284576416016, 0.7983126640319824, 0.20916898548603058, 0.9064703583717346]
+Validation accuracy: 0.37850284576416016 Validation accuracy: 2.1966898441314697
+
+
+p0309.ten.osc.edu:
+                                                                               Req'd  Req'd   Elap 
+Job id               Username Queue    Name                 SessID NDS   TSK   Memory Time Use S Time 
+-------------------- -------- -------- -------------------- ------ ----- ----- ------ ----- - -----
+2648793              dong760  gpuseria plant_disease_diagno --         1    40     -- 24:00 R 11:44
+2648794              dong760  gpuseria plant_disease_diagno --         1    40     -- 24:00 R 11:44
+The date when running current script is :
+Sun Dec 27 03:54:49 EST 2020
