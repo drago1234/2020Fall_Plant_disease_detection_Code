@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --job-name=plant_disease_diagnosis
 #SBATCH --account=PAA0023
-#SBATCH --time=1-00:00:00
-#SBATCH --nodes=1 --ntasks-per-node=40 --gpus-per-node=1
-#SBATCH --output=/users/PAA0023/dong760/plant_leaves_diagnosis/outputs/InceptionV3_model(256x256)_16_0.2ValSplit_03-21-2021
+#SBATCH --time=2-00:00:00
+#SBATCH --nodes=1 --ntasks-per-node=48 --gpus-per-node=1
+#SBATCH --output=/users/PAA0023/dong760/plant_leaves_diagnosis/outputs/InceptionV3_model(256x256)_16_0.8ValSplit_03-31-2021
 #SBATCH --mail-type=END # BEGIN,END,NONE,FAIL,ALL
 #SBATCH --mail-user=dong.760@osu.edu
 
-# If you want interactive allocation: $ salloc -A PAA -t 00:20:00  -N 1 --ntasks-per-node=3 -p debug-40core --gpus-per-node=G
+# If you want interactive allocation: $ salloc -A PAA0023 -t 00:20:00 -p gpuparallel-48core --ntasks-per-node=40 --gpus-per-node=1
 
 # ENV setup
 echo 'environemnt set up'
@@ -40,7 +40,7 @@ conda activate tf_latest
 
 # Run the program
 echo 'Running the batch script'
-python plant_leaves_diagnosis/baseline_InceptionV3.py # baseline_backup.py baseline_InceptionV3.py baseline_ResNet.py baseline_debug.py baseline_NASNet.py
+python plant_leaves_diagnosis/InceptionV3_model.py # baseline_backup.py baseline_InceptionV3.py baseline_ResNet.py baseline_debug.py baseline_NASNet.py
 
 echo 
 qstat -u dong760 
