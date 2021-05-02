@@ -104,7 +104,7 @@ print(f"Image size: {img.shape}") # ==> Image size: (256, 256, 3)
 # Model configuration
 BASE_DIR = "/users/PAA0023/dong760/plant_leaves_diagnosis"
 batch_size = 32
-no_epochs = 250
+no_epochs = 1
 img_width, img_height, img_num_channels = 256, 256, 3
 loss_function = 'categorical_crossentropy' # 'mean_squared_error', 'mean_absolute_error', 'binary_crossentropy', 'sparse_categorical_crossentropy', 'categorical_crossentropy'
 metrics = [tf.keras.metrics.Precision(), tf.keras.metrics.CategoricalAccuracy(name='accuracy')] # 'accuracy', 'precision', 'recall', 'auc', and more(https://www.tensorflow.org/tfx/model_analysis/metrics, https://www.tensorflow.org/api_docs/python/tf/keras/Model#compile)
@@ -242,7 +242,7 @@ model.compile(optimizer=optimizer,
               loss=loss_function, # "categorical_crossentropy", 'binary_crossentropy', sparse_categorical_crossentropy
               metrics=METRICS)
 print(f"\n====> Statistics: epochs={no_epochs}, batch_size={batch_size}, validation_split={validation_split}, lr={lr}, momentum={momentum}, steps_per_epoch ={steps_per_epoch}, feature shape= {(img_width, img_height, img_num_channels)}, no_classes={no_classes }, loss_function={loss_function}")
-# print(model.summary())
+print(model.summary())
 
 # Define the checkpoint directory:
 # checkpoint_dir = './checkpoints/'
@@ -253,10 +253,11 @@ history = model.fit(train_generator,
                     epochs=no_epochs, 
                     verbose=verbosity,
 #                     callbacks=[callbacks],
-#                     steps_per_epoch=steps_per_epoch,                    
+                    steps_per_epoch=steps_per_epoch,                    
 #                     validation_steps=steps_per_epoch,
                     validation_data=validation_generator)
 print(history.history)
+print(model.summary())
 
 # Evaluate the performance
 print("Prediction Result: ")
